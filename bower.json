@@ -1,0 +1,22 @@
+{
+  "name": "mr-jekyll",
+  "authors": [
+    "ItsJonQ <itsjonq@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "_assets/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "composer-css": "git@github.com:ItsJonQ/composer-css.git"
+  }
+}

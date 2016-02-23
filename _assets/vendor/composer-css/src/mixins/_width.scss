@@ -1,0 +1,20 @@
+// Mixins :: Width
+
+@mixin composer-make-width($fluid: false) {
+  @for $i from (1) through $grid-columns {
+    $_util-classname: u-width-#{$i};
+    $_width: ceil( ( $i / $grid-columns ) * map-get($container-max-widths, xl)) !important;
+
+    @if ($fluid != false) {
+      $_util-classname: u-width-#{$i}--fluid;
+      $_width: percentage( $i / $grid-columns ) !important;
+    }
+
+    .#{$_util-classname} {
+      @include composer-each-breakpoint() {
+        max-width: 100%;
+        width: $_width;
+      }
+    }
+  }
+}

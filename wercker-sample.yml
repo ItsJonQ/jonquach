@@ -1,0 +1,39 @@
+# This references the default Ruby container from
+# the Docker Hub.
+# https://registry.hub.docker.com/_/ruby/
+box: ruby:2.2.2
+
+# This is the build pipeline. Pipelines are the core of wercker
+# Read more about pipelines on our dev center
+# http://devcenter.wercker.com/docs/pipelines/index.html
+
+build:
+  # Steps make up the actions in your pipeline
+  # Read more about steps on our dev center:
+  # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    - script:
+        name: git config https
+        code: git config --global url."https://".insteadOf git://
+    - script:
+        name: git token
+        code: echo -e "machine github.com\n  login $CI_USER_TOKEN" >> ~/.netrc
+    - script:
+        name: git config user
+        code: |-
+          git config --global user.email "itsjonq@gmail.com"
+          git config --global user.name "ItsJonQ"
+    - bundle-install
+    - script:
+        name: build
+        code: jekyll build
+
+deploy:
+  steps:
+    - add-ssh-key:
+        keyname: YOUR_DEPLOY_KEY
+    - add-to-known_hosts:
+        hostname: $YOUR_HOST
+    - script:
+      name: deploy to digital ocean
+      code: rsync -a _site/ $YOUR_HOST:$YOUR_HOST_DEST

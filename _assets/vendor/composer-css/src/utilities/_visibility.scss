@@ -1,0 +1,27 @@
+// Utilities :: Visibility
+
+// Hidden uses display;
+.u-hidden {
+  @include composer-each-breakpoint-down() {
+    display: none !important;
+  }
+}
+
+.u-display-block {
+  @include composer-each-breakpoint() {
+    display: block !important;
+  }
+}
+
+// Invisible uses visibility
+.u-invisible {
+  @include composer-each-breakpoint-down() {
+    visibility: hidden !important;
+  }
+}
+
+.u-visible {
+  @include composer-each-breakpoint() {
+    visibility: visible !important;
+  }
+}

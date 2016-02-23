@@ -1,0 +1,52 @@
+// Mixins :: Breakpoints
+
+@mixin composer-media-breakpoint($name, $breakpoints: $grid-breakpoints) {
+  @if map-has-key($breakpoints, $name) {
+    @media (min-width: #{map-get($breakpoints, $name)}) {
+      @content;
+    }
+  }
+}
+
+@mixin composer-media-breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  @if map-has-key($breakpoints, $name) {
+    @media (max-width: #{map-get($breakpoints, $name) - 1px}) {
+      @content;
+    }
+  }
+}
+
+@mixin composer-each-breakpoint() {
+  @each $name, $breakpoint in $grid-breakpoints {
+
+    @if($breakpoint == 0) {
+      @content;
+    }
+
+    @else {
+      @include composer-media-breakpoint($name) {
+        &--at-#{$name} {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+@mixin composer-each-breakpoint-down() {
+  @each $name, $breakpoint in $grid-breakpoints {
+
+    @if($breakpoint == 0) {
+      @content;
+    }
+
+    @else {
+      @include composer-media-breakpoint-max($name) {
+        &--at-#{$name} {
+          @content;
+        }
+      }
+    }
+  }
+}
+
