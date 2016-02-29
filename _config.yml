@@ -28,6 +28,7 @@ sass:
 
 gems:
 - jekyll-assets
+- jekyll-coffeescript
 
 assets:
   compress:
