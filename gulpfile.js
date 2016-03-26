@@ -10,7 +10,7 @@ var config = {
   src: 'src',
   dist: '_site',
   assets: 'src/_assets',
-  port: 4200
+  port: 4848
 };
 
 
@@ -24,22 +24,30 @@ var messages = {
 
 
 // Jekyll
-gulp.task('jekyll-clean, function(done) {
+gulp.task('jekyll-clean', function(done) {
   return exec('bundle exec jekyll clean', function(err, stdout, stderr) {
     console.log(stdout);
   }).on('close', done);
 });
 
-gulp.task('jekyll-exec, function(done) {
-  return exec('bundle exec jekyll build', function(err, stdout, stderr) {
+gulp.task('jekyll-exec', function(done) {
+  return exec('bundle exec jekyll build --incremental', function(err, stdout, stderr) {
     console.log(stdout);
   }).on('close', done);
 });
 
-gulp.task('jekyll-deploy, function(done) {
+gulp.task('jekyll-deploy', function(done) {
   return exec('bundle exec jekyll clean build --config "_config.yml, _config/production/_config.yml"', function(err, stdout, stderr) {
     console.log(stdout);
   }).on('close', done);
+});
+
+gulp.task('jekyll', ['jekyll-exec'], function() {
+  gulp.start('sass');
+});
+
+gulp.task('jekyll-rebuild', ['jekyll', 'sass'], function () {
+  reload();
 });
 
 
@@ -51,7 +59,7 @@ gulp.task('sass', function () {
     sass({
       includePaths: [
         config.assets + '/stylesheets',
-        config.assets + '/vendors'
+        'src/_assets/vendors'
       ],
     })
     .on('error', sass.logError)
