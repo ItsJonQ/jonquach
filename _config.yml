@@ -1,53 +1,25 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+---
 
-# Site settings
 title: Your awesome title
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-port: 4848
+source: ./src
+destination: ./_site
+
+ENV: development
+
+baseurl: "" 
+url: ""
+
+
+gems:
+  - jekyll-assets
 
 
 # Build settings
-markdown: kramdown
-
-
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _scss
-  style:            :compressed
-
-gems:
-- jekyll-assets
-- jekyll-coffeescript
-
-assets:
-  compress:
-    css: true
-  cache: .asset-cache
-  prefix: "/assets"
-  assets:
-    - "*.png"
-    - "*.jpg"
-    - "*.svg"
-  digest: true
-  sources:
-    - _assets/images
-    - _assets/javascripts
-    - _assets/stylesheets
-    - _assets/vendor
-  features:
-    liquid: true
-    automatic_img_alt: false
+markdown:     kramdown
+permalink:    pretty
 
 exclude: [
   ".asset-cache",
@@ -58,3 +30,30 @@ exclude: [
   "node_modules",
   "tmp"
 ]
+
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _scss
+  style:            :compressed
+
+assets:
+  compress:
+    css: true
+  cache: .asset-cache
+  prefix: "/assets"
+  assets:
+    - "*.png"
+    - "*.jpg"
+    - "*.svg"
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/vendor
+  features:
+    liquid: true
+    automatic_img_alt: false
+

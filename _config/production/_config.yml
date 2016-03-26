@@ -1,0 +1,10 @@
+url: ""
+baseurl:  ""
+
+ENV: production
+
+assets:
+  compress:
+    css: true
+  digest: true
+
