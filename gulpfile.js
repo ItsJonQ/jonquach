@@ -77,7 +77,7 @@ gulp.task('cssmin', ['sass'], function(done) {
 
 
 // Browser Sync (Live Reload)
-gulp.task('browser-sync', ['jekyll'], function() {
+gulp.task('browser-sync', function() {
   browserSync({
     notify: false,
     port: config.port,
@@ -93,7 +93,7 @@ gulp.task('browser-reload', function() {
 
 
 // Watch
-gulp.task('watch', function () {
+gulp.task('watch', function() {
   gulp.watch([
     'src/_assets/stylesheets/**/*.scss'
   ], ['sass']);
