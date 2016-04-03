@@ -39,7 +39,7 @@ gulp.task('jekyll-exec', function(done) {
 });
 
 gulp.task('jekyll-deploy', function(done) {
-  return exec('bundle exec jekyll clean build --config "_config.yml, _config/production/_config.yml"', function(err, stdout, stderr) {
+  return exec('bundle exec jekyll build --config "_config.yml,_config/production/_config.yml"', function(err, stdout, stderr) {
     console.log(stdout);
   }).on('close', done);
 });
@@ -68,7 +68,9 @@ gulp.task('sass', function(done) {
 // Minify
 gulp.task('cssmin', ['sass'], function(done) {
   return gulp.src('_site/css/**/*.css')
-    .pipe(cssmin())
+    .pipe(cssmin({
+      keepSpecialComments: false 
+    }))
     .pipe(gulp.dest('_site/css'))
     .on('close', done);
 });
