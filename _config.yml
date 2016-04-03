@@ -13,10 +13,6 @@ baseurl: ""
 url: ""
 
 
-gems:
-  - jekyll-assets
-
-
 # Build settings
 markdown:     kramdown
 permalink:    pretty
@@ -30,30 +26,3 @@ exclude: [
   "node_modules",
   "tmp"
 ]
-
-
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _scss
-  style:            :compressed
-
-assets:
-  compress:
-    css: true
-  cache: .asset-cache
-  prefix: "/assets"
-  assets:
-    - "*.png"
-    - "*.jpg"
-    - "*.svg"
-  sources:
-    - _assets/images
-    - _assets/javascripts
-    - _assets/stylesheets
-    - _assets/vendor
-  features:
-    liquid: true
-    automatic_img_alt: false
-

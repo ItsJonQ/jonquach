@@ -1,9 +1,11 @@
 var gulp            = require('gulp');
-var exec            = require('child_process').exec;
 var browserSync     = require('browser-sync');
-var plumber         = require('gulp-plumber');
-var sass            = require('gulp-sass');
+var cssmin      = require('gulp-cssmin');
+var exec            = require('child_process').exec;
 var ghPages         = require('gulp-gh-pages');
+var plumber         = require('gulp-plumber');
+var runSequence = require('run-sequence');
+var sass            = require('gulp-sass');
 
 
 var config = {
@@ -42,13 +44,6 @@ gulp.task('jekyll-deploy', function(done) {
   }).on('close', done);
 });
 
-gulp.task('jekyll', ['jekyll-exec'], function() {
-  gulp.start('sass');
-});
-
-gulp.task('jekyll-rebuild', ['jekyll', 'sass'], function () {
-  reload();
-});
 
 
 // Sass
@@ -110,6 +105,22 @@ gulp.task('deploy', ['jekyll-clean', 'jekyll-deploy'], function() {
 gulp.task('push', ['deploy']);
 
 
+// Build tasks
+gulp.task('jekyll', function(fn) {
+  runSequence('jekyll-exec', ['sass'], fn);
+});
+
+gulp.task('jekyll-build', function(fn) {
+  runSequence('jekyll', 'browser-sync', fn);
+});
+
+gulp.task('jekyll-rebuild', function(fn) {
+  runSequence('jekyll', 'browser-reload', fn);
+});
+
+
 // Default
-gulp.task('default', ['jekyll-clean', 'browser-sync', 'watch']);
+gulp.task('default', function(fn) {
+  runSequence('jekyll-clean', 'jekyll-build', 'watch', fn);
+});
 gulp.task('serve', ['default']);
