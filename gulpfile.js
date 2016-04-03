@@ -1,10 +1,10 @@
 var gulp            = require('gulp');
 var browserSync     = require('browser-sync');
-var cssmin      = require('gulp-cssmin');
+var cssmin          = require('gulp-cssmin');
 var exec            = require('child_process').exec;
 var ghPages         = require('gulp-gh-pages');
 var plumber         = require('gulp-plumber');
-var runSequence = require('run-sequence');
+var runSequence     = require('run-sequence');
 var sass            = require('gulp-sass');
 
 
@@ -45,22 +45,32 @@ gulp.task('jekyll-deploy', function(done) {
 });
 
 
-
 // Sass
-gulp.task('sass', function () {
-  return gulp.src(config.assets + '/stylesheets/*.scss')
+gulp.task('sass', function(done) {
+  return gulp.src(config.assets + '/stylesheets/**/*.scss')
   .pipe(plumber())
   .pipe(
     sass({
       includePaths: [
         config.assets + '/stylesheets',
-        'src/_assets/vendors'
+        'src/_assets/vendors',
+        'bower_components'
       ],
     })
     .on('error', sass.logError)
   )
   .pipe(gulp.dest(config.dist + '/css'))
-  .pipe(reload({stream:true}));
+  .pipe(reload({stream:true}))
+  .on('close', done);
+});
+
+
+// Minify
+gulp.task('cssmin', ['sass'], function(done) {
+  return gulp.src('_site/css/**/*.css')
+    .pipe(cssmin())
+    .pipe(gulp.dest('_site/css'))
+    .on('close', done);
 });
 
 
@@ -73,6 +83,10 @@ gulp.task('browser-sync', ['jekyll'], function() {
       baseDir: config.dist
     }
   });
+});
+
+gulp.task('browser-reload', function() {
+  reload();
 });
 
 
@@ -98,9 +112,8 @@ gulp.task('watch', function () {
 
 
 // Deploy
-gulp.task('deploy', ['jekyll-clean', 'jekyll-deploy'], function() {
-  return gulp.src('./' + config.dist + '/**/*')
-    .pipe(ghPages());
+gulp.task('deploy', function() {
+  runSequence('jekyll-deploy', 'sass', 'cssmin');
 });
 gulp.task('push', ['deploy']);
 

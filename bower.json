@@ -7,7 +7,7 @@
   "main": "",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/ItsJonQ/mr-jekyll",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -18,5 +18,8 @@
   ],
   "dependencies": {
     "composer-css": "git@github.com:ItsJonQ/composer-css.git"
+  },
+  "devDependencies": {
+    "bourbon": "^4.2.6"
   }
 }
