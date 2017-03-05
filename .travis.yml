@@ -28,12 +28,12 @@ script:
 
 # Resolve dpl gem issue
 # https://github.com/travis-ci/travis-ci/issues/5072
-before_deploy:
-  - export PATH="$PATH:$HOME/.rvm/bin"
+# before_deploy:
+#   - export PATH="$PATH:$HOME/.rvm/bin"
 
-deploy:
-  skip_cleanup: true
-  provider: script
-  script: gulp deploy-production
-  on:
-    branch: master
+# deploy:
+#   skip_cleanup: true
+#   provider: script
+#   script: gulp deploy-production
+#   on:
+#     branch: master
