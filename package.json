@@ -1,16 +1,17 @@
 {
   "name": "mr-jekyll",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A starter template for Jekyll",
   "main": "gulpfile.js",
   "scripts": {
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ItsJonQ/mr-jekyll.git"
   },
-  "author": "",
+  "author": "ItsJonQ",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ItsJonQ/mr-jekyll/issues"
