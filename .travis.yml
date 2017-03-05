@@ -1,0 +1,39 @@
+language: node_js
+node_js:
+  - 4
+
+cache:
+  bundler: true
+  directories:
+    - node_modules
+
+before_install:
+  - rvm install 2.2.2
+  - npm set progress=false
+  - echo -e "machine github.com\n  login ${GH_TOKEN}" >> ~/.netrc
+  - git remote set-url origin "https://${GH_TOKEN}@github.com/itsjonq/jonquach.git"
+  - git config --global user.name "ItsJonQ"
+  - git config --global user.email "itsjonq@gmail.com"
+  - git config --global url.https://github.com/.insteadOf git://github.com/
+
+install:
+  - bundle install
+  - npm install
+
+before_script:
+  - npm install gulp-cli -g
+
+script:
+  - gulp build
+
+# Resolve dpl gem issue
+# https://github.com/travis-ci/travis-ci/issues/5072
+before_deploy:
+  - export PATH="$PATH:$HOME/.rvm/bin"
+
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: gulp deploy-production
+  on:
+    branch: master
