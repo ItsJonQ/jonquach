@@ -11,11 +11,11 @@ gulp.task('default', function(callback) {
     'clean-jekyll',
     'jekyll-incremental',
     [
+      'images-base',
       'styles-base',
       'scripts-base',
     ],
     'browsersync',
-    'open-development',
     'watch'
   );
 });

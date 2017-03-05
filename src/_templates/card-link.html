@@ -1,0 +1,22 @@
+---
+title: "Hello"
+description: "Stuff"
+emoji: false
+link: "/"
+class: ""
+---
+
+<a href="{{ template.link }}"
+  class="c-card c-card--link u-d-block tx-no-underline
+    t-shadow-0 t-shadow-hover-2
+    {{ template.class }}">
+  <div class="c-card__block">
+    {% if template.emoji %}
+      <div class="tx-h3 tx-lh-reset u-mrg-b-3">{{ template.emoji }}</div>
+    {% endif %}
+    <h4 class="tx-h5 tx-bold t-tx-charcoal-800 u-mrg-b-1">{{ template.title }}</h4>
+    <p class="u-mrg-b-0 tx-sm t-tx-charcoal-300">
+      {{ template.description }}
+    </p>
+  </div>
+</a>

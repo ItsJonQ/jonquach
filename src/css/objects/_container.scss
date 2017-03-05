@@ -1,0 +1,9 @@
+// Objects :: Container
+// Extends styles from seed-grid
+
+.o-container {
+  // Modifiers
+  &--main {
+    max-width: 680px;
+  }
+}
