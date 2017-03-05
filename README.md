@@ -1,5 +1,6 @@
-# Mr. Jekyll
-A starter template for Jekyll
+# Q
+[http://jonquach.com](http://jonquach.com)
+Built with [mr-jekyll](https://github.com/ItsJonQ/mr-jekyll)
 
 ### Getting started
 
@@ -12,11 +13,3 @@ Then:
 ```
 gulp
 ```
-
-That's it! You should be ready to start developing your Jekyll blog.
-
-### Wercker deploy
-[http://wercker.com/](http://wercker.com/)
-
-Rename the ``wercker-sample.yml`` to ``wercker.yml``, and adjust the variables as needed.
-The default sample wercker.yml is configured for an SSH deploy, based on the Ruby docker (no Node support).

@@ -1,7 +1,7 @@
 # This references the default Ruby container from
 # the Docker Hub.
 # https://registry.hub.docker.com/_/ruby/
-box: ruby:2.2.2
+box: starefossen/ruby-node
 
 # This is the build pipeline. Pipelines are the core of wercker
 # Read more about pipelines on our dev center
@@ -25,15 +25,18 @@ build:
           git config --global user.name "ItsJonQ"
     - bundle-install
     - script:
+        name: npm install
+        code: npm install
+    - script:
         name: build
-        code: jekyll build
+        code: gulp build
 
 deploy:
   steps:
     - add-ssh-key:
-        keyname: YOUR_DEPLOY_KEY
+        keyname: DO_DEPLOY_KEY
     - add-to-known_hosts:
-        hostname: $YOUR_HOST
+        hostname: $DO_HOST
     - script:
       name: deploy to digital ocean
-      code: rsync -a _site/ $YOUR_HOST:$YOUR_HOST_DEST
+      code: rsync -a _site/ $DO_HOST:$DO_DEST

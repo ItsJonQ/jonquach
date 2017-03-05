@@ -1,7 +1,7 @@
 {
-  "name": "mr-jekyll",
-  "version": "0.0.1",
-  "description": "A starter template for Jekyll",
+  "name": "jonquach",
+  "version": "0.0.2",
+  "description": "Personal site for Q",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
