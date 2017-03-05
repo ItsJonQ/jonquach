@@ -1,8 +1,6 @@
 source "https://rubygems.org"
 
-gem "mini_magick", "4.4.0"
 gem "kramdown"
 gem "rouge"
-gem "jekyll", "3.1.2"
-gem "therubyracer"
-gem "jekyll-coffeescript"
+gem "jekyll"
+gem "jekyll-template"

@@ -22,7 +22,6 @@ exclude: [
   ".grunt",
   ".tmp",
   "_assets/vendor",
-  "bower_components",
   "node_modules",
   "tmp"
 ]

@@ -17,12 +17,27 @@
   },
   "homepage": "https://github.com/ItsJonQ/mr-jekyll#readme",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
+    "check-dependencies": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.1.7",
     "gulp-gh-pages": "^0.5.4",
     "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.2.0",
-    "run-sequence": "^1.1.5"
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-util": "^3.0.8",
+    "is-online": "^6.1.0",
+    "require-dir": "^0.3.1",
+    "resp-modifier": "^6.0.2",
+    "run-sequence": "^1.2.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "yargs": "^7.0.1"
+  },
+  "dependencies": {
+    "sass-pathfinder": "0.0.5",
+    "seed-harvester": "0.1.5",
+    "seed-packer": "0.0.10"
   }
 }

@@ -5,7 +5,12 @@ A starter template for Jekyll
 
 Once you have this repo cloned, run the following command:
 ```
-bundle install
+npm install
+```
+
+Then:
+```
+gulp
 ```
 
 That's it! You should be ready to start developing your Jekyll blog.
