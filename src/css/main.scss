@@ -2,3 +2,12 @@
 
 // Plugins
 @import "./plugins/seed-packs";
+
+// Base
+@import "./base/_index";
+// Components
+@import "./components/_index";
+// Objects
+@import "./objects/_index";
+// Type
+@import "./type/_index";
