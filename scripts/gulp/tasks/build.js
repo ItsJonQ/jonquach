@@ -9,6 +9,7 @@ gulp.task('build', function(callback) {
     'verify-dependencies',
     'clean-jekyll',
     'jekyll-production',
+    'images',
     'scripts',
     'styles',
     callback
