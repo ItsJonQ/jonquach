@@ -8,12 +8,15 @@ projects:
   - name: "Seed CSS"
     link: "http://seedcss.com"
     description: "A modular CSS framework designed for scale"
-  - name: "jekyll-template"
-    link: "https://github.com/helpscout/jekyll-template"
-    description: "A custom templating Liquid block with YAML support for Jekyll"
+    emoji: "🌰"
   - name: "Emojify.cool"
     link: "https://emojify.cool/"
     description: "A tiny web-app that resizes images for Slack emojis"
+    emoji: "😎"
+  - name: "jekyll-template"
+    link: "https://github.com/helpscout/jekyll-template"
+    description: "A custom templating Liquid block with YAML support for Jekyll"
+    emoji: "📑"
 
 folks:
   - image: "logo-npm.png"
@@ -29,9 +32,9 @@ folks:
 <div class="u-mrg-t-10 u-pad-t-2 u-mrg-b-5">
   <div class="o-flexy u-mrg-b-8">
     <div class="o-flexy__item u-mrg-r-8">
-      <div class="c-avatar">
-        <img src="/images/me-happy.svg" class="c-avatar__image u-mrg-b-md" width="115" height="110" />
-        <div class="c-avatar__shadow"></div>
+      <div class="c-ma-face">
+        <img src="/images/me-happy.svg" class="c-ma-face__image u-mrg-b-4" width="115" height="110" />
+        <div class="c-ma-face__shadow"></div>
       </div>
     </div>
     <div class="o-flexy__block">
@@ -44,27 +47,36 @@ folks:
     <p class="tx-h3 tx-300 u-mrg-b-2 tx-lh-lead">
       Hi! 👋
     </p>
-    <p class="tx-h3 tx-300 u-mrg-b-4 tx-lh-lead">
+    <p class="tx-h3 tx-h2@md tx-300 u-mrg-b-4 tx-lh-lead">
       I'm a Toronto-based designer who loves <strong class="tx-700">beautifully engineered CSS</strong> & <strong class="tx-700">adorable character design</strong>.
     </p>
     <p class="tx-h4">
       I'm part of team <a href="http://www.helpscout.net/" target="_blank" title="Help Scout">Help Scout</a>, where I do design engineer-y things.
     </p>
 
-    <br>
+  </div>
 
+  <div class="u-mrg-v-10 u-pad-b-3">
     <p>
       Some things I've made include:
     </p>
-    <ul class="c-list">
-      {% for project in page.projects %}
-      <li class="u-pad-v-2 u-pad-v-1@md">
-        <a href="{{ project.link }}" target="_blank">{{ project.name }}</a>:
-        {{ project.description }}
-      </li>
-      {% endfor %}
-    </ul>
-    <p>
+    <div class="o-container">
+      <div class="o-row-flex o-row--sm">
+        {% for project in page.projects %}
+        <div class="o-col-4@md u-mrg-b-3">
+          {% template card-link.html %}
+          ---
+          title: {{ project.name }}
+          description: {{ project.description }}
+          link: {{ project.link }}
+          emoji: {{ project.emoji }}
+          ---
+          {% endtemplate %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <p class="u-mrg-b-0">
       I think they're pretty neat 🤓
     </p>
   </div>
@@ -75,13 +87,13 @@ folks:
       I'm not super on the socials, but I do have a <a href="https://twitter.com/itsjonq" target="_blank" title="Twitter">Twitter</a>, <a href="https://dribbble.com/itsjonq" target="_blank" title="Dribble">Dribbble</a>, and <a href="https://github.com/itsjonq" target="_blank" title="Github">Github</a>.
     </p>
     <p>
-      <a href="mailto:{{ page.email }}" class="c-button c-button--linky">Email Me</a>
+      <a href="mailto:{{ page.email }}" class="c-button t-tx-blue-500 tx-bold">Email Me</a>
     </p>
   </div>
 
   <div class="u-mrg-b-10 u-pad-v-3">
     <p>
-      <strong class="u-op-3 tx-xs">Some awesome folks I've worked with</strong>
+      <strong class="u-op-3">Some awesome folks I've worked with</strong>
     </p>
     <div class="o-flexy u-mrg-v-8">
       {% for folk in page.folks %}
