@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      html {
+        overflow-x: hidden;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        background-color: red;
+        width: 200px;
+        margin-right: 20px;
+        height: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: left;
+      }
+      .one {
+        height: 20px;
+        width: 30px;
+      }
+      .two {
+        height: 300px;
+      }
+      .three {
+        height: 500px;
+      }
+      .slow {
+        transition: transform 0.3s ease-in;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box one rx-follow rx-rainbow">Move yo mouse</div>
+    <div class="box two rx-color">Resize da window</div>
+    <div class="box rx-height three rx-color">Inspect element!!</div>
+    <div class="box rx-height rx-color">So magic</div>
+
+    <script src="./rxs.js"></script>
+    <script src="./neato.js"></script>
+  </body>
+</html>

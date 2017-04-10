@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      html {
+        overflow-x: hidden;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .fill {
+        height: 800px;
+      }
+      .surprise {
+        background: hotpink;
+        height: 50px;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translateY(-100%);
+        z-index: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="surprise rx-promo-bar"></div>
+    <div class="">
+      <img src="./images/cupcake.jpg" class="rx-hero-image">
+    </div>
+    <div class="fill"></div>
+
+    <script src="./rxs.js"></script>
+    <script src="./hero.js"></script>
+  </body>
+</html>
