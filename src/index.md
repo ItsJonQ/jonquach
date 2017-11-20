@@ -16,6 +16,7 @@ title: "Hello"
       specializing in UI system<br />
       design and mascots!
     </h1>
+    {% QFace %}
   {% endFramed %}
 {% endSection %}
 

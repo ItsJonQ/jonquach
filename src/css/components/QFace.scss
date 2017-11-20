@@ -1,0 +1,34 @@
+.c-QFace {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  opacity: 0.3;
+  transform: rotate(-5deg);
+  height: 180px;
+  width: 180px;
+  @include breakpoint(md) {
+    height: 280px;
+    width: 280px;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  path {
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: SVGDraw 3s normal forwards ease-in-out;
+  }
+
+  @keyframes SVGDraw {
+    from {
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}

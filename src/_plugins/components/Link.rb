@@ -19,7 +19,6 @@ module Jekyll
         %Q[target='#{target}']
       ) : ''
 
-      p href
       render = %Q[
         <a class='#{componentClassName}' #{targetMarkup} href='#{href}'>
           #{content}
