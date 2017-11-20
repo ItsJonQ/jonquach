@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   {% include head.html %}
-
-  <body class="tx-smooth t-tx-charcoal-500">
-
+  <body class="tx-smooth">
     {% include header.html %}
-
+    {% Container class: 'u-pad-t-10' %}
       {{ content }}
-
+    {% endContainer %}
     {% include footer.html %}
-
+    {% BackgroundLines %}
   </body>
-
 </html>

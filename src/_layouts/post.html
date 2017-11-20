@@ -2,4 +2,22 @@
 layout: default
 ---
 
-{{ content }}
+{% Section %}
+  {% template post/category.html post: page %}www{% endtemplate %}
+
+  {% Framed %}
+    {% CopyContainer %}
+      <h1>{{page.title}}</h1>
+    {% endCopyContainer %}
+  {% endFramed %}
+{% endSection %}
+
+<p>
+  {% Text size: '12', uppercase: true, muted: true %}
+    Published on {{page.date | date: "%B %d, %Y"}}
+  {% endText %}
+</p>
+
+{% CopyContainer %}
+  {{content}}
+{% endCopyContainer %}

@@ -1,5 +1,16 @@
-// Base :: HTML
+@import "../configs/color";
 
 html {
+  background-color: _color(background);
+  color: _color(text);
+  font-size: 16px;
   line-height: 1.6;
+
+  @include breakpoint(md) {
+    font-size: 20px;
+  }
+}
+
+::selection {
+  background: _color(brand);
 }

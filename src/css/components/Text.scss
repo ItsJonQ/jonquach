@@ -1,0 +1,43 @@
+@import "../configs/font";
+@import "../functions/rem";
+
+.c-Text {
+  $sizes: (11, 12, 13, 14, 16, 20);
+
+  // Sizes
+  @each $size in $sizes {
+    &.is-#{$size} {
+      font-size: rem($size);
+    }
+  }
+
+  // Family
+  &.is-sans {
+    font-family: #{_config(fontFamily, sans)};
+  }
+  &.is-serif {
+    font-family: #{_config(fontFamily, serif)};
+  }
+  &.is-code {
+    font-family: #{_config(fontFamily, code)};
+  }
+
+  // Shades
+  &.is-subtle {
+    opacity: 0.8;
+  }
+
+  &.is-muted {
+    opacity: 0.5;
+  }
+
+  &.is-faint {
+    opacity: 0.3;
+  }
+
+  // Transform
+  &.is-uppercase {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}

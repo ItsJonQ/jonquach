@@ -1,0 +1,9 @@
+@import "../configs/color";
+@import "../configs/headings";
+
+@mixin copyStyles () {
+  & > p {
+    @import "./firstLetterStyles";
+    @include firstLetterStyles;
+  }
+}

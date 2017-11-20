@@ -1,0 +1,18 @@
+@mixin framedStyles() {
+  $cornerSize: 15px;
+  $gutter: 10px;
+  $offset: 28px;
+  border: $cornerSize solid rgba(black, 0);
+  border-image: url('/images/framed-corners.svg') 50%;
+  box-sizing: border-box;
+  margin-left: -($cornerSize);
+  margin-right: -($cornerSize);
+  padding: $offset 0;
+
+  @include breakpoint(lg) {
+    $offset: 12px;
+    padding: $offset;
+    margin-left: -($offset + $cornerSize);
+    margin-right: -($offset + $cornerSize);
+  }
+}

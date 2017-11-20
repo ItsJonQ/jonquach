@@ -1,0 +1,28 @@
+@import "pack/seed-breakpoints/_index";
+
+.c-BackgroundLines {
+  $line-offset: 100px;
+  $line-offset--md: 160px;
+
+  bottom: 0;
+  display: flex;
+  left: 0;
+  overflow: hidden;
+  opacity: 0.3;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+
+  &__line {
+    border-right: 1px dotted rgba(white, 0.5);
+    height: 100%;
+    padding-left: $line-offset;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+
+    @include breakpoint(md) {
+      padding-left: $line-offset--md;
+    }
+  }
+}

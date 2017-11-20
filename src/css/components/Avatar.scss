@@ -1,0 +1,21 @@
+.c-Avatar {
+  $size: 40px;
+
+  background-color: white;
+  border-radius: 9999px;
+  overflow: hidden;
+  height: $size;
+  width: $size;
+
+  &__image {
+    transform: rotate(-5deg);
+    height: auto;
+    max-width: 100%;
+  }
+
+  &.is-sm {
+    $size: 28px;
+    height: $size;
+    width: $size;
+  }
+}

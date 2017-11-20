@@ -1,0 +1,15 @@
+@import "../configs/headings";
+
+.c-Heading {
+  font-weight: 700;
+
+  &.is-muted {
+    opacity: 0.6;
+  }
+
+  &.is-small {
+    font-size: _config(headingSize, small);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
