@@ -2,14 +2,15 @@
 
 blockquote {
   @import "../components/Framed/framedStyles";
-  @include framedStyles;
+  @include framedStyles();
 
   font-size: _config(headingSize, h4);
   font-weight: 300;
   line-height: 1.2;
-  letter-spacing: -2px;
+  letter-spacing: 0;
 
   @include breakpoint(md) {
     font-size: _config(headingSize, h3);
+    letter-spacing: -1px;
   }
 }

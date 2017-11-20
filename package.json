@@ -37,6 +37,7 @@
     "seed-centralize": "0.0.4",
     "seed-color-scheme": "0.3.0",
     "seed-config": "0.1.1",
+    "seed-dash": "0.0.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "yargs": "^7.0.1"

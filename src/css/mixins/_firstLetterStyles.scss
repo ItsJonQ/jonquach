@@ -24,12 +24,12 @@
         margin: 0 ceil($margin / 2) 0 0;
         padding: $margin ceil($margin / 2) $margin;
       }
+    }
 
-      &:after {
-        clear: both;
-        content: "";
-        display: block;
-      }
+    &::after {
+      clear: both;
+      content: "";
+      display: block;
     }
   }
 }

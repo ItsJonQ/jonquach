@@ -3,11 +3,13 @@ layout: default
 ---
 
 {% Section %}
-  {% template post/category.html post: page %}www{% endtemplate %}
+  {% template post/category.html post: page %}{% endtemplate %}
 
   {% Framed %}
     {% CopyContainer %}
-      <h1>{{page.title}}</h1>
+      <h1 class='tx-h3 tx-h2@md tx-h1@lg'>
+        {{page.title}}
+      </h1>
     {% endCopyContainer %}
   {% endFramed %}
 {% endSection %}

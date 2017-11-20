@@ -6,4 +6,9 @@
     @import "./firstLetterStyles";
     @include firstLetterStyles;
   }
+
+  & > img {
+    @import "../components/Framed/framedStyles";
+    @include framedStyles(white);
+  }
 }

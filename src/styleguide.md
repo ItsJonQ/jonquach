@@ -3,8 +3,8 @@ layout: "copy"
 title: "Styleguide"
 ---
 
-{% Heading class: 'u-mrg-b-6' small: true %}
-  <em>Typography</em>
+{% Heading class: 'u-mrg-b-6' small: true em: true %}
+  Typography
 {% endHeading %}
 
 {% Section %}
@@ -79,4 +79,32 @@ title: "Styleguide"
     {% Text serif: true %}Serif{% endText %}.
     {% Text code: true %}Code{% endText %}.
   </p>
+{% endSection %}
+
+{% Section %}
+  {% Heading class: 'u-mrg-b-6' small: true muted: true %}
+    Images.
+  {% endHeading %}
+  {% CopyContainer %}
+    <p>
+      <img src='http://lorempixel.com/400/200/' />
+    </p>
+  {% endCopyContainer %}
+{% endSection %}
+
+
+---
+
+
+{% Section %}
+  {% Heading class: 'u-mrg-b-6' small: true, em: true %}
+    Post.
+  {% endHeading %}
+  {% CopyContainer %}
+    {% Post
+      category: 'Category',
+      title: 'Lorem ipsum dolor sit amet'
+      excerpt: 'Consectetur adipiscing elit. Morbi porta, massa id maximus facilisis, lacus augue egestas mi, vulputate pharetra diam sem ac purus.'
+    %}
+  {% endCopyContainer %}
 {% endSection %}

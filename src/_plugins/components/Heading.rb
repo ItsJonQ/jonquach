@@ -5,6 +5,7 @@ module Jekyll
     def template(context)
       className = @props['class']
       content = @props['content']
+      em = @props['em']
       muted = @props['muted']
       small = @props['small']
 
@@ -15,9 +16,15 @@ module Jekyll
         className
       ].join(' ')
 
+      contentMarkup = em ? (
+        %Q[
+          <em>#{content}</em>
+        ]
+      ) : content
+
       render = %Q[
         <div class='#{componentClassName}'>
-          #{content}
+          #{contentMarkup}
         </div>
       ]
     end

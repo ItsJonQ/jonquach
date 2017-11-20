@@ -1,18 +1,28 @@
+// Checkout
+// https://theoutline.com/
+
 @import "../configs/color";
 
 a {
-  border-bottom: 1px solid _color(brand);
-  color: _color(brand);
-  transition: none;
+  background-color: rgba(_color(brand), 0.3);
+  border-bottom: 2px solid _color(brand);
+  color: white;
+  transition: background-color 0.2s ease;
   text-decoration: none;
 
-  &:hover {
+  &:active {
+    background-color: rgba(_color(brand), 0.5);
+  }
+
+  &:hover,
+  &:focus {
     background-image: url('/images/link-swiggle.svg');
     background-position: 0 calc(100% - 1.5px);
     background-size: auto 3px;
     background-repeat: repeat-x;
     border-bottom: 0;
     padding-bottom: 3px;
+    outline: none;
     text-decoration: none;
   }
 }
