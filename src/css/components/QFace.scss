@@ -1,7 +1,7 @@
 .c-QFace {
   position: absolute;
   top: -15px;
-  right: -15px;
+  right: 0;
   opacity: 0.3;
   transform: rotate(-5deg);
   height: 180px;
@@ -24,11 +24,25 @@
   }
 
   @keyframes SVGDraw {
-    from {
+    0% {
+      opacity: 0.6;
       stroke-dashoffset: 1000;
     }
-    to {
+    40% {
+      fill: rgba(white, 0);
+      opacity: 1;
       stroke-dashoffset: 0;
+      stroke-width: 2;
+    }
+    70% {
+      fill: white;
+      opacity: 1;
+      stroke-width: 0;
+    }
+    100% {
+      fill: white;
+      opacity: 0.6;
+      stroke-width: 0;
     }
   }
 }

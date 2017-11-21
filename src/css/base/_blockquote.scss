@@ -2,7 +2,7 @@
 
 blockquote {
   @import "../components/Framed/framedStyles";
-  @include framedStyles();
+  @include framedStyles(quote);
 
   font-size: _config(headingSize, h4);
   font-weight: 300;

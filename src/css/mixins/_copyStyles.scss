@@ -5,9 +5,20 @@
   & > p {
     @import "./firstLetterStyles";
     @include firstLetterStyles;
+    margin-bottom: 1.6em;
   }
 
-  & > img {
+  & > blockquote {
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    @include breakpoint(md) {
+      margin-bottom: 60px;
+      margin-top: 60px;
+    }
+  }
+
+  img {
     @import "../components/Framed/framedStyles";
     @include framedStyles(white);
   }

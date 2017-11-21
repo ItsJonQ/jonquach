@@ -13,6 +13,7 @@ module Jekyll
       size = @props['size']
       subtle = @props['subtle']
       uppercase = @props['uppercase']
+      weight = @props['weight']
 
       componentClassName = [
         'c-Text',
@@ -24,6 +25,7 @@ module Jekyll
         size && %Q[is-#{size}],
         subtle && 'is-subtle',
         uppercase && 'is-uppercase',
+        weight && %Q[is-#{weight}],
         className
       ].join(' ')
 

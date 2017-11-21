@@ -16,11 +16,8 @@ a {
 
   &:hover,
   &:focus {
-    background-image: url('/images/link-swiggle.svg');
-    background-position: 0 calc(100% - 1.5px);
-    background-size: auto 3px;
-    background-repeat: repeat-x;
-    border-bottom: 0;
+    @import "../mixins/swiggleStyles";
+    @include swiggleBackground;
     padding-bottom: 3px;
     outline: none;
     text-decoration: none;

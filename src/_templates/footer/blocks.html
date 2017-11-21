@@ -1,0 +1,33 @@
+{% Section %}
+  <hr />
+  {% Section %}
+    {% Container %}
+      {% Row %}
+        {% Col class: 'o-col-6@sm u-mrg-v-10' %}
+          {% Heading class: 'u-mrg-b-6', small: true, em: true %}
+            Writing
+          {% endHeading %}
+
+          {% assign post = site.posts.first %}
+          {% assign excerpt = post.excerpt | strip_html %}
+          {% Post
+            category: post.categories.first
+            excerpt: excerpt
+            link: post.url
+            title: post.title
+          %}
+        {% endCol %}
+
+        {% Col class:'o-col-6@sm u-mrg-v-10' %}
+          {% Heading class: 'u-mrg-b-6', small: true, em: true %}
+            Speaking
+          {% endHeading %}
+          {% Text size: 'lead', faint: true %}
+            None yet. I'm workin' on it!
+          {% endText %}
+        {% endCol %}
+      {% endRow %}
+    {% endContainer %}
+  {% endSection %}
+  <hr />
+{% endSection %}

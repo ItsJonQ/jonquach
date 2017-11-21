@@ -6,9 +6,10 @@ links:
     link: 'https://github.com/itsjonq/jonquach'
 ---
 
+{% template footer/blocks.html %}{% endtemplate %}
+
 {% Section %}
   {% Container %}
-    <hr />
     <div class='c-list c-list--inline'>
       {% for link in template.links %}
         <div class='c-list__item'>

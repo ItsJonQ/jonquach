@@ -1,13 +1,22 @@
 @import "../configs/font";
+@import "../configs/headings";
 @import "../functions/rem";
 
 .c-Text {
   $sizes: (11, 12, 13, 14, 16, 20);
+  $weights: (200, 300, 400, 700, 900);
 
   // Sizes
   @each $size in $sizes {
     &.is-#{$size} {
       font-size: rem($size);
+    }
+  }
+
+  // Weight
+  @each $weight in $weights {
+    &.is-#{$weight} {
+      font-weight: $weight;
     }
   }
 
@@ -33,6 +42,18 @@
 
   &.is-faint {
     opacity: 0.3;
+  }
+
+  // Styles
+  &.is-lead {
+    font-size: rem(24px);
+    font-weight: 300;
+    font-weight: 200;
+    line-height: 1.2;
+
+    @include breakpoint(sm) {
+      font-size: _config(headingSize, h4);
+    }
   }
 
   // Transform

@@ -1,11 +1,15 @@
 ---
 post: null
 ---
-{% if template.post.categories %}
-<div class='u-mrg-b-8'>
-  {% assign category = template.post.categories.first %}
-  {% Heading small: true %}
-    {{category}}
-  {% endHeading %}
-</div>
+{% if template.post %}
+  {% assign post = template.post %}
+  {% assign caption = post.categories.first %}
+  {% if post.topCaption %}
+    {% assign caption = post.topCaption %}
+  {% endif %}
+  <div class='u-mrg-b-8'>
+    {% Heading small: true %}
+      {{caption}}
+    {% endHeading %}
+  </div>
 {% endif %}

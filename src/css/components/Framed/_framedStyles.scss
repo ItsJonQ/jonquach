@@ -1,4 +1,4 @@
-@mixin framedStyles($color: false) {
+@mixin framedStyles($style: false) {
   $cornerSize: 15px;
   $gutter: 10px;
   $offset: 28px;
@@ -8,8 +8,8 @@
   margin-right: -($cornerSize);
   padding: $offset 0;
 
-  @if ($color) {
-    border-image: url('/images/framed-corners--#{$color}.svg') 50%;
+  @if ($style) {
+    border-image: url('/images/framed-corners--#{$style}.svg') 50%;
   } @else {
     border-image: url('/images/framed-corners.svg') 50%;
   }

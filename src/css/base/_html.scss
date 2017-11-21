@@ -1,8 +1,10 @@
 @import "../configs/color";
+@import "../configs/font";
 
 html {
   background-color: _color(background);
   color: _color(text);
+  font-family: #{_config(fontFamily, sans)};
   font-size: 16px;
   line-height: 1.6;
 

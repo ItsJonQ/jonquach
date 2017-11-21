@@ -14,12 +14,9 @@ layout: default
   {% endFramed %}
 {% endSection %}
 
-<p>
-  {% Text size: '12', uppercase: true, muted: true %}
-    Published on {{page.date | date: "%B %d, %Y"}}
-  {% endText %}
-</p>
+{% template post/publish-date.html post: page %}{% endtemplate %}
 
 {% CopyContainer %}
+  {% template post/lead.html post: page %}{% endtemplate %}
   {{content}}
 {% endCopyContainer %}
