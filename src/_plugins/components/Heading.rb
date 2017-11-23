@@ -7,12 +7,16 @@ module Jekyll
       content = @props['content']
       em = @props['em']
       muted = @props['muted']
+      size = @props['size']
       small = @props['small']
+      weight = @props['weight']
 
       componentClassName = [
         'c-Heading',
         muted && 'is-muted',
         small && 'is-small',
+        size && %Q[is-#{size}],
+        weight && %Q[is-#{weight}],
         className
       ].join(' ')
 

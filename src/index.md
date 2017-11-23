@@ -1,15 +1,12 @@
 ---
 layout: "default"
 title: "Hello"
+topCaption: "Hello 👋"
 ---
 
 {% Section %}
+  {% template post/topCaption.html post: page %}{% endtemplate %}
   {% Framed %}
-    <div class='u-mrg-b-5'>
-      {% Heading small: true, muted: true %}
-        Hello 👋
-      {% endHeading %}
-    </div>
     <h1 class='tx-h3 tx-h2@sm tx-h1@lg'>
       I'm Q.<br />
       A designer & developer,<br />

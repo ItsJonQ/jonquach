@@ -1,4 +1,4 @@
-{% Section %}
+{% Section class: 'u-pad-v-0 u-pad-v-10@md u-mrg-v-8@md' %}
   <hr />
   {% Section %}
     {% Container %}
@@ -9,13 +9,19 @@
           {% endHeading %}
 
           {% assign post = site.posts.first %}
-          {% assign excerpt = post.excerpt | strip_html %}
-          {% Post
-            category: post.categories.first
-            excerpt: excerpt
-            link: post.url
-            title: post.title
-          %}
+          {% if post %}
+            {% assign excerpt = post.excerpt | strip_html %}
+            {% Post
+              category: post.categories.first
+              excerpt: excerpt
+              link: post.url
+              title: post.title
+            %}
+          {% else %}
+            {% Text size: 'lead', faint: true %}
+              None yet. I'm workin' on it!
+            {% endText %}
+          {% endif %}
         {% endCol %}
 
         {% Col class:'o-col-6@sm u-mrg-v-10' %}

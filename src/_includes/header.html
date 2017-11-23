@@ -1,11 +1,14 @@
 {% Navbar %}
   {% Container %}
-    {% Flexy %}
-      {% FlexyItem %}
+    {% Flexy gap: 'xl' %}
+      {% FlexyItem class: 'u-mrg-r-6@md' %}
         <a href='/' title='Home'>
           {% Avatar %}
         </a>
       {% endFlexyItem %}
+      {% FlexyBlock %}
+        {% NavbarList %}
+      {% endFlexyBlock %}
     {% endFlexy %}
   {% endContainer %}
 {% endNavbar %}

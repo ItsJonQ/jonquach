@@ -1,7 +1,18 @@
 ---
-layout: "copy"
+layout: "post"
 title: "Styleguide"
+topCaption: "So stylish. Such fasion 💅"
+dropCap: false
 ---
+
+{% Section %}
+  {% Text size: 'lead' %}
+    Welcome to the (mini) styleguide for my site! If you're curious about how all this stuff is coded up, check out the {% Link href: 'https://github.com/itsjonq/jonquach' %}source{% endLink %}.
+  {% endText %}
+{% endSection %}
+
+<hr />
+<div class='u-pad-v-6'></div>
 
 {% Heading class: 'u-mrg-b-6' small: true em: true %}
   Typography
@@ -42,7 +53,7 @@ title: "Styleguide"
   {% Heading class: 'u-mrg-b-6' small: true muted: true %}
     Opening.
   {% endHeading %}
-  {% CopyContainer %}
+  {% CopyContainer dropCap: true %}
     <p>
       First word.
     </p>

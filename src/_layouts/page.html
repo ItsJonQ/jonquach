@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: base
 ---
 
-{{ content }}
+{% template post/lead.html post: page %}{% endtemplate %}
+{{content}}

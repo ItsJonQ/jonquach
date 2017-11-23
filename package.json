@@ -45,14 +45,14 @@
   "dependencies": {
     "sass-pathfinder": "0.0.5",
     "seed-base": "0.0.2",
-    "seed-flexy": "0.2.0",
+    "seed-flexy": "0.3.4",
     "seed-grid": "0.4.0",
     "seed-harvester": "0.1.5",
     "seed-hr": "0.0.3",
     "seed-list": "0.0.15",
     "seed-opacity": "0.0.2",
     "seed-packer": "0.0.10",
-    "seed-reset": "0.1.2",
+    "seed-reset": "0.1.4",
     "seed-spacing": "0.4.3"
   }
 }

@@ -51,4 +51,5 @@ defaults:
       type: 'posts'
     values:
       layout: 'post'
+      dropCap: true
       robots: 'index, follow'

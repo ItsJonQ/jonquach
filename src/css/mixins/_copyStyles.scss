@@ -2,9 +2,14 @@
 @import "../configs/headings";
 
 @mixin copyStyles () {
+  &.has-dropCap {
+    & > p {
+      @import "./firstLetterStyles";
+      @include firstLetterStyles;
+    }
+  }
+
   & > p {
-    @import "./firstLetterStyles";
-    @include firstLetterStyles;
     margin-bottom: 1.6em;
   }
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: base
 ---
 
 {% Section %}
@@ -16,7 +16,7 @@ layout: default
 
 {% template post/publish-date.html post: page %}{% endtemplate %}
 
-{% CopyContainer %}
+{% CopyContainer dropCap: page.dropCap %}
   {% template post/lead.html post: page %}{% endtemplate %}
   {{content}}
 {% endCopyContainer %}

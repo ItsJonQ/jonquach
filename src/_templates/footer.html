@@ -8,11 +8,11 @@ links:
 
 {% template footer/blocks.html %}{% endtemplate %}
 
-{% Section %}
+{% Section class: 'u-mrg-b-4' %}
   {% Container %}
     <div class='c-list c-list--inline'>
       {% for link in template.links %}
-        <div class='c-list__item'>
+        <div class='c-list__item u-mrg-r-2'>
           <a href='{{link.link}}'>
             {% Text size: 14 %}
               {{link.title}}

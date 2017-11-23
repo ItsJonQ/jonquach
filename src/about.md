@@ -1,13 +1,13 @@
 ---
 layout: "post"
 title: "About"
-topCaption: "Oh Hai There 😊"
+topCaption: "Shucks! You wanna know more about me? ❤️"
 lead: "I'm Q and I love improving experiences for people."
 ---
 
 I'm a self-taught _Designer / Developer_, with several years of experience in both (I started first with Design). I'm proficient in a handful of [coding languages](https://github.com/itsjonq), but my absolute fav. is CSS.
 
-> **I love CSS.** It's so wonderfully creative, expressively fun, generally mis-understood.
+> **I love CSS.** It's so wonderfully creative, expressively fun, and generally mis-understood.
 
 Having experience in design and development allows me to effectively make an impact in both disciplines. In other words, I make both sides happier and get along better, together.
 

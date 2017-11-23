@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  {% include head.html %}
-  <body class="tx-smooth">
-    {% include header.html %}
-    {% Container class: 'u-pad-t-10' %}
-      {{ content }}
-    {% endContainer %}
-    {% template footer.html %}{% endtemplate %}
-    {% BackgroundLines %}
-  </body>
-</html>
+---
+layout: base
+---
+
+{% template post/lead.html post: page %}{% endtemplate %}
+{{content}}

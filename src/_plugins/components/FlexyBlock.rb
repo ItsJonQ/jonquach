@@ -1,15 +1,13 @@
 require 'jekyll-spark'
 
 module Jekyll
-  class Flexy < ComponentBlock
+  class FlexyBlock < ComponentBlock
     def template(context)
       className = @props['class']
       content = @props['content']
-      gap = @props['gap']
 
       componentClassName = [
-        'o-flexy',
-        gap ? %Q[o-flexy--gap-#{gap}] : 'o-flexy--gap-sm',
+        'o-flexy__block',
         className
       ].join(' ')
 
@@ -23,6 +21,6 @@ module Jekyll
 end
 
 Liquid::Template.register_tag(
-  'Flexy',
-  Jekyll::Flexy,
+  'FlexyBlock',
+  Jekyll::FlexyBlock,
 )
