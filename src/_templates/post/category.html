@@ -4,12 +4,11 @@ post: null
 {% if template.post %}
   {% assign post = template.post %}
   {% assign caption = post.categories.first %}
-  {% if post.topCaption %}
-    {% assign caption = post.topCaption %}
+  {% if caption %}
+    <div class='u-mrg-b-2'>
+      {% Heading small: true, muted: true %}
+        {{caption}}
+      {% endHeading %}
+    </div>
   {% endif %}
-  <div class='u-mrg-b-8'>
-    {% Heading small: true %}
-      {{caption}}
-    {% endHeading %}
-  </div>
 {% endif %}

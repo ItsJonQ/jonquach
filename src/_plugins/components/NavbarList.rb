@@ -56,7 +56,7 @@ module Jekyll
                 class: 'u-mrg-r-2'
                 href: '#{link}'
               %}
-                {% Text size: 14, weight: 900 %}
+                {% Text size: 14, weight: 800 %}
                   #{title}.
                 {% endText %}
               {% endNavbarListItem %}

@@ -3,11 +3,12 @@ layout: base
 ---
 
 {% Section %}
-  {% template post/category.html post: page %}{% endtemplate %}
+  {% template post/topCaption.html post: page %}{% endtemplate %}
 
   {% Framed %}
+    {% template post/category.html post: page %}{% endtemplate %}
     {% CopyContainer %}
-      <h1 class='tx-h3 tx-h2@md tx-h1@lg'>
+      <h1 class='tx-h3 tx-h2@sm tx-h1@lg'>
         {{page.title}}
       </h1>
     {% endCopyContainer %}

@@ -1,10 +1,11 @@
 @import "../configs/font";
 @import "../configs/headings";
 @import "../functions/rem";
+@import "../mixins/leadStyles";
 
 .c-Text {
   $sizes: (11, 12, 13, 14, 16, 20);
-  $weights: (200, 300, 400, 700, 900);
+  $weights: (200, 300, 400, 700, 800);
 
   // Sizes
   @each $size in $sizes {
@@ -46,14 +47,7 @@
 
   // Styles
   &.is-lead {
-    font-size: rem(24px);
-    font-weight: 300;
-    font-weight: 200;
-    line-height: 1.2;
-
-    @include breakpoint(sm) {
-      font-size: _config(headingSize, h4);
-    }
+    @include leadStyles;
   }
 
   // Transform

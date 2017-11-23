@@ -6,6 +6,7 @@ html {
   color: _color(text);
   font-family: #{_config(fontFamily, sans)};
   font-size: 16px;
+  font-weight: 300;
   line-height: 1.6;
 
   @include breakpoint(md) {

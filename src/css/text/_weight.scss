@@ -1,5 +1,5 @@
 .tx {
-  $weights: (200, 300, 400, 600, 700, 900);
+  $weights: (200, 300, 400, 600, 700, 800);
 
   @each $weight in $weights {
     &-#{$weight} {
