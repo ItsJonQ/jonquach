@@ -1,6 +1,7 @@
 ---
 title: "Writing"
 topCaption: "Scribbles… ✍️"
+redirect_from: "/writing/"
 ---
 
 {% for post in site.posts %}
