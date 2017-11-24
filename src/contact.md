@@ -7,7 +7,7 @@ dropCap: false
 
 {% Heading size: 'h3', class: 'u-mrg-b-8' %}
   {% Link href: 'mailto:hello@jonquach.com' %}
-    Email me
+    ✉️  Email me
   {% endLink %}
 {% endHeading %}
 

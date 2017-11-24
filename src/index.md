@@ -2,6 +2,15 @@
 layout: "default"
 title: "Hello"
 topCaption: "Hello 👋"
+folks:
+  - image: "logo-npm.png"
+    title: "npm"
+  - image: "logo-google.png"
+    title: "Google"
+  - image: "logo-idonethis.png"
+    title: "iDoneThis"
+  - image: "logo-cio.png"
+    title: "Customer.io"
 ---
 
 {% Section %}
@@ -28,3 +37,18 @@ topCaption: "Hello 👋"
     </div>
   {% endCopyContainer %}
 {% endSection %}
+
+<div class="u-mrg-b-10 u-pad-v-3">
+  <p>
+    {% Text class: 'u-op-6' %}
+      Some awesome folks I've worked with
+    {% endText %}
+  </p>
+  <div class="o-flexy u-mrg-v-8">
+    {% for folk in page.folks %}
+      <div class="o-flexy__block tx-center u-pad-h-2 u-pad-h-8@md">
+        <img src="/images/{{ folk.image }}" width="120" alt="{{ folk.title }}">
+      </div>
+    {% endfor %}
+  </div>
+</div>

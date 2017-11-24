@@ -1,4 +1,5 @@
 @import "pack/seed-dash/_index";
+@import "../configs/font";
 @import "../configs/headings";
 @import "../functions/rem";
 
@@ -14,6 +15,12 @@
     font-size: rem(_config(headingSize, small));
     letter-spacing: 1px;
     text-transform: uppercase;
+  }
+
+  em {
+    background: linear-gradient(145deg, _color(brand), _color(brand));
+    font-family: #{_config(fontFamily, sans)};
+    font-style: normal;
   }
 
   $sizes: (

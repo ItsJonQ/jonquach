@@ -16,14 +16,10 @@ module Jekyll
         className
       ].join(' ')
 
-      contentMarkup = active ? (
-        %Q[<em>#{content}</em>]
-      ) : content
-
       render = %Q[
         <div class='#{componentClassName}'>
-          {% Link href: '#{href}', subtle: true %}
-            #{contentMarkup}
+          {% Link href: '#{href}', subtle: #{!active} %}
+            #{content}
           {% endLink %}
         </div>
       ]
