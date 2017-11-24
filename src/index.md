@@ -3,13 +3,13 @@ layout: "default"
 title: "Hello"
 topCaption: "Hello 👋"
 folks:
-  - image: "logo-npm.png"
+  - image: "logo--npm.png"
     title: "npm"
-  - image: "logo-google.png"
+  - image: "logo--google.png"
     title: "Google"
-  - image: "logo-idonethis.png"
+  - image: "logo--idonethis.png"
     title: "iDoneThis"
-  - image: "logo-cio.png"
+  - image: "logo--cio.png"
     title: "Customer.io"
 ---
 
