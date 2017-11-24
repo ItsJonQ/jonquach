@@ -1,0 +1,40 @@
+@import "pack/seed-dash/_index";
+@import "../configs/headings";
+
+.tx {
+  $sizes: (
+    h1: (
+      size: _config(headingSize, h1),
+      letter-spacing: -3px,
+    ),
+    h2: (
+      size: _config(headingSize, h2),
+      letter-spacing: -2px,
+    ),
+    h3: (
+      size: _config(headingSize, h3),
+      letter-spacing: -1px,
+    ),
+    h4: (
+      size: _config(headingSize, h4),
+      letter-spacing: 0,
+    ),
+    h5: (
+      size: _config(headingSize, h5),
+      letter-spacing: 0,
+    ),
+    h6: (
+      size: _config(headingSize, h6),
+      letter-spacing: 0,
+    ),
+  );
+
+  @include breakpoint-prop-map($sizes, (config)) {
+    $config: prop(config);
+    $size: _get($config, size);
+    $letterSpacing: _get($config, letter-spacing);
+
+    font-size: $size !important;
+    letter-spacing: $letterSpacing;
+  }
+}

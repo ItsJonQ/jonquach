@@ -1,0 +1,26 @@
+@import "pack/seed-color-scheme/_index";
+
+// Brand
+@include _color((
+  brand: (
+    default: #E71E63,
+    secondary: #e7431e
+  )
+));
+
+// Background
+@include _color((
+  background: (
+    default: black
+  )
+));
+
+// Text
+@include _color((
+  text: (
+    default: white,
+    subtle: #aaa,
+    muted: #666,
+    faint: #333,
+  )
+));

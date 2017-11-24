@@ -1,0 +1,30 @@
+---
+links:
+  - title: 'Styleguide'
+    link: '/styleguide/'
+  - title: 'Source Code'
+    link: 'https://github.com/itsjonq/jonquach'
+---
+
+{% template footer/blocks.html %}{% endtemplate %}
+
+{% Section class: 'u-mrg-b-4' %}
+  {% Container %}
+    <div class='c-list c-list--inline'>
+      {% for link in template.links %}
+        <div class='c-list__item u-mrg-r-2'>
+          <a href='{{link.link}}'>
+            {% Text size: 14 %}
+              {{link.title}}
+            {% endText %}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+    <p>
+      {% Text size: 13 %}
+        &copy; {{ 'now' | date: '%Y' }}. Made with ❤️  by Q. <strong>Have a great day!</strong>
+      {% endText %}
+    </p>
+  {% endContainer %}
+{% endSection %}

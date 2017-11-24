@@ -1,16 +1,15 @@
 ---
-
-title: "Jon Quach | Design Engineer + Doodler"
-email: "hello@jonquach.com"
-description: "Heya! I'm a Toronto designer who loves beautifully engineered CSS & doodles."
+title: 'Jon Quach | Design Engineer + Doodler'
+email: 'hello@jonquach.com'
+description: "Hi! I'm Q. A designer & developer, specializing in UI system design… and mascots!"
 
 source: ./src
 destination: ./_site
 
 ENV: development
 
-baseurl: "" 
-url: ""
+baseurl: '' 
+url: ''
 
 
 # Build settings
@@ -18,7 +17,8 @@ markdown:     kramdown
 permalink:    pretty
 
 gems:
-  - jekyll-template
+  - jekyll-jolt
+  - jekyll-spark
 
 exclude:
   - css
@@ -31,4 +31,25 @@ keep_files:
   - fonts
   - images
   - js
-  - "*.xml"
+  - '*.xml'
+
+
+collections:
+  posts:
+    permalink: /posts/:slug/
+
+defaults:
+  -
+    scope:
+      path: '' # an empty string here means all files in the project
+    values:
+      layout: 'default'
+      robots: 'index, follow'
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+      layout: 'post'
+      dropCap: true
+      robots: 'index, follow'

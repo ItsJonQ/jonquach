@@ -1,0 +1,11 @@
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function rem($values) {
+  $max: length($values);
+  $value: strip-unit($values);
+  $baseSize: 20;
+
+  @return #{($value / $baseSize)}rem;
+}

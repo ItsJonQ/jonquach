@@ -1,0 +1,51 @@
+@import "../configs/color";
+@import "../configs/headings";
+@import "./leadStyles";
+
+@mixin copyStyles () {
+  &.has-dropCap {
+    & > p {
+      @import "./firstLetterStyles";
+      @include firstLetterStyles;
+    }
+  }
+
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5 {
+    margin-bottom: 0.8em;
+  }
+
+  > * + {
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin-top: 2.2em;
+    }
+  }
+
+  & > p {
+    margin-bottom: 1.6em;
+
+    &:first-child {
+      @include leadStyles;
+    }
+  }
+
+  & > blockquote {
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    @include breakpoint(md) {
+      margin-bottom: 60px;
+      margin-top: 60px;
+    }
+  }
+
+  img {
+    @import "../components/Framed/framedStyles";
+    @include framedStyles(white);
+  }
+}

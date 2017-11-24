@@ -1,0 +1,37 @@
+@import "../configs/color";
+@import "../configs/headings";
+
+@mixin firstLetterStyles() {
+  &:first-child {
+    &:first-letter {
+      $margin: 16px;
+
+      // background-color: _color(brand);
+      // background: linear-gradient(145deg, _color(brand), _color(brand, secondary));
+      border: 1px solid _color(brand);
+      color: _color(brand);
+      display: block;
+      float: left;
+      font-size: _config(headingSize, h3);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0 ceil($margin / 2) 0 0;
+      padding: $margin ceil($margin / 2) $margin;
+      text-transform: uppercase;
+
+      @include breakpoint(md) {
+        $margin: 24px;
+        font-size: _config(headingSize, h2);
+        margin: 0 ceil($margin / 2) 0 0;
+        padding: $margin ceil($margin / 2) $margin;
+      }
+    }
+
+    &::after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+}

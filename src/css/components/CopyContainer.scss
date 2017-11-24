@@ -1,0 +1,6 @@
+.c-CopyContainer {
+  @import "../mixins/copyStyles";
+  @include copyStyles;
+
+  max-width: 720px;
+}

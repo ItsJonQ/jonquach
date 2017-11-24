@@ -22,6 +22,7 @@
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
     "check-dependencies": "^1.0.1",
+    "glob": "7.1.2",
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.1.7",
     "gulp-gh-pages": "^0.5.4",
@@ -33,6 +34,10 @@
     "require-dir": "^0.3.1",
     "resp-modifier": "^6.0.2",
     "run-sequence": "^1.2.2",
+    "seed-centralize": "0.0.4",
+    "seed-color-scheme": "0.3.0",
+    "seed-config": "0.1.1",
+    "seed-dash": "0.0.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "yargs": "^7.0.1"
@@ -40,21 +45,14 @@
   "dependencies": {
     "sass-pathfinder": "0.0.5",
     "seed-base": "0.0.2",
-    "seed-button": "^0.1.13",
-    "seed-card": "^0.1.0",
-    "seed-display": "^0.1.5",
-    "seed-flexy": "^0.2.0",
-    "seed-grid": "^0.4.0",
+    "seed-flexy": "0.3.4",
+    "seed-grid": "0.4.0",
     "seed-harvester": "0.1.5",
-    "seed-helpscout-theme": "0.0.4",
     "seed-hr": "0.0.3",
-    "seed-link": "0.0.3",
     "seed-list": "0.0.15",
     "seed-opacity": "0.0.2",
     "seed-packer": "0.0.10",
-    "seed-reset": "^0.1.2",
-    "seed-shadow": "0.0.5",
-    "seed-spacing": "^0.4.3",
-    "seed-typography": "^0.4.8"
+    "seed-reset": "0.1.4",
+    "seed-spacing": "0.4.3"
   }
 }
