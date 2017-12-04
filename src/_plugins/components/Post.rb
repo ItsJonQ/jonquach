@@ -18,7 +18,7 @@ module Jekyll
       titleClassName = [
         'c-Post__title',
         'u-mrg-b-4',
-        featured ? 'tx-h1' : 'tx-h3'
+        featured ? 'tx-h2 tx-h1@md' : 'tx-h3'
       ].join(' ')
 
       categoryMarkup = category ? (

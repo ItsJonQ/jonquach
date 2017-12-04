@@ -44,6 +44,10 @@
     }
   }
 
+  & > .twitter-tweet ~ p {
+    margin-top: 1.6em;
+  }
+
   img {
     @import "../components/Framed/framedStyles";
     @include framedStyles(white);
