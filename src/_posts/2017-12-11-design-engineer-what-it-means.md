@@ -5,7 +5,7 @@ category: "Product"
 topCaption: "🎨 + 💻?"
 ---
 
-Recently, I had a catch-up chat with a product designer collegue from work (his name is [Buzz](https://www.buzzusborne.com/) and he is awesome). One of the things we talked about was the various things I did at [Help Scout](https://www.helpscout.net/).
+Recently, I had a catch-up chat with a product designer colleague from work (his name is [Buzz](https://www.buzzusborne.com/) and he is awesome). One of the things we talked about was the various things I did at [Help Scout](https://www.helpscout.net/).
 
 He was specifically curious what skills, experience, or traits one would need to do what I do on a daily basis. In other words, my role as the team's Design Engineer. This led me thinking…
 
