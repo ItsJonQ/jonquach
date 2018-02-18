@@ -1,5 +1,19 @@
-// Base :: HTML
+@import "../configs/color";
+@import "../configs/font";
 
 html {
+  background-color: _color(background);
+  color: _color(text);
+  font-family: #{_config(fontFamily, sans)};
+  font-size: 18px;
+  font-weight: 300;
   line-height: 1.6;
+
+  @include breakpoint(md) {
+    font-size: 21px;
+  }
+}
+
+::selection {
+  background: _color(brand);
 }

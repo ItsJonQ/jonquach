@@ -1,0 +1,5 @@
+.c-Framed {
+  @import "./framedStyles";
+  @include framedStyles;
+  position: relative;
+}

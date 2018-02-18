@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
+---
+layout: base
+---
 
-  {% include head.html %}
-
-  <body class="tx-smooth t-tx-charcoal-500">
-
-    {% include header.html %}
-
-      {{ content }}
-
-    {% include footer.html %}
-
-  </body>
-
-</html>
+{% template post/lead.html post: page %}{% endtemplate %}
+{{content}}

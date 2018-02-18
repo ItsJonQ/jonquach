@@ -1,0 +1,100 @@
+// Plugins :: Highlighter-Rouge
+
+@import "pack/seed-breakpoints/_index";
+@import "../configs/color";
+@import "./pygments-css/monokai";
+
+.highlighter-rouge {
+  $backgroundColor: #272822;
+  $br: 4px;
+
+  background: $backgroundColor;
+  border-radius: $br;
+  margin-bottom: 2.5em;
+  margin-top: 2em;
+
+  > * {
+    &:first-child {
+      border-top-left-radius: $br;
+      border-top-right-radius: $br;
+    }
+    &:last-child {
+      border-bottom-left-radius: $br;
+      border-bottom-right-radius: $br;
+    }
+  }
+
+  pre {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  &__wrapper {
+    padding: 0.5em;
+  }
+
+  .highlight-header {
+    background-color: lighten($backgroundColor, 2);
+    border-bottom: 1px solid darken($backgroundColor, 4);
+    padding: 8px 0.5em;
+
+    pre {
+      background: none;
+      border: 0;
+      color: _color(charcoal, 200);
+    }
+  }
+
+  .highlight {
+    overflow: auto;
+    padding: 0;
+    margin-bottom: 0;
+
+    pre {
+      font-size: 0.75rem;
+      white-space: pre-wrap;
+    }
+
+    &--none {
+      padding: 5px 10px;
+    }
+  }
+
+  pre.highlight {
+    border: 0;
+    font-size: 0.875rem;
+    white-space: pre-wrap;
+  }
+
+  .gutter {
+    border-right: 1px solid _color(grey, 400);
+    padding: 5px;
+    min-width: 36px;
+    text-align: right;
+    vertical-align: top;
+    width: 36px;
+
+    pre {
+      color: _color(grey, 800);
+    }
+  }
+
+  .code {
+    padding: 5px 10px;
+  }
+
+  @at-root code#{&} {
+    background-color: rgba(black, 0.08);
+    border: none;
+    border-radius: 3px;
+    color: black;
+    display: inline;
+    font-size: 85%;
+    margin: 0;
+    padding: 0.16em 0.4em;
+  }
+
+  code, kbd, pre, samp {
+    padding: 0;
+  }
+}

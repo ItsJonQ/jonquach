@@ -1,0 +1,10 @@
+---
+post: null
+---
+{% if template.post.date %}
+<p class='u-mrg-b-4 u-mrg-b-8@md'>
+  {% Text size: '12', uppercase: true, muted: true %}
+    Published on {{post.date | date: "%B %d, %Y"}}
+  {% endText %}
+</p>
+{% endif %}

@@ -18,9 +18,14 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-jolt (0.23.0)
+      htmlcompressor (~> 0.3.1)
+      jekyll (>= 3.1.2)
+    jekyll-redirect-from (0.12.1)
+      jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
-    jekyll-template (0.21.0)
+    jekyll-spark (0.6.0)
       htmlcompressor (~> 0.3.1)
       jekyll (>= 3.1.2)
     jekyll-watch (1.5.0)
@@ -46,9 +51,11 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.3, >= 3.3.1)
-  jekyll-template (= 0.21.0)
+  jekyll-jolt
+  jekyll-redirect-from
+  jekyll-spark (~> 0.6.0)
   kramdown (~> 1.13, >= 1.13.2)
   rouge
 
 BUNDLED WITH
-   1.14.6
+   1.16.0

@@ -1,13 +1,10 @@
-// Mr Jekyll
-
+// Configs
+@import "./configs/_index";
 // Plugins
-@import "./plugins/seed-packs";
-
+@import "./plugins/_index";
 // Base
 @import "./base/_index";
 // Components
 @import "./components/_index";
-// Objects
-@import "./objects/_index";
-// Type
-@import "./type/_index";
+// Text
+@import "./text/_index";

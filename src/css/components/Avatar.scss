@@ -1,0 +1,61 @@
+.c-Avatar {
+  $size: 28px;
+  background-color: white;
+  border-radius: 9999px;
+  overflow: hidden;
+  height: $size;
+  width: $size;
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  @include breakpoint(md) {
+    $size: 40px;
+    height: $size;
+    width: $size;
+  }
+
+  &:hover {
+    animation: datPop 300ms normal forwards ease-in-out;
+  }
+  &:active {
+    animation: datTwerk 300ms normal forwards ease-in-out;
+  }
+
+  &__image {
+    transform: rotate(-5deg);
+    height: auto;
+    max-width: 100%;
+  }
+
+  &.is-sm {
+    $size: 28px;
+    height: $size;
+    width: $size;
+  }
+
+  @keyframes datPop {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1) translateX(0);
+    }
+  }
+
+  @keyframes datTwerk {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(0.7) rotate(-290deg) translateX(3px);
+    }
+  }
+}

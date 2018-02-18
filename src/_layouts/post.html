@@ -1,5 +1,25 @@
 ---
-layout: default
+layout: base
 ---
 
-{{ content }}
+{% Section %}
+  {% template post/topCaption.html post: page %}{% endtemplate %}
+
+  {% Framed %}
+    {% template post/category.html post: page %}{% endtemplate %}
+    {% CopyContainer %}
+      <h1 class='tx-h3 tx-h2@sm tx-h1@lg'>
+        {{page.title}}
+      </h1>
+    {% endCopyContainer %}
+  {% endFramed %}
+{% endSection %}
+
+{% template post/publish-date.html post: page %}{% endtemplate %}
+
+{% CopyContainer dropCap: page.dropCap %}
+  {% template post/lead.html post: page %}{% endtemplate %}
+  {{content}}
+{% endCopyContainer %}
+
+{% template post/previous-next.html %}{% endtemplate %}

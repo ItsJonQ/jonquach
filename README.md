@@ -12,7 +12,7 @@ npm install
 
 Then:
 ```
-gulp
+npm start
 ```
 
 🤓

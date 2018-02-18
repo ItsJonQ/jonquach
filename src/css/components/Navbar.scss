@@ -1,0 +1,12 @@
+.c-Navbar {
+  background: linear-gradient(to bottom, black, rgba(black, 0));
+  padding-top: 8px;
+  padding-bottom: 4px;
+  min-height: 48px;
+  position: relative;
+  z-index: 2;
+
+  @include breakpoint(md) {
+    padding-top: 24px;
+  }
+}
