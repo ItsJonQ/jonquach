@@ -31,9 +31,9 @@ script:
 # before_deploy:
 #   - export PATH="$PATH:$HOME/.rvm/bin"
 
-deploy:
-  skip_cleanup: true
-  provider: script
-  script: gulp deploy-production
-  on:
-    branch: master
+# deploy:
+#   skip_cleanup: true
+#   provider: script
+#   script: gulp deploy-production
+#   on:
+#     branch: master
