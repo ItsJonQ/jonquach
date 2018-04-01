@@ -23,9 +23,14 @@
           {% Heading class: 'u-mrg-b-6', small: true, em: true %}
             Speaking
           {% endHeading %}
-          {% Text size: 'lead', faint: true %}
-            None yet. I'm workin' on it!
-          {% endText %}
+          {% assign post = site.data.speaking.first %}
+          {% assign date = post.date | date: "%B %d, %Y" %}
+          {% Post
+            category: post.event
+            excerpt: date
+            link: post.url
+            title: post.title
+          %}
         {% endCol %}
       {% endRow %}
     {% endContainer %}

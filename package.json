@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
-    "deploy": "gulp deploy",
+    "surge": "surge ./_site/",
+    "deploy": "npm run start && npm run surge",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,6 +39,7 @@
     "seed-color-scheme": "0.3.0",
     "seed-config": "0.1.1",
     "seed-dash": "0.0.2",
+    "surge": "0.20.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "yargs": "^7.0.1"

@@ -1,1 +1,1 @@
-gulp deploy-production
+surge ./_site/
