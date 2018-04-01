@@ -19,7 +19,7 @@ Here's what I've been up to!
 
 ##### January
 * 🎉 Happy New Year
-* 🐻 Illustrated a [New Years Wombat](/image/posts/npm-new-years-wombat-2018.png) for the lovely folks at [npm](https://www.npmjs.com/)
+* 🐻 Illustrated a [New Years Wombat](/images/posts/npm-new-years-wombat-2018.png) for the lovely folks at [npm](https://www.npmjs.com/)
 * ✨ Went to Disney World! (No really, [we did](/images/posts/didney-2018.jpg)!)
 * 🖌 Illustrated intro artwork for [Google's Supercharged](https://www.youtube.com/watch?v=jav5hPmUaUw)
 
@@ -37,5 +37,8 @@ Here's what I've been up to!
 
 I recognize that I've failed pretty terribly at this, "I'm gonna write a blog post every week (or so)" thing. But, I haven't given up. I'll just try to fail less terribly the next time 😊.
 
+P.S. This is me, (doing double thumbs up for some reason) at the CSS animation workshop!
 
-P.S. I don't drink, so in the above hypothetical situation that I've totes never been in before, I most likely would have had a cup of water… or if I was feeling adventurous… fizzy water.
+![Women Who Code - CSS Animation Workshop](/images/posts/wwc-workshop.jpg)
+
+P.P.S. I don't drink, so in the above hypothetical situation that I've totes never been in before, I most likely would have had a cup of water… or if I was feeling adventurous… fizzy water.
