@@ -4,9 +4,10 @@
   "description": "Personal site for Q",
   "main": "gulpfile.js",
   "scripts": {
+    "build": "gulp build",
     "start": "gulp",
     "surge": "surge ./_site/",
-    "deploy": "npm run start && npm run surge",
+    "deploy": "npm run build && npm run surge",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
