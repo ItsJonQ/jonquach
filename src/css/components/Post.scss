@@ -1,3 +1,8 @@
 .c-Post {
   max-width: 720px;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
