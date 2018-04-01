@@ -20,20 +20,17 @@ install:
   - bundle install
   - npm install
 
-before_script:
-  - npm install gulp-cli -g
-
 script:
-  - gulp build
+  - npm run build
 
 # Resolve dpl gem issue
 # https://github.com/travis-ci/travis-ci/issues/5072
 # before_deploy:
 #   - export PATH="$PATH:$HOME/.rvm/bin"
 
-# deploy:
-#   skip_cleanup: true
-#   provider: script
-#   script: gulp deploy-production
-#   on:
-#     branch: master
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: npm run surge
+  on:
+    branch: master
