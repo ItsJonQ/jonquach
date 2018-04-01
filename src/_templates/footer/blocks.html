@@ -3,13 +3,12 @@
   {% Section %}
     {% Container %}
       {% Row %}
-        {% Col class: 'o-col-6@sm u-mrg-v-10' %}
-          {% Heading class: 'u-mrg-b-6', small: true, em: true %}
-            Writing
-          {% endHeading %}
-
-          {% assign post = site.posts.first %}
-          {% if post %}
+        {% assign post = site.posts.first %}
+        {% if post and post.url != page.url %}
+          {% Col class: 'o-col-6@sm u-mrg-v-10' %}
+            {% Heading class: 'u-mrg-b-6', small: true, em: true %}
+              Writing
+            {% endHeading %}
             {% assign excerpt = post.excerpt | strip_html %}
             {% Post
               category: post.categories.first
@@ -17,12 +16,8 @@
               link: post.url
               title: post.title
             %}
-          {% else %}
-            {% Text size: 'lead', faint: true %}
-              None yet. I'm workin' on it!
-            {% endText %}
-          {% endif %}
-        {% endCol %}
+          {% endCol %}
+        {% endif %}
 
         {% Col class:'o-col-6@sm u-mrg-v-10' %}
           {% Heading class: 'u-mrg-b-6', small: true, em: true %}
