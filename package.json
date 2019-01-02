@@ -1,61 +1,49 @@
 {
   "name": "jonquach",
-  "version": "0.0.2",
-  "description": "Personal site for Q",
-  "main": "gulpfile.js",
-  "scripts": {
-    "build": "gulp build",
-    "start": "gulp",
-    "surge": "surge ./_site/",
-    "deploy": "npm run build && npm run surge",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ItsJonQ/mr-jekyll.git"
-  },
-  "author": "ItsJonQ",
-  "license": "ISC",
+  "private": true,
+  "description": "Personal website for Jon Quach",
+  "version": "3.0.0",
+  "author": "Jon Quach <hello@jonquach.com>",
   "bugs": {
-    "url": "https://github.com/ItsJonQ/mr-jekyll/issues"
-  },
-  "homepage": "https://github.com/ItsJonQ/mr-jekyll#readme",
-  "devDependencies": {
-    "browser-sync": "^2.18.8",
-    "browserify": "^14.1.0",
-    "check-dependencies": "^1.0.1",
-    "glob": "7.1.2",
-    "gulp": "^3.9.1",
-    "gulp-cssmin": "^0.1.7",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-util": "^3.0.8",
-    "is-online": "^6.1.0",
-    "require-dir": "^0.3.1",
-    "resp-modifier": "^6.0.2",
-    "run-sequence": "^1.2.2",
-    "seed-centralize": "0.0.4",
-    "seed-color-scheme": "0.3.0",
-    "seed-config": "0.1.1",
-    "seed-dash": "0.0.2",
-    "surge": "0.20.1",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "yargs": "^7.0.1"
+    "url": "https://github.com/itsjonq/jonquach/issues"
   },
   "dependencies": {
-    "sass-pathfinder": "0.0.5",
-    "seed-base": "0.0.2",
-    "seed-flexy": "0.3.4",
-    "seed-grid": "0.4.0",
-    "seed-harvester": "0.1.5",
-    "seed-hr": "0.0.3",
-    "seed-list": "0.0.15",
-    "seed-opacity": "0.0.2",
-    "seed-packer": "0.0.10",
-    "seed-reset": "0.1.4",
-    "seed-spacing": "0.4.3"
+    "gatsby": "^2.0.76",
+    "gatsby-plugin-feed": "^2.0.8",
+    "gatsby-plugin-google-analytics": "^2.0.5",
+    "gatsby-plugin-manifest": "^2.0.5",
+    "gatsby-plugin-offline": "^2.0.5",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.0.16",
+    "gatsby-remark-autolink-headers": "^2.0.12",
+    "gatsby-remark-copy-linked-files": "^2.0.5",
+    "gatsby-remark-images": "^2.0.6",
+    "gatsby-remark-prismjs": "^3.0.0",
+    "gatsby-remark-responsive-iframe": "^2.0.5",
+    "gatsby-remark-smartypants": "^2.0.5",
+    "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-transformer-remark": "^2.1.17",
+    "gatsby-transformer-sharp": "^2.1.9",
+    "lodash": "^4.17.11",
+    "prismjs": "^1.15.0",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.14.2"
+  },
+  "homepage": "https://jonquach.com",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gatsby develop",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "build": "rm -rf public && rm -rf .cache && gatsby build",
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }

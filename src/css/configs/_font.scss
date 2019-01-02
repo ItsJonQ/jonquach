@@ -1,9 +1,0 @@
-@import "pack/seed-config/_index";
-
-@include _config((
-  fontFamily: (
-    sans: 'Libre Franklin, Helvetica Neue, Helvetica, Arial, sans-serif',
-    serif: 'Georgia, serif',
-    code: '"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace',
-  )
-));

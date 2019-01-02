@@ -1,7 +1,0 @@
-@import "../configs/color";
-@import "../configs/font";
-
-em {
-  // background: linear-gradient(145deg, _color(brand), _color(brand));
-  font-family: #{_config(fontFamily, serif)};
-}

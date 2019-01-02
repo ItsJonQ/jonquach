@@ -1,36 +1,15 @@
 language: node_js
+
+os:
+  - linux
+  - osx
+
 node_js:
-  - 8
-
-cache:
-  bundler: true
-  directories:
-    - node_modules
-
-before_install:
-  - rvm install 2.2.3
-  - npm set progress=false
-  - echo -e "machine github.com\n  login ${GH_TOKEN}" >> ~/.netrc
-  - git remote set-url origin "https://${GH_TOKEN}@github.com/itsjonq/jonquach.git"
-  - git config --global user.name "ItsJonQ"
-  - git config --global user.email "itsjonq@gmail.com"
-  - git config --global url.https://github.com/.insteadOf git://github.com/
-
-install:
-  - bundle install
-  - npm install
+  - "node"
+  - "lts/*"
+  - "7"
+  - "8"
 
 script:
-  - npm run build
-
-# Resolve dpl gem issue
-# https://github.com/travis-ci/travis-ci/issues/5072
-# before_deploy:
-#   - export PATH="$PATH:$HOME/.rvm/bin"
-
-deploy:
-  skip_cleanup: true
-  provider: script
-  script: npm run surge
-  on:
-    branch: master
+  - npm install
+  - npm run lint
