@@ -10,11 +10,19 @@ module.exports = {
   },
   pathPrefix: '/',
   plugins: [
+    'gatsby-plugin-emotion',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/posts`,
         name: 'posts',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
       },
     },
     {
@@ -24,7 +32,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 800,
             },
           },
           {
@@ -50,7 +58,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-130227707-1`,
+        trackingId: `UA-50367408-1`,
       },
     },
     `gatsby-plugin-feed`,

@@ -1,40 +1,40 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
-
+import styled from '@emotion/styled'
 import SEO from '../components/SEO'
+import PostHeader from '../components/PostHeader'
+import PostMeta from '../components/PostMeta'
+import Section from '../components/Section'
 import Layout from '../components/Layout'
-import { formatReadingTime } from '../utils/helpers'
-
-const GITHUB_USERNAME = 'itsjonq'
-const GITHUB_REPO_NAME = 'jonquach'
+import Typography from '../components/Typography'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const { previous, next, slug } = this.props.pageContext
-    console.log(this.props)
-    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${slug.replace(
-      /\//g,
-      ''
-    )}.md`
-    const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
-      `https://jonquach.com${slug}`
-    )}`
+    const { previous, next } = this.props.pageContext
+
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.excerpt}
           slug={post.fields.slug}
         />
-        <h1>{post.frontmatter.title}</h1>
-        <p>
-          {post.frontmatter.date}
-          {` • ${formatReadingTime(post.timeToRead)}`}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+        <FadeTopUI />
+        <Section>
+          <PostHeader>{post.frontmatter.title}</PostHeader>
+          <PostMeta date={post.frontmatter.date} timeToRead={post.timeToRead} />
+        </Section>
+
+        <PostContentUI>
+          <Typography
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            className="has-dropCap"
+          />
+        </PostContentUI>
+
         <h3 style={{}}>
           <Link
             style={{
@@ -75,6 +75,22 @@ class BlogPostTemplate extends React.Component {
     )
   }
 }
+
+const PostContentUI = styled('div')`
+  margin: 40px auto;
+`
+
+const FadeTopUI = styled('div')`
+  height: 10vh;
+  position: sticky;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  margin-bottom: -5vh;
+`
 
 export default BlogPostTemplate
 

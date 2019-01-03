@@ -3,7 +3,6 @@ title: 'What it means to be a Design Engineer'
 date: 2017-12-08
 category: 'Product'
 topCaption: '🎨 + 💻?'
-permalink: 'posts/what-it-means-to-be-a-design-engineer'
 ---
 
 Recently, I had a catch-up chat with a product designer colleague from work (his name is [Buzz](https://www.buzzusborne.com/) and he is awesome). One of the things we talked about was the various things I did at [Help Scout](https://www.helpscout.net/).

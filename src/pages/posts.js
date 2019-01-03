@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
-import Layout from '../components/Layout'
+import Layout from '../layouts'
 import { formatReadingTime } from '../utils/helpers'
 
 class BlogIndex extends React.Component {
@@ -21,10 +21,7 @@ class BlogIndex extends React.Component {
           return (
             <div key={node.fields.slug}>
               <h3 style={{}}>
-                <Link
-                  style={{ boxShadow: 'none' }}
-                  to={node.frontmatter.permalink}
-                >
+                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
@@ -53,7 +50,10 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { type: { in: ["post"] } } }
+    ) {
       edges {
         node {
           fields {
@@ -62,7 +62,6 @@ export const pageQuery = graphql`
           timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
-            permalink
             title
             excerpt
           }

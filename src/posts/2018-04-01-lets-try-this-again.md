@@ -3,7 +3,6 @@ title: "Let's try this again!"
 date: 2018-04-01
 category: 'Writing'
 topCaption: '😊'
-permalink: 'posts/lets-try-this-again'
 ---
 
 Oh boy! It's only been… about 4 months since I wrote something. Not a day goes by where I don't think…

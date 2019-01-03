@@ -3,7 +3,6 @@ title: 'Make Design Engineering Happen'
 date: 2018-04-07
 category: 'Design Engineering'
 topCaption: '🙌'
-permalink: 'posts/make-design-engineering-happen'
 ---
 
 This year, I started mentoring at [Out of Office Hours](https://www.outofofficehours.com/). I've had multiple sessions, and one very interesting thing I've noticed is that every single person I've spoken to has said…

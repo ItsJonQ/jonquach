@@ -3,7 +3,6 @@ title: 'BLACKPINK'
 categories: ['Misc']
 date: 2017-11-22
 topCaption: 'BOOMBAYAH 💅'
-permalink: 'posts/blackpink'
 ---
 
 Oh wow, talk about a facelift! Black & pink have always been one of my favourite color combos. Not to mention, I've always wanted a dark site!

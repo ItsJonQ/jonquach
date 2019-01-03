@@ -23,7 +23,6 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   frontmatter {
                     title
-                    permalink
                   }
                 }
               }
@@ -63,13 +62,41 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const fallbackValue = createFilePath({ node, getNode })
-    const value = _.get(node, 'frontmatter.permalink', fallbackValue)
+    const defaultSlug = createFilePath({ node, getNode })
+    const type = getContentTypeFromNode(node)
+    let slug = removeDateFromSlug(defaultSlug)
+
+    if (type === 'post') {
+      slug = `/posts${slug}`
+    }
 
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: slug,
+    })
+
+    createNodeField({
+      name: `type`,
+      node,
+      value: type,
     })
   }
+}
+
+function removeDateFromSlug(slug) {
+  return slug.replace(/\d{4}-\d{1,2}-\d{1,2}\-/g, '')
+}
+
+function getContentTypeFromNode(node) {
+  const srcPath = path.resolve(__dirname, 'src')
+  const filePath = node.fileAbsolutePath.replace(srcPath, '')
+  let fileType = path.dirname(filePath).split('/')[1]
+
+  // Remove pluralization
+  if (fileType[fileType.length - 1] === 's') {
+    fileType = fileType.slice(0, -1)
+  }
+
+  return fileType
 }

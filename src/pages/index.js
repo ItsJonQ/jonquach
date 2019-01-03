@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import Layout from '../layouts'
 
 class BlogIndex extends React.Component {
   render() {
     return (
-      <div>
+      <Layout>
         <Link to="/posts">Posts</Link>
-      </div>
+      </Layout>
     )
   }
 }
