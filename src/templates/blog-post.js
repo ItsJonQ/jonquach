@@ -23,10 +23,15 @@ class BlogPostTemplate extends React.Component {
         />
 
         <FadeTopUI />
-        <Section>
-          <PostHeader>{post.frontmatter.title}</PostHeader>
-          <PostMeta date={post.frontmatter.date} timeToRead={post.timeToRead} />
-        </Section>
+        <PostIntroUI>
+          <Section>
+            <PostHeader>{post.frontmatter.title}</PostHeader>
+            <PostMeta
+              date={post.frontmatter.date}
+              timeToRead={post.timeToRead}
+            />
+          </Section>
+        </PostIntroUI>
 
         <PostContentUI>
           <Typography
@@ -76,6 +81,10 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
+const PostIntroUI = styled('div')`
+  padding: 10px 0 0;
+`
+
 const PostContentUI = styled('div')`
   margin: 40px auto;
 `
@@ -89,7 +98,7 @@ const FadeTopUI = styled('div')`
   width: 100%;
   pointer-events: none;
   background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  margin-bottom: -5vh;
+  margin-bottom: -10vh;
 `
 
 export default BlogPostTemplate

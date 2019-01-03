@@ -18,8 +18,6 @@ const TitleUI = styled('h1')`
   font-weight: 900;
   line-height: 1.1;
   margin: 20px auto;
-  padding: 0 15px;
-  text-align: center;
 
   @media (min-width: 768px) {
     font-size: 72px;

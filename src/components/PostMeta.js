@@ -23,7 +23,6 @@ export class PostHeader extends React.PureComponent {
 const PostHeaderUI = styled('div')`
   color: #aaa;
   font-size: 0.85rem;
-  text-align: center;
 `
 
 const SepUI = styled('span')`
