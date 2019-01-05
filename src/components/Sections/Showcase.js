@@ -71,6 +71,10 @@ const ItemUI = styled(List.Item)`
   opacity: 0.3;
   transition: opacity 200ms ease;
 
+  @media (min-width: 768px) {
+    padding: 0 20px;
+  }
+
   &:hover {
     opacity: 0.5;
   }
