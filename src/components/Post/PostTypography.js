@@ -35,7 +35,9 @@ const TypographyUI = styled('div')`
     font-size: 0.707rem;
   }
 
-  &.has-dropCap {
+  ${({ withDropCap }) =>
+    withDropCap &&
+    `
     & > p {
       &:first-of-type {
         &:first-letter {
@@ -58,7 +60,7 @@ const TypographyUI = styled('div')`
         }
       }
     }
-  }
+  `}
 
   & > h2,
   & > h3,

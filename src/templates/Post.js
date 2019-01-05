@@ -9,6 +9,13 @@ import BaseLayout from '../layouts'
 import Container from '../components/Layout/Container'
 import Section from '../components/Layout/Section'
 import PostTypography from '../components/Post/PostTypography'
+import {
+  getPostDataFromProps,
+  isPageType,
+  pageTypeCheck,
+  getPostIntroProps,
+  getDropcapFromPost,
+} from '../utils/posts'
 
 class PostTemplate extends React.Component {
   renderPreviousNext() {
@@ -27,6 +34,7 @@ class PostTemplate extends React.Component {
 
   render() {
     const post = getPostDataFromProps(this.props)
+    console.log(post)
 
     return (
       <BaseLayout>
@@ -45,7 +53,7 @@ class PostTemplate extends React.Component {
             <PostContentUI>
               <PostTypography
                 dangerouslySetInnerHTML={{ __html: post.html }}
-                className="has-dropCap"
+                withDropCap={getDropcapFromPost(post)}
               />
             </PostContentUI>
             {this.renderPreviousNext()}
@@ -59,37 +67,6 @@ class PostTemplate extends React.Component {
 const PostContentUI = styled('div')`
   margin: 40px auto;
 `
-
-function getPostDataFromProps(props) {
-  return props.data.markdownRemark
-}
-
-function isPageType(props) {
-  const post = getPostDataFromProps(props)
-  return post.fields.type === 'page'
-}
-
-function getPostIntroProps(props) {
-  const post = getPostDataFromProps(props)
-  const isPage = isPageType(props)
-
-  const { topCaption, category, title, date, timeToRead } = post.frontmatter
-
-  return {
-    topCaption,
-    category,
-    title,
-    date,
-    timeToRead: !isPage && timeToRead,
-  }
-}
-
-function pageTypeCheck(post) {
-  if (post.fields.slug.indexOf('posts/') < 0) return null
-  return post
-}
-
-export default PostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -108,6 +85,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         category
         topCaption
+        dropCap
       }
       fields {
         slug
@@ -116,3 +94,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default PostTemplate

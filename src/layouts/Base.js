@@ -2,7 +2,7 @@ import React from 'react'
 import { css, Global } from '@emotion/core'
 import NavBar from '../components/Nav/NavBar'
 import SiteContainer from '../components/Layout/SiteContainer'
-import Footer from '../components/Layout/Footer'
+import Footer from '../components/Sections/Footer'
 
 class Layout extends React.PureComponent {
   render() {
@@ -30,6 +30,8 @@ const globalStyles = css`
     --fontFamilyMono: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
       monospace;
     --fontWeightTitle: 800;
+    --backgroundColor: #fff;
+    --backgroundColorRGB: 255, 255, 255;
     --brandColor: #05f;
     --brandColorRGB: 0, 85, 255;
     --fontColor: #111;
@@ -44,6 +46,7 @@ const globalStyles = css`
 
   html,
   body {
+    background-color: var(--backgroundColor);
     font-family: var(--fontFamilySans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -58,6 +61,11 @@ const globalStyles = css`
     &:hover {
       background: rgba(var(--brandColorRGB), 0.1);
     }
+  }
+
+  em {
+    font-style: normal;
+    text-decoration: underline;
   }
 `
 

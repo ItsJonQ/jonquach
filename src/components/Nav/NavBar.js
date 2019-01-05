@@ -2,6 +2,7 @@ import React from 'react'
 import NavLogo from './NavLogo'
 import styled from '@emotion/styled'
 import Link from '../Base/Link'
+import List from '../Base/List'
 import SiteContainer from '../Layout/SiteContainer'
 
 export class NavBar extends React.PureComponent {
@@ -49,12 +50,11 @@ const NavBarUI = styled('div')`
   margin: 20px 0;
 `
 
-const MenuUI = styled('ul')`
+const MenuUI = styled(List)`
   display: flex;
-  list-style: none;
 `
 
-const MenuItemUI = styled('li')`
+const MenuItemUI = styled(List.Item)`
   padding: 15px 7px;
 
   &.is-logo {

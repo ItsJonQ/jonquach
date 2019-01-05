@@ -3,13 +3,26 @@ import styled from '@emotion/styled'
 import Layout from '../layouts'
 import PostIntro from '../components/Post/PostIntro'
 import PostLead from '../components/Post/PostLead'
+import PostSnippet from '../components/Post/PostSnippet'
 import Section from '../components/Layout/Section'
+import SectionMetaTitle from '../components/Meta/SectionMetaTitle'
 import Link from '../components/Base/Link'
+import Hr from '../components/Base/Hr'
+import Showcase from '../components/Sections/Showcase'
+import SEO from '../components/Base/SEO'
+import { getSnippetPostsFromProps } from '../utils/posts'
 
 class BlogIndex extends React.Component {
   render() {
+    const posts = getSnippetPostsFromProps(this.props)
+
     return (
       <Layout>
+        <SEO
+          title="Hello"
+          description="I'm Q. A designer / developer. I specialize in Design Systems, Interaction, and UI."
+          slug="/"
+        />
         <Section>
           <PostIntro
             topCaption="Hello 👋"
@@ -24,12 +37,26 @@ class BlogIndex extends React.Component {
             }
           />
         </Section>
-        <LeadUI>I specialize in Design Systems, Interaction, and UI.</LeadUI>
-        <AboutUI>
-          I'm a <strong>Design Engineer</strong> at{' '}
+        <LeadUI>
+          I specialize in <em>Design Systems</em>, <em>Interaction</em>, and{' '}
+          <em>UI</em>.<br />
+          I'm a Design Engineer at{' '}
           <Link to="https://www.helpscout.com/">Help Scout</Link>, where I
           create frameworks, tools, and 🎉 delight 🎉.
-        </AboutUI>
+        </LeadUI>
+        <Showcase />
+        <Hr />
+        {posts.length && (
+          <>
+            <SectionMetaTitle>Writing</SectionMetaTitle>
+            {posts.map(post => (
+              <PostSnippet {...post} />
+            ))}
+            <SeeMoreUI>
+              <Link to="/posts">See More</Link>
+            </SeeMoreUI>
+          </>
+        )}
       </Layout>
     )
   }
@@ -40,13 +67,14 @@ const SecondaryTextUI = styled('div')`
 `
 
 const LeadUI = styled(PostLead)`
-  font-size: 1.6rem;
+  font-family: var(--fontFamilySans);
+  font-weight: 400;
   margin-bottom: 20px;
   margin-top: -20px;
-`
 
-const AboutUI = styled(PostLead)`
-  font-size: 1.15rem;
+  a {
+    color: inherit;
+  }
 `
 
 const DesignerUI = styled('span')``
@@ -59,6 +87,41 @@ const DeveloperUI = styled('span')`
 const SlashUI = styled('span')`
   font-weight: 200;
   opacity: 0.5;
+`
+
+const SeeMoreUI = styled('p')`
+  margin: 1em 0;
+`
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { type: { in: ["post"] } } }
+      limit: 3
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          timeToRead
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            category
+          }
+        }
+      }
+    }
+  }
 `
 
 export default BlogIndex
