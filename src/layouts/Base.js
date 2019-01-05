@@ -22,13 +22,14 @@ class Layout extends React.PureComponent {
 
 const globalStyles = css`
   :root {
-    --fontFamilySans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Roboto Light', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-      'Segoe UI Symbol';
-    --fontFamilySerif: 'Merriweather', 'Georgia', serif;
+    --fontFamilySans: 'Libre Franklin', -apple-system, BlinkMacSystemFont,
+      'Segoe UI', 'Roboto', 'Roboto Light', 'Oxygen', 'Ubuntu', 'Cantarell',
+      'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    --fontFamilySerif: 'Libre Baskerville', 'Merriweather', 'Georgia', serif;
     --fontFamilyMono: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
       monospace;
+    --fontWeightTitle: 800;
     --brandColor: #05f;
     --brandColorRGB: 0, 85, 255;
     --fontColor: #111;

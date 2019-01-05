@@ -7,6 +7,7 @@ import PostFadeTop from '../components/Post/PostFadeTop'
 import PostPreviousNext from '../components/Post/PostPreviousNext'
 import BaseLayout from '../layouts'
 import Container from '../components/Layout/Container'
+import Section from '../components/Layout/Section'
 import PostTypography from '../components/Post/PostTypography'
 
 class PostTemplate extends React.Component {
@@ -16,7 +17,12 @@ class PostTemplate extends React.Component {
 
     if (isPage) return null
 
-    return <PostPreviousNext previous={previous} next={next} />
+    return (
+      <PostPreviousNext
+        previous={pageTypeCheck(previous)}
+        next={pageTypeCheck(next)}
+      />
+    )
   }
 
   render() {
@@ -33,7 +39,9 @@ class PostTemplate extends React.Component {
         <article>
           <Container>
             <PostFadeTop />
-            <PostIntro {...getPostIntroProps(this.props)} />
+            <Section>
+              <PostIntro {...getPostIntroProps(this.props)} />
+            </Section>
             <PostContentUI>
               <PostTypography
                 dangerouslySetInnerHTML={{ __html: post.html }}
@@ -74,6 +82,11 @@ function getPostIntroProps(props) {
     date,
     timeToRead: !isPage && timeToRead,
   }
+}
+
+function pageTypeCheck(post) {
+  if (post.fields.slug.indexOf('posts/') < 0) return null
+  return post
 }
 
 export default PostTemplate

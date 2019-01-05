@@ -78,10 +78,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Merriweather`,
-        ]
-      }
-    }
+        fonts: [`Libre Baskerville`, `Libre Franklin\:300,400,800`],
+      },
+    },
   ],
 }

@@ -1,5 +1,7 @@
 import React from 'react'
+import styled from '@emotion/styled'
 import Link from '../Base/Link'
+import TopCaption from '../Meta/TopCaption'
 
 export class PreviousNext extends React.PureComponent {
   static defaultProps = {
@@ -11,32 +13,41 @@ export class PreviousNext extends React.PureComponent {
     const { previous, next } = this.props
 
     return (
-      <ul
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
-          listStyle: 'none',
-          padding: 0,
-        }}
-      >
-        <li>
+      <section>
+        <header>
+          <TopCaption>More Posts</TopCaption>
+        </header>
+        <ListUI>
           {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
+            <ListItemUI>
+              <Link to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </Link>
+            </ListItemUI>
           )}
-        </li>
-        <li>
           {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Link>
+            <ListItemUI>
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title} →
+              </Link>
+            </ListItemUI>
           )}
-        </li>
-      </ul>
+        </ListUI>
+      </section>
     )
   }
 }
+
+const ListUI = styled('ul')`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+`
+
+const ListItemUI = styled('li')`
+  margin-bottom: 10px;
+`
 
 export default PreviousNext

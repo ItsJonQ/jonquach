@@ -11,12 +11,18 @@ const SectionUI = styled('section')`
   ${({ isCompact }) =>
     isCompact &&
     `
+    padding-top: 40px;
     padding-bottom: 40px;
 
     @media (min-width: 768px) {
+      padding-top: 60px;
       padding-bottom: 40px;
     }
   `}
 `
+
+SectionUI.defaultProps = {
+  isCompact: true,
+}
 
 export default SectionUI

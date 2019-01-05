@@ -64,8 +64,8 @@ const TypographyUI = styled('div')`
   & > h3,
   & > h4,
   & > h5 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--fontFamilySans);
+    font-weight: var(--fontWeightTitle);
     line-height: 1.2;
     margin-bottom: 0.8em;
   }

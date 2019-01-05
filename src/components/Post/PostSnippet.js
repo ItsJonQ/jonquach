@@ -39,19 +39,21 @@ const LinkUI = styled(Link)`
 `
 
 const ExcerptUI = styled('p')`
-  font-family: 'Merriweather', 'serif';
+  font-family: var(--fontFamilySerif);
   font-size: 0.9rem;
   transition: opacity 200ms ease;
+  line-height: 1.5;
 `
 
 const TitleUI = styled('h4')`
   color: black;
   font-size: 1.2rem;
   transition: color 200ms ease;
+  margin-bottom: 5px;
 `
 
 const ArticleUI = styled('article')`
-  padding: 1em 0;
+  padding: 1.2em 0;
 
   ${ExcerptUI} {
     opacity: 0.5;

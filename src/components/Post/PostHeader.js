@@ -12,10 +12,9 @@ export class PostHeader extends React.PureComponent {
 }
 
 const TitleUI = styled('h1')`
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--fontFamilySans);
   font-size: 2.75rem;
-  font-weight: 900;
+  font-weight: var(--fontWeightTitle);
   line-height: 1.1;
   margin: 20px auto;
 

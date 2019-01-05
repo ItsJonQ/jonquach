@@ -4,24 +4,50 @@ import get from 'lodash/get'
 
 import Layout from '../layouts'
 import Container from '../components/Layout/Container'
-import PostIntro from '../components/Post/PostIntro'
+import Section from '../components/Layout/Section'
 import PostSnippet from '../components/Post/PostSnippet'
+import PostFeatured from '../components/Post/PostFeatured'
+import TopCaption from '../components/Meta/TopCaption'
 
 export class PostIndex extends React.Component {
+  getPosts() {
+    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const [featuredPosts, ...rest] = posts
+
+    return rest.map(({ node }) => getSnippetPropsFromNode(node))
+  }
+
+  getFeaturedPost() {
+    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const [featuredPost, ...rest] = posts
+
+    return featuredPost && getSnippetPropsFromNode(featuredPost.node)
+  }
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
       this,
       'props.data.site.siteMetadata.description'
     )
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+
+    const featuredPost = this.getFeaturedPost()
+    const posts = this.getPosts()
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <PostIntro title="Writing" topCaption="Scribbles... ✍️" />
+        <Section>
+          <TopCaption>
+            Scribbles...{' '}
+            <span aria-label="Writing emoji" role="img">
+              ✍️
+            </span>
+          </TopCaption>
+          {featuredPost && <PostFeatured {...featuredPost} />}
+        </Section>
         <Container>
-          {posts.map(({ node }) => {
-            return <PostSnippet {...getSnippetPropsFromNode(node)} />
+          {posts.map(post => {
+            return <PostSnippet {...post} />
           })}
         </Container>
       </Layout>
