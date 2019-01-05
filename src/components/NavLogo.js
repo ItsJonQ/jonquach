@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import Link from './Link'
 import Logo from './Logo'
 import LogoHappy from './LogoHappy'
 import VisuallyHidden from './VisuallyHidden'
@@ -7,7 +8,7 @@ import VisuallyHidden from './VisuallyHidden'
 export class NavLogo extends React.PureComponent {
   static defaultProps = {
     title: 'Q',
-    href: '/',
+    to: '/',
   }
 
   render() {
@@ -42,7 +43,6 @@ const AnimationUI = styled('span')`
     }
   }
 
-  background: white;
   backface-visibility: hidden;
   filter: blur(0);
   display: block;
@@ -74,7 +74,7 @@ const AnimationUI = styled('span')`
   }
 `
 
-const NavLogoUI = styled('a')`
+const NavLogoUI = styled(Link)`
   display: block;
   width: 50px;
   height: 50px;

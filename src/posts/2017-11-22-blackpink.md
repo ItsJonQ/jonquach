@@ -1,6 +1,6 @@
 ---
 title: 'BLACKPINK'
-categories: ['Misc']
+category: 'Misc'
 date: 2017-11-22
 topCaption: 'BOOMBAYAH 💅'
 ---

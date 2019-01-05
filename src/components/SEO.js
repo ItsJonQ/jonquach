@@ -32,7 +32,7 @@ function SEO({ meta, image, title, description, slug }) {
             htmlAttributes={{ lang: 'en' }}
             {...(title
               ? {
-                  titleTemplate: `%s - ${siteMetadata.title}`,
+                  titleTemplate: `%s | ${siteMetadata.title}`,
                   title,
                 }
               : {

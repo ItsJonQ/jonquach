@@ -4,8 +4,8 @@ import { formatReadingTime } from '../utils/helpers'
 
 export class PostHeader extends React.PureComponent {
   static defaultProps = {
-    date: 'January 1, 2019',
-    timeToRead: '1 min read',
+    date: null,
+    timeToRead: null,
   }
 
   render() {
@@ -13,8 +13,12 @@ export class PostHeader extends React.PureComponent {
     return (
       <PostHeaderUI>
         {date}
-        <SepUI>•</SepUI>
-        {formatReadingTime(timeToRead)}
+        {timeToRead && (
+          <React.Fragment>
+            <SepUI>•</SepUI>
+            {formatReadingTime(timeToRead)}
+          </React.Fragment>
+        )}
       </PostHeaderUI>
     )
   }

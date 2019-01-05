@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 export class Logo extends React.PureComponent {
   static defaultProps = {
-    color: '#05f',
+    color: 'var(--brandColor)',
     width: 200,
   }
 
@@ -19,7 +19,7 @@ export class Logo extends React.PureComponent {
     return (
       <LogoUI style={style}>
         <svg
-          enable-background="new 0 0 460 460"
+          enableBackground="new 0 0 460 460"
           viewBox="0 0 460 460"
           xmlns="http://www.w3.org/2000/svg"
         >

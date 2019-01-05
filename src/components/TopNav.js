@@ -1,22 +1,22 @@
 import React from 'react'
 import NavLogo from './NavLogo'
 import styled from '@emotion/styled'
+import Link from './Link'
 import SiteContainer from './SiteContainer'
-import { Link } from 'gatsby'
 
 export class TopNav extends React.PureComponent {
   static defaultProps = {
     links: [
       {
-        to: 'about/',
+        to: '/about/',
         title: 'About',
       },
       {
-        to: 'posts/',
+        to: '/posts/',
         title: 'Writing',
       },
       {
-        to: 'contact/',
+        to: '/contact/',
         title: 'Contact',
       },
     ],
@@ -33,11 +33,7 @@ export class TopNav extends React.PureComponent {
             </MenuItemUI>
             {links.map(link => (
               <MenuItemUI key={link.to} role="menuitem">
-                <NavLinkUI
-                  to={link.to}
-                  activeClassName="is-active"
-                  exact={false}
-                >
+                <NavLinkUI to={link.to} activeClassName="is-active">
                   {link.title}
                 </NavLinkUI>
               </MenuItemUI>
@@ -54,12 +50,11 @@ const TopNavUI = styled('div')`
 `
 
 const MenuUI = styled('ul')`
+  display: flex;
   list-style: none;
-  overflow: hidden;
 `
 
 const MenuItemUI = styled('li')`
-  float: left;
   padding: 15px 7px;
 
   &.is-logo {
@@ -69,6 +64,7 @@ const MenuItemUI = styled('li')`
     margin-right: 15px;
     position: sticky;
     top: 0;
+    margin-left: -10px;
   }
 `
 
@@ -77,9 +73,6 @@ const NavLinkUI = styled(Link)`
   font-weight: 700;
   font-size: 14px;
   padding: 5px 5px;
-
-  &.is-active {
-  }
 `
 
 export default TopNav
