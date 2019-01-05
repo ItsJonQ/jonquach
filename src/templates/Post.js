@@ -1,11 +1,13 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import SEO from '../components/SEO'
-import PostIntro from '../components/PostIntro'
+import SEO from '../components/Base/SEO'
+import PostIntro from '../components/Post/PostIntro'
+import PostFadeTop from '../components/Post/PostFadeTop'
+import PostPreviousNext from '../components/Post/PostPreviousNext'
 import BaseLayout from '../layouts'
-import Container from '../components/Container'
-import Typography from '../components/Typography'
+import Container from '../components/Layout/Container'
+import PostTypography from '../components/Post/PostTypography'
 
 class PostTemplate extends React.Component {
   renderPreviousNext() {
@@ -14,7 +16,7 @@ class PostTemplate extends React.Component {
 
     if (isPage) return null
 
-    return <PreviousNext previous={previous} next={next} />
+    return <PostPreviousNext previous={previous} next={next} />
   }
 
   render() {
@@ -30,10 +32,10 @@ class PostTemplate extends React.Component {
 
         <article>
           <Container>
-            <FadeTopUI />
+            <PostFadeTop />
             <PostIntro {...getPostIntroProps(this.props)} />
             <PostContentUI>
-              <Typography
+              <PostTypography
                 dangerouslySetInnerHTML={{ __html: post.html }}
                 className="has-dropCap"
               />
@@ -46,53 +48,8 @@ class PostTemplate extends React.Component {
   }
 }
 
-class PreviousNext extends React.PureComponent {
-  render() {
-    const { previous, next } = this.props
-
-    return (
-      <ul
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
-          listStyle: 'none',
-          padding: 0,
-        }}
-      >
-        <li>
-          {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
-          )}
-        </li>
-        <li>
-          {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Link>
-          )}
-        </li>
-      </ul>
-    )
-  }
-}
-
 const PostContentUI = styled('div')`
   margin: 40px auto;
-`
-
-const FadeTopUI = styled('div')`
-  height: 10vh;
-  position: sticky;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  pointer-events: none;
-  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  margin-bottom: -10vh;
 `
 
 function getPostDataFromProps(props) {

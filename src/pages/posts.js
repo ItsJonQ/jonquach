@@ -1,14 +1,13 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../layouts'
-import Container from '../components/Container'
-import PostIntro from '../components/PostIntro'
-import PostSnippet from '../components/PostSnippet'
-import { formatReadingTime } from '../utils/helpers'
+import Container from '../components/Layout/Container'
+import PostIntro from '../components/Post/PostIntro'
+import PostSnippet from '../components/Post/PostSnippet'
 
-class BlogIndex extends React.Component {
+export class PostIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
@@ -49,7 +48,7 @@ function getExcerptFromNode(node) {
   return node.frontmatter.excerpt || node.excerpt
 }
 
-export default BlogIndex
+export default PostIndex
 
 export const pageQuery = graphql`
   query {

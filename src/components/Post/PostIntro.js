@@ -1,10 +1,9 @@
 import React from 'react'
-import styled from '@emotion/styled'
-import Category from './Category'
-import TopCaption from './TopCaption'
+import Category from '../Meta/Category'
+import TopCaption from '../Meta/TopCaption'
 import PostHeader from './PostHeader'
 import PostMeta from './PostMeta'
-import Section from './Section'
+import Section from '../Layout/Section'
 
 export class PostIntro extends React.PureComponent {
   static defaultProps = {

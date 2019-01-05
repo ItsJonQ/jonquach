@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Layout from '../layouts'
-import PostIntro from '../components/PostIntro'
-import Link from '../components/Link'
+import PostIntro from '../components/Post/PostIntro'
+import Link from '../components/Base/Link'
 
 class BlogIndex extends React.Component {
   render() {

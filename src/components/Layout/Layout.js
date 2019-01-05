@@ -1,5 +1,5 @@
 import React from 'react'
-import BaseLayout from '../layouts'
+import BaseLayout from '../../layouts'
 import Container from './Container'
 
 class Layout extends React.PureComponent {

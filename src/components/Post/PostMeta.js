@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { formatReadingTime } from '../utils/helpers'
+import { formatReadingTime } from '../../utils/helpers'
 
 export class PostHeader extends React.PureComponent {
   static defaultProps = {

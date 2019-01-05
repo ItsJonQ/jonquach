@@ -1,8 +1,8 @@
 import React from 'react'
 import { css, Global } from '@emotion/core'
-import SiteContainer from '../components/SiteContainer'
-import TopNav from '../components/TopNav'
-import Footer from '../components/Footer'
+import NavBar from '../components/Nav/NavBar'
+import SiteContainer from '../components/Layout/SiteContainer'
+import Footer from '../components/Layout/Footer'
 
 class Layout extends React.PureComponent {
   render() {
@@ -10,7 +10,7 @@ class Layout extends React.PureComponent {
     return (
       <React.Fragment>
         <Global styles={globalStyles} />
-        <TopNav />
+        <NavBar />
         <SiteContainer>
           {children}
           <Footer />

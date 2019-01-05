@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import Link from './Link'
-import Logo from './Logo'
-import LogoHappy from './LogoHappy'
-import VisuallyHidden from './VisuallyHidden'
+import Link from '../Base/Link'
+import Logo from '../Logo/Logo'
+import LogoHappy from '../Logo/LogoHappy'
+import VisuallyHidden from '../Base/VisuallyHidden'
 
 export class NavLogo extends React.PureComponent {
   static defaultProps = {

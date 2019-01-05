@@ -1,10 +1,10 @@
 import React from 'react'
 import NavLogo from './NavLogo'
 import styled from '@emotion/styled'
-import Link from './Link'
-import SiteContainer from './SiteContainer'
+import Link from '../Base/Link'
+import SiteContainer from '../Layout/SiteContainer'
 
-export class TopNav extends React.PureComponent {
+export class NavBar extends React.PureComponent {
   static defaultProps = {
     links: [
       {
@@ -26,7 +26,7 @@ export class TopNav extends React.PureComponent {
     const { links } = this.props
     return (
       <SiteContainer>
-        <TopNavUI role="navigation">
+        <NavBarUI role="navigation">
           <MenuUI role="menubar">
             <MenuItemUI role="menuitem" className="is-logo">
               <NavLogo />
@@ -39,13 +39,13 @@ export class TopNav extends React.PureComponent {
               </MenuItemUI>
             ))}
           </MenuUI>
-        </TopNavUI>
+        </NavBarUI>
       </SiteContainer>
     )
   }
 }
 
-const TopNavUI = styled('div')`
+const NavBarUI = styled('div')`
   margin: 20px 0;
 `
 
@@ -75,4 +75,4 @@ const NavLinkUI = styled(Link)`
   padding: 5px 5px;
 `
 
-export default TopNav
+export default NavBar

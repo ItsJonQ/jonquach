@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import Category from './Category'
-import Link from './Link'
+import Category from '../Meta/Category'
+import Link from '../Base/Link'
 
 export class PostSnippet extends React.PureComponent {
   static defaultProps = {
