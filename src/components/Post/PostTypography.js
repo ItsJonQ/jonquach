@@ -91,7 +91,7 @@ const TypographyUI = styled('div')`
     margin-bottom: 1.6em;
 
     &:first-of-type {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 300;
       line-height: 1.4;
     }
@@ -102,7 +102,7 @@ const TypographyUI = styled('div')`
     margin-top: 40px;
     border-left: 3px solid var(--brandColor);
     font-weight: 300;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding-left: 20px;
     line-height: 1.4;
   }

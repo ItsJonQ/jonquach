@@ -61,17 +61,21 @@ const MenuItemUI = styled(List.Item)`
     padding-left: 0;
     padding-top: 0;
     padding-bottom: 0;
-    margin-right: 15px;
+    margin-right: 0px;
     position: sticky;
     top: 0;
     margin-left: -10px;
+
+    @media (min-width: 768px) {
+      margin-right: 15px;
+    }
   }
 `
 
 const NavLinkUI = styled(Link)`
   color: black;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.8rem;
   padding: 5px 5px;
 `
 

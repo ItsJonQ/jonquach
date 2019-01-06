@@ -12,7 +12,13 @@
   --brandColor: #05f;
   --brandColorRGB: 0, 85, 255;
   --fontColor: #111;
-  --fontSize: 18px;
+  --fontSize: 16px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fontSize: 18px;
+  }
 }
 
 * {
