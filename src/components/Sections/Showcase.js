@@ -41,7 +41,7 @@ export class Showcase extends React.PureComponent {
         <ListUI>
           {items.map(item => (
             <ItemUI key={item.title}>
-              <Image src={item.src} title={item.title} alt={item.title} />
+              <ImageUI src={item.src} title={item.title} alt={item.title} />
             </ItemUI>
           ))}
         </ListUI>
@@ -70,6 +70,7 @@ const ItemUI = styled(List.Item)`
   margin: 0 10px;
   opacity: 0.3;
   transition: opacity 200ms ease;
+  max-height: 42px;
 
   @media (min-width: 768px) {
     padding: 0 20px;
@@ -77,6 +78,19 @@ const ItemUI = styled(List.Item)`
 
   &:hover {
     opacity: 0.5;
+  }
+`
+
+const ImageUI = styled(Image)`
+  animation: fadeIn 300ms linear;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `
 

@@ -13,7 +13,7 @@ import Showcase from '../components/Sections/Showcase'
 import SEO from '../components/Base/SEO'
 import { getSnippetPostsFromProps } from '../utils/posts'
 
-class BlogIndex extends React.Component {
+export class BlogIndex extends React.PureComponent {
   render() {
     const posts = getSnippetPostsFromProps(this.props)
 

@@ -1,7 +1,6 @@
+import './src/utils/base.css'
 import './src/utils/theme.css'
 
-export const onRouteUpdate = () => {
-  requestAnimationFrame(() => {
-    window.scrollTo(0, 0)
-  })
+export const shouldUpdateScroll = () => {
+  return [0, 0]
 }
