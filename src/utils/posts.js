@@ -66,7 +66,7 @@ export function getPostIntroProps(props) {
  * Post selectors / utils
  */
 export function pageTypeCheck(post) {
-  if (get(post, 'fields.slug').indexOf('posts/') < 0) return null
+  if (get(post, 'fields.slug', '').indexOf('posts/') < 0) return null
   return post
 }
 
