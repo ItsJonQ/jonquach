@@ -1,5 +1,7 @@
 # Q
 
+[![Build Status](https://travis-ci.org/ItsJonQ/jonquach.svg?branch=master)](https://travis-ci.org/ItsJonQ/jonquach)
+
 > Personal site for Jon Q
 
 ## Setup
