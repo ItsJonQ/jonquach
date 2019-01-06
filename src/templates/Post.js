@@ -34,7 +34,6 @@ class PostTemplate extends React.Component {
 
   render() {
     const post = getPostDataFromProps(this.props)
-    console.log(post)
 
     return (
       <BaseLayout>

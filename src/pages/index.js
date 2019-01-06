@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { graphql } from 'gatsby'
 import Layout from '../layouts'
 import PostIntro from '../components/Post/PostIntro'
 import PostLead from '../components/Post/PostLead'

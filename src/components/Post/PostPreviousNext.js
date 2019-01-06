@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Link from '../Base/Link'
+import Hr from '../Base/Hr'
 import TopCaption from '../Meta/TopCaption'
 
 export class PreviousNext extends React.PureComponent {
@@ -14,6 +15,7 @@ export class PreviousNext extends React.PureComponent {
 
     return (
       <section>
+        <Hr />
         <header>
           <TopCaption>More Posts</TopCaption>
         </header>

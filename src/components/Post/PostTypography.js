@@ -110,6 +110,11 @@ const TypographyUI = styled('div')`
   & > .twitter-tweet ~ p {
     margin-top: 1.6em;
   }
+
+  a[href*="https://gfycat.com"] {
+    font-size: 0.7rem;
+    opacity: 0.4;
+  }
 `
 
 export default Typography
