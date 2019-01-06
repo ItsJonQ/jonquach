@@ -1,4 +1,6 @@
 import React from 'react'
+import get from 'lodash/get'
+import { StaticQuery, graphql } from 'gatsby'
 import NavLogo from './NavLogo'
 import styled from '@emotion/styled'
 import Link from '../Base/Link'
@@ -7,24 +9,12 @@ import SiteContainer from '../Layout/SiteContainer'
 
 export class NavBar extends React.PureComponent {
   static defaultProps = {
-    links: [
-      {
-        to: '/about/',
-        title: 'About',
-      },
-      {
-        to: '/posts/',
-        title: 'Writing',
-      },
-      {
-        to: '/contact/',
-        title: 'Contact',
-      },
-    ],
+    links: [],
   }
 
   render() {
     const { links } = this.props
+
     return (
       <SiteContainer>
         <NavBarUI role="navigation">
@@ -79,4 +69,30 @@ const NavLinkUI = styled(Link)`
   padding: 5px 5px;
 `
 
-export default NavBar
+function getLinksFromData(data) {
+  const nodes = get(data, 'allNavYaml.edges', [])
+  return nodes.map(({ node }) => node)
+}
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+        allNavYaml {
+          edges {
+            node {
+              to
+              title
+            }
+          }
+        }
+      }
+    `}
+    render={data => <NavBar links={getLinksFromData(data)} />}
+  />
+)

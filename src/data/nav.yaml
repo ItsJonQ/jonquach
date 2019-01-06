@@ -1,0 +1,6 @@
+- title: 'About'
+  to: '/about'
+- title: 'Writing'
+  to: '/posts'
+- title: 'Contact'
+  to: '/contact'

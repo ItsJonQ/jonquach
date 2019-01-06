@@ -1,27 +1,14 @@
 import React from 'react'
+import get from 'lodash/get'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import Hr from '../Base/Hr'
 import List from '../Base/List'
 import Link from '../Base/Link'
 
-const links = [
-  {
-    to: 'https://twitter.com/itsjonq',
-    title: 'Twitter',
-  },
-  {
-    to: 'https://github.com/itsjonq',
-    title: 'Github',
-  },
-  {
-    to: 'https://github.com/ItsJonQ/jonquach',
-    title: 'View Source',
-  },
-]
-
 export class Footer extends React.PureComponent {
   static defaultProps = {
-    links,
+    links: [],
   }
 
   render() {
@@ -78,4 +65,30 @@ const ListItemUI = styled(List.Item)`
   }
 `
 
-export default Footer
+function getLinksFromData(data) {
+  const nodes = get(data, 'allNavFooterYaml.edges', [])
+  return nodes.map(({ node }) => node)
+}
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+        allNavFooterYaml {
+          edges {
+            node {
+              to
+              title
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Footer links={getLinksFromData(data)} />}
+  />
+)
