@@ -37,7 +37,7 @@ export class NavBar extends React.PureComponent {
 }
 
 const NavBarUI = styled('div')`
-  margin: 20px 0;
+  padding: 20px 0;
 `
 
 const MenuUI = styled(List)`
