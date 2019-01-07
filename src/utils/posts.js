@@ -29,7 +29,8 @@ export function getExcerptFromNode(node) {
  * Prop selectors / utils
  */
 export function getPostNodesFromProps(props) {
-  return get(props, 'data.allMarkdownRemark.edges', [])
+  const posts = get(props, 'data.allMarkdownRemark.edges', [])
+  return filterPublishedPosts(posts)
 }
 
 export function getSnippetPostsFromProps(props) {
@@ -72,4 +73,15 @@ export function pageTypeCheck(post) {
 
 export function getDropcapFromPost(post) {
   return get(post, 'frontmatter.dropCap') === false ? false : true
+}
+
+export function filterPublishedPost(post) {
+  return (
+    process.env.NODE_ENV === 'development' ||
+    !get(post, 'node.frontmatter.draft')
+  )
+}
+
+export function filterPublishedPosts(posts) {
+  return posts.filter(filterPublishedPost)
 }

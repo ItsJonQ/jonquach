@@ -8,6 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/Post.js')
+
     resolve(
       graphql(
         `
@@ -23,6 +24,7 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   frontmatter {
                     title
+                    draft
                   }
                 }
               }
@@ -38,7 +40,9 @@ exports.createPages = ({ graphql, actions }) => {
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges
 
-        _.each(posts, (post, index) => {
+        const publishedPosts = filterPublishedPosts(posts)
+
+        _.each(publishedPosts, (post, index) => {
           const previous =
             index === posts.length - 1 ? null : posts[index + 1].node
           const next = index === 0 ? null : posts[index - 1].node
@@ -99,4 +103,15 @@ function getContentTypeFromNode(node) {
   }
 
   return fileType
+}
+
+function filterPublishedPost(post) {
+  return (
+    process.env.NODE_ENV === 'development' ||
+    !_.get(post, 'node.frontmatter.draft')
+  )
+}
+
+function filterPublishedPosts(posts) {
+  return posts.filter(filterPublishedPost)
 }

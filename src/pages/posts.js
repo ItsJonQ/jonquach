@@ -74,6 +74,7 @@ export const pageQuery = graphql`
           timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
+            draft
             title
             category
           }
