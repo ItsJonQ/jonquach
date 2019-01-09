@@ -3,6 +3,7 @@ title: 'Why is writing so hard.'
 date: 2017-12-03
 category: 'Writing'
 topCaption: '😱'
+draft: false
 ---
 
 Goodness. Gracious. Why is writing so hard! Since re-launching my site, I've set a personal goal to write **at least** once a week. I gave myself a soft-pass this week, as I sorta missed my goal by a bit. But I was busy!
