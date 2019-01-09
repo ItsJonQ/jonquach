@@ -39,7 +39,7 @@ class PostTemplate extends React.Component {
       <BaseLayout>
         <SEO
           title={post.frontmatter.title}
-          description={post.frontmatter.excerpt}
+          description={post.excerpt}
           slug={post.fields.slug}
         />
 
@@ -79,6 +79,7 @@ export const pageQuery = graphql`
       id
       html
       timeToRead
+      excerpt
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
