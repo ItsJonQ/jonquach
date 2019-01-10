@@ -25,8 +25,12 @@ function SEO({ meta, image, title, description, slug }) {
       render={data => {
         const { siteMetadata } = data.site
         const metaDescription = description || siteMetadata.description
-        const metaImage = getMetaImage(image)
+        const metaImage = getMetaImage(
+          image,
+          `${siteMetadata.siteUrl}/images/q-meta.png`
+        )
         const url = `${siteMetadata.siteUrl}${slug}`
+        console.log(siteMetadata)
 
         return (
           <Helmet
@@ -95,9 +99,9 @@ function SEO({ meta, image, title, description, slug }) {
   )
 }
 
-function getMetaImage(image) {
+function getMetaImage(image, fallback = withPrefix('/images/q-meta.png')) {
   if (!image) {
-    return withPrefix('/images/q.png')
+    return fallback
   }
 
   if (typeof image === 'string') {
@@ -108,7 +112,7 @@ function getMetaImage(image) {
     return image.publicURL
   }
 
-  return withPrefix('/images/q.png')
+  return fallback
 }
 
 SEO.defaultProps = {
