@@ -53,10 +53,10 @@ Fun Tip: I recommend formatting your description in a way that is **not** Pull R
 Example:
 
 **Non-Pull Request specific**<br />
-"This _update_ fixes the interaction issues with the Button component when it is rendered within a Form."
+"This _update_ fixes the interaction issues with the `Button` component when it is rendered within a `Form`."
 
 **Pull Request specific**<br />
-"This _PR_ fixes the interaction issues with the Button component when it is rendered within a Form."
+"This _PR_ fixes the interaction issues with the `Button` component when it is rendered within a `Form`."
 
 This helps set us up for our next and final trick!
 

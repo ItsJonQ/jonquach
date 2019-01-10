@@ -16,6 +16,10 @@ const TypographyUI = styled('div')`
   font-weight: 300;
   line-height: 1.7;
 
+  strong {
+    font-weight: bold;
+  }
+
   h1 {
     font-size: 3.998rem;
   }
