@@ -9,6 +9,8 @@ image: './images/design-engineer-it-me.png'
 
 Every so often, a tweet or blog post would make me reflect upon my career in the web development industry. Being a hybrid design/coder, I can't help but feel out of place within in.
 
+<!-- more -->
+
 Over the winter break, I indulged in two of my favourite things - drawing and video games (three if you include eating - no regrets). While poking around on YouTube for concept art illustration videos, I stumbled upon a [series by Riot Games](https://www.youtube.com/watch?v=RqRoXLLwJ8g&list=PL42m9XiTqPHJdJuVXO6Vf5ta5D07peiVx) - makers of [League of Legends](https://play.na.leagueoflegends.com/en_US). This series is dedicated to making video games. It provides insight to various aspects of video game creation, such as sound design, 3D animation, tooling, and more. One of the episodes, was entitled "Technical Art".
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kr7XYXMM7-U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

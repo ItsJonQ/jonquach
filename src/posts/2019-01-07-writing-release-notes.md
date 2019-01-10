@@ -8,6 +8,8 @@ topCaption: '"Bug Fixes. The End."'
 
 If you work on a library or module (be it open sourced or closed), writing really good (at least adequate) release notes is one of the most important things you can do.
 
+<!-- more -->
+
 (Other than perhaps documentation and the code itself. Obvi.)
 
 I think it's interesting that many open-source libraries and tools, even those published by some of my favourite **Open Sourcerers**, seem to lack adequate release notes (or any release notes at all).

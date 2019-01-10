@@ -40,7 +40,7 @@ export function getSnippetPostsFromProps(props) {
 }
 
 export function getPostDataFromProps(props) {
-  return props.data.markdownRemark
+  return get(props, 'data.markdownRemark')
 }
 
 export function isPageType(props) {
@@ -84,4 +84,8 @@ export function filterPublishedPost(post) {
 
 export function filterPublishedPosts(posts) {
   return posts.filter(filterPublishedPost)
+}
+
+export function getDescriptionFromPost(post) {
+  return get(post, 'frontmatter.description') || post.excerpt
 }
