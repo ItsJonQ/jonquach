@@ -131,6 +131,16 @@ const TypographyUI = styled('div')`
   .gatsby-resp-iframe-wrapper {
     margin: 1.6em 0 2em !important;
   }
+
+  .gatsby-resp-image-figure {
+    margin: 1.6em 0;
+  }
+
+  .gatsby-resp-image-figcaption {
+    color: #888;
+    margin-top: 0.5em;
+    font-size: 0.8rem;
+  }
 `
 
 export default Typography
