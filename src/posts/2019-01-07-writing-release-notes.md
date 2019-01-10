@@ -52,7 +52,7 @@ Fun Tip: I recommend formatting your description in a way that is **not** Pull R
 
 Example:
 
-**Not Pull Request specific**<br />
+**Non-Pull Request specific**<br />
 "This _update_ fixes the interaction issues with the Button component when it is rendered within a Form."
 
 **Pull Request specific**<br />
