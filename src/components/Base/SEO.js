@@ -25,10 +25,10 @@ function SEO({ meta, image, title, description, slug }) {
       render={data => {
         const { siteMetadata } = data.site
         const metaDescription = description || siteMetadata.description
-        const metaImage = getMetaImage(
-          image,
-          `${siteMetadata.siteUrl}/images/q-meta.png`
-        )
+
+        let metaImage = getMetaImage(image, `/images/q-meta.png`)
+        metaImage = `${siteMetadata.siteUrl}${metaImage}`
+
         const url = `${siteMetadata.siteUrl}${slug}`
         console.log(siteMetadata)
 
