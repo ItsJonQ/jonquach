@@ -2,6 +2,7 @@ const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+const { get } = _
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -68,6 +69,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const defaultSlug = createFilePath({ node, getNode })
     const type = getContentTypeFromNode(node)
     let slug = removeDateFromSlug(defaultSlug)
+    let image = get(node, 'frontmatter.image', '')
+    const draft = get(node, 'frontmatter.draft', false)
+
+    if (image) {
+      image = path.relative(
+        path.dirname(node.fileAbsolutePath),
+        path.join(__dirname, '/static/', image)
+      )
+    }
 
     if (type === 'post') {
       slug = `/posts${slug}`
@@ -107,7 +117,7 @@ function getContentTypeFromNode(node) {
 function filterPublishedPost(post) {
   return (
     process.env.NODE_ENV === 'development' ||
-    !_.get(post, 'node.frontmatter.draft')
+    !get(post, 'node.frontmatter.draft')
   )
 }
 

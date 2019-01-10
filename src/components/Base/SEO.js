@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, withPrefix } from 'gatsby'
 
 const query = graphql`
   query GetSiteMetadata {
@@ -25,8 +25,9 @@ function SEO({ meta, image, title, description, slug }) {
       render={data => {
         const { siteMetadata } = data.site
         const metaDescription = description || siteMetadata.description
-        const metaImage = image ? `${siteMetadata.siteUrl}/${image}` : null
+        const metaImage = getMetaImage(image)
         const url = `${siteMetadata.siteUrl}${slug}`
+
         return (
           <Helmet
             htmlAttributes={{ lang: 'en' }}
@@ -92,6 +93,22 @@ function SEO({ meta, image, title, description, slug }) {
       }}
     />
   )
+}
+
+function getMetaImage(image) {
+  if (!image) {
+    return withPrefix('/images/q.png')
+  }
+
+  if (typeof image === 'string') {
+    return image
+  }
+
+  if (typeof image === 'object' && image.publicURL) {
+    return image.publicURL
+  }
+
+  return withPrefix('/images/q.png')
 }
 
 SEO.defaultProps = {

@@ -34,13 +34,13 @@ class PostTemplate extends React.Component {
 
   render() {
     const post = getPostDataFromProps(this.props)
-
     return (
       <BaseLayout>
         <SEO
           title={post.frontmatter.title}
           description={post.excerpt}
           slug={post.fields.slug}
+          image={post.frontmatter.image}
         />
 
         <article>
@@ -86,6 +86,9 @@ export const pageQuery = graphql`
         category
         topCaption
         dropCap
+        image {
+          publicURL
+        }
       }
       fields {
         slug

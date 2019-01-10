@@ -10,6 +10,14 @@ module.exports = {
   },
   pathPrefix: '/',
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-50367408-1`,
+      },
+    },
     'gatsby-plugin-emotion',
     {
       resolve: `gatsby-source-filesystem`,
@@ -66,14 +74,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-50367408-1`,
-      },
-    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -88,11 +88,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Libre Baskerville`, `Libre Franklin\:300,400,800`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [`Libre Baskerville`, `Libre Franklin\:300,400,800`],
+    //   },
+    // },
   ],
 }

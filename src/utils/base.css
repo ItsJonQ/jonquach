@@ -1,11 +1,14 @@
 :root {
-  --fontFamilySans: 'Libre Franklin', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', 'Roboto', 'Roboto Light', 'Oxygen', 'Ubuntu', 'Cantarell',
-    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
-  --fontFamilySerif: 'Libre Baskerville', 'Merriweather', 'Georgia', serif;
+  --fontFamilySans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Roboto Light', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  --fontFamilySerif: var(--fontFamilySans);
+  --fontFamilySansFancy: 'Libre Franklin', var(--fontFamilySans);
+  --fontFamilySerifFancy: 'Libre Baskerville', 'Merriweather', 'Georgia', serif;
   --fontFamilyMono: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
     monospace;
+  --fontWeightBase: 400;
   --fontWeightTitle: 800;
   --backgroundColor: #fff;
   --backgroundColorRGB: 255, 255, 255;

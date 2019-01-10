@@ -13,7 +13,7 @@ export class Typography extends React.PureComponent {
 
 const TypographyUI = styled('div')`
   font-family: var(--fontFamilySerif);
-  font-weight: 300;
+  font-weight: var(--fontWeightBase);
   line-height: 1.7;
 
   strong {
@@ -118,6 +118,18 @@ const TypographyUI = styled('div')`
   a[href*="https://gfycat.com"] {
     font-size: 0.7rem;
     opacity: 0.4;
+  }
+
+  .gatsby-resp-image-wrapper {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .gatsby-resp-image-link:hover {
+    background: none;
+  }
+
+  .gatsby-resp-iframe-wrapper {
+    margin: 1.6em 0 2em !important;
   }
 `
 
