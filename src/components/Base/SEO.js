@@ -30,7 +30,6 @@ function SEO({ meta, image, title, description, slug }) {
         metaImage = `${siteMetadata.siteUrl}${metaImage}`
 
         const url = `${siteMetadata.siteUrl}${slug}`
-        console.log(siteMetadata)
 
         return (
           <Helmet
