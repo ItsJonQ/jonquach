@@ -141,6 +141,15 @@ const TypographyUI = styled('div')`
     margin-top: 0.5em;
     font-size: 0.8rem;
   }
+
+  hr {
+    width: 100%;
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid var(--fontColor);
+    opacity: 0.08;
+    margin: 3em 0;
+  }
 `
 
 export default Typography
