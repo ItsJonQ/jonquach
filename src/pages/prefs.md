@@ -65,7 +65,7 @@ I use [my own](https://github.com/ItsJonQ/dotfiles/tree/master/base16-shell). Li
 
 I was a heavy [Vim](https://github.com/ItsJonQ/dotfiles/tree/master/vim) user for several years. My decision to switch over to something... non-Vim... came from the realization that I would often forget how to type normally, without using Vim commands.
 
-My emails, notes, Pull Request descriptions, would have `:i`, `:w` or `jjjjjjjjjjjj` all over the place.
+My emails, notes, Pull Request descriptions, would have `i`, `:w` or `jjjjjjjjjjjj` all over the place.
 
 ##### VS Code Theme?
 
