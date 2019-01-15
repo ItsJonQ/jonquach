@@ -40,7 +40,8 @@ Give yourself 15-30 seconds to scribble down those keywords. It's fine if the wo
 
 Call it `.AppSecondaryPricingPageCallToActionFooterNewsletterBox` if you have to.
 
-Is it verbose? Yes. Is it ugly? Most definitely.<br />
+Is it verbose? Yes.<br />
+Is it ugly? Most definitely.<br />
 Is it clear? **Absolutely**.
 
 Remember, you can always refactor it later! Maybe when the name annoys you enough or when you randomly come up with something better. When that time comes, maybe 2 or 6 months later, you'll be glad that `.AppSecondaryPricingPageCallToActionFooterNewsletterBox` was quick to find and easy to understand.
