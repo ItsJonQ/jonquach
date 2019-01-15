@@ -61,6 +61,7 @@ html *:not(pre) code[class*='language-'] {
   font-size: 85%;
   margin: 0;
   padding: 0.2em 0.4em;
+  word-break: break-word;
 }
 
 ::-webkit-scrollbar-track {

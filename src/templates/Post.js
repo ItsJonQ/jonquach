@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import SEO from '../components/Base/SEO'
 import PostIntro from '../components/Post/PostIntro'
 import PostFadeTop from '../components/Post/PostFadeTop'
+import PostFeaturedImage from '../components/Post/PostFeaturedImage'
 import PostPreviousNext from '../components/Post/PostPreviousNext'
 import BaseLayout from '../layouts'
 import Container from '../components/Layout/Container'
@@ -15,6 +16,7 @@ import {
   pageTypeCheck,
   getPostIntroProps,
   getDropcapFromPost,
+  getFeaturedImageFromPost,
 } from '../utils/posts'
 
 class PostTemplate extends React.Component {
@@ -32,8 +34,18 @@ class PostTemplate extends React.Component {
     )
   }
 
+  renderFeaturedImage() {
+    const post = getPostDataFromProps(this.props)
+    const featuredImage = getFeaturedImageFromPost(post)
+
+    if (!featuredImage) return
+
+    return <PostFeaturedImage src={featuredImage} />
+  }
+
   render() {
     const post = getPostDataFromProps(this.props)
+
     return (
       <BaseLayout>
         <SEO
@@ -50,6 +62,7 @@ class PostTemplate extends React.Component {
               <PostIntro {...getPostIntroProps(this.props)} />
             </Section>
             <PostContentUI>
+              {this.renderFeaturedImage()}
               <PostTypography
                 dangerouslySetInnerHTML={{ __html: post.html }}
                 withDropCap={getDropcapFromPost(post)}
@@ -86,6 +99,13 @@ export const pageQuery = graphql`
         category
         topCaption
         dropCap
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 700) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
         image {
           publicURL
         }

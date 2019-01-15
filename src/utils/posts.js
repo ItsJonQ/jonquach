@@ -89,3 +89,7 @@ export function filterPublishedPosts(posts) {
 export function getDescriptionFromPost(post) {
   return get(post, 'frontmatter.description') || post.excerpt
 }
+
+export function getFeaturedImageFromPost(post) {
+  return get(post, 'frontmatter.featuredImage.childImageSharp.fluid')
+}
