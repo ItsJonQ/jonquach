@@ -45,7 +45,11 @@ const MenuUI = styled(List)`
 `
 
 const MenuItemUI = styled(List.Item)`
-  padding: 15px 7px;
+  padding: 15px 3px;
+
+  @media (min-width: 768px) {
+    padding: 15px 7px;
+  }
 
   &.is-logo {
     padding-left: 0;
