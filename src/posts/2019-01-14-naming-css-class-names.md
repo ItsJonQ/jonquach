@@ -54,4 +54,4 @@ Note: If your team/company has guidelines on how you should name your CSS class 
 
 ---
 
-P.S. You may have noticed I use camelCase for my class name examples. I have thoughts on this. Will write about this in a future blog post. Stay tuned!
+P.S. You may have noticed I use PascalCase for my class name examples. I have thoughts on this. Will write about this in a future blog post. Stay tuned!
