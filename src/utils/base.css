@@ -84,3 +84,15 @@ html *:not(pre) code[class*='language-'] {
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+body.theme-terminal {
+  --fontFamilySans: var(--fontFamilyMono);
+  --fontFamilySerif: var(--fontFamilyMono);
+  --fontSize: 14px;
+  font-size: 14px !important;
+}
+
+body.theme-terminal * {
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+}

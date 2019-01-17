@@ -25,6 +25,11 @@ const TitleUI = styled('span')`
   line-height: 1;
   padding: 1px 3px;
   text-transform: uppercase;
+
+  ${({ theme }) => theme.type === 'terminal' && `
+    border: none;
+    padding: 0;
+  `}
 `
 
 export default SectionMetaTitle

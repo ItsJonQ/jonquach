@@ -66,6 +66,19 @@ const TypographyUI = styled('div')`
     }
   `}
 
+  ${({ theme }) => theme.type === 'terminal' && `
+    & > p {
+      &:first-of-type {
+        &:first-letter {
+          display: inline;
+          font-size: inherit;
+          float: none;
+          padding: 0;
+        }
+      }
+    }
+  `}
+
   & > h2,
   & > h3,
   & > h4,
