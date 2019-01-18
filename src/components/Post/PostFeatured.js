@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Category from '../Meta/Category'
 import TopCaption from '../Meta/TopCaption'
+import Date from '../Meta/Date'
 import SectionMetaTitle from '../Meta/SectionMetaTitle'
 import PostHeader from './PostHeader'
 import PostMeta from './PostMeta'
@@ -18,7 +19,7 @@ export class PostFeatured extends React.PureComponent {
   }
 
   render() {
-    const { category, excerpt, title, url } = this.props
+    const { category, date, excerpt, title, url } = this.props
     return (
       <LinkUI to={url}>
         <MetaTitleUI>Latest Post</MetaTitleUI>
@@ -26,6 +27,7 @@ export class PostFeatured extends React.PureComponent {
         <TitleUI>
           <span>{title}</span>
         </TitleUI>
+        {date && <PostMetaUI date={date} />}
         {excerpt && <PostLead>{excerpt}</PostLead>}
       </LinkUI>
     )
@@ -49,6 +51,10 @@ const LinkUI = styled(Link)`
       }
     }
   }
+`
+
+const PostMetaUI = styled(PostMeta)`
+  margin: 15px 0;
 `
 
 const MetaTitleUI = styled(SectionMetaTitle)`
