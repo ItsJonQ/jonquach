@@ -5,49 +5,39 @@ import Container from '../components/Layout/Container'
 import Section from '../components/Layout/Section'
 import PostSnippet from '../components/Post/PostSnippet'
 import PostFeatured from '../components/Post/PostFeatured'
+import PostIntro from '../components/Post/PostIntro'
 import TopCaption from '../components/Meta/TopCaption'
 import SEO from '../components/Base/SEO'
 import { getPostNodesFromProps, getSnippetPropsFromNode } from '../utils/posts'
-import { getSiteTitleFromProps } from '../utils/helpers'
 
 export class PostIndex extends React.Component {
   getPosts() {
     const posts = getPostNodesFromProps(this.props)
-    const [featuredPosts, ...rest] = posts
 
-    return rest.map(({ node }) => getSnippetPropsFromNode(node))
-  }
-
-  getFeaturedPost() {
-    const posts = getPostNodesFromProps(this.props)
-    const [featuredPost, ...rest] = posts
-
-    return featuredPost && getSnippetPropsFromNode(featuredPost.node)
+    return posts.map(({ node }) => getSnippetPropsFromNode(node))
   }
 
   render() {
-    const featuredPost = this.getFeaturedPost()
     const posts = this.getPosts()
 
     return (
       <Layout>
         <SEO
-          title="Writing"
-          slug="/posts"
-          description="A collection of blog posts, aka, scribbles."
+          title="Today I Learned"
+          slug="/til"
+          description="A collection of daily learnings."
         />
         <Section>
-          <TopCaption>
-            Scribbles...{' '}
-            <span aria-label="Writing emoji" role="img">
-              ✍️
-            </span>
-          </TopCaption>
-          {featuredPost && <PostFeatured {...featuredPost} />}
+          <PostIntro topCaption="Daily Learnings 🤓" title="Today I Learned" />
         </Section>
         <Container>
           {posts.map(post => {
-            return <PostSnippet {...post} />
+            return (
+              <PostSnippet
+                {...post}
+                excerpt={`<strong>TIL</strong> ${post.excerpt}`}
+              />
+            )
           })}
         </Container>
       </Layout>
@@ -67,7 +57,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fields: { type: { in: ["post"] } } }
+      filter: { fields: { type: { in: ["til"] } } }
     ) {
       edges {
         node {

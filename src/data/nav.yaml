@@ -2,6 +2,8 @@
   to: '/about'
 - title: 'Writing'
   to: '/posts'
+- title: 'TIL'
+  to: '/til'
 - title: 'Prefs'
   to: '/prefs'
 - title: 'Contact'

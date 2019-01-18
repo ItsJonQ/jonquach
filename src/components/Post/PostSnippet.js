@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Category from '../Meta/Category'
+import Date from '../Meta/Date'
 import Link from '../Base/Link'
 
 export class PostSnippet extends React.PureComponent {
@@ -14,7 +15,7 @@ export class PostSnippet extends React.PureComponent {
   }
 
   render() {
-    const { category, excerpt, title, url } = this.props
+    const { category, date, excerpt, title, url } = this.props
     return (
       <LinkUI to={url}>
         <ArticleUI>
@@ -22,6 +23,7 @@ export class PostSnippet extends React.PureComponent {
           <TitleUI>
             <span>{title}</span>
           </TitleUI>
+          {date && <Date>{date}</Date>}
           <ExcerptUI dangerouslySetInnerHTML={{ __html: excerpt }} />
         </ArticleUI>
       </LinkUI>

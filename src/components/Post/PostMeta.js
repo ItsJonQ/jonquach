@@ -9,9 +9,9 @@ export class PostHeader extends React.PureComponent {
   }
 
   render() {
-    const { date, timeToRead } = this.props
+    const { date, timeToRead, ...rest } = this.props
     return (
-      <PostHeaderUI>
+      <PostHeaderUI {...rest}>
         {date}
         {timeToRead && (
           <React.Fragment>

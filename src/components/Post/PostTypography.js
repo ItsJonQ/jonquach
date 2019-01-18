@@ -66,7 +66,9 @@ const TypographyUI = styled('div')`
     }
   `}
 
-  ${({ theme }) => theme.type === 'terminal' && `
+  ${({ theme }) =>
+    theme.type === 'terminal' &&
+    `
     & > p {
       &:first-of-type {
         &:first-letter {
@@ -145,6 +147,7 @@ const TypographyUI = styled('div')`
     margin: 1.6em 0 2em !important;
   }
 
+  .gatsby-highlight,
   .gatsby-resp-image-figure {
     margin: 1.6em 0;
   }

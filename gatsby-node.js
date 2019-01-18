@@ -8,7 +8,11 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/Post.js')
+    const templates = {
+      page: path.resolve('./src/templates/Post.js'),
+      post: path.resolve('./src/templates/Post.js'),
+      til: path.resolve('./src/templates/TIL.js'),
+    }
 
     resolve(
       graphql(
@@ -22,6 +26,7 @@ exports.createPages = ({ graphql, actions }) => {
                 node {
                   fields {
                     slug
+                    type
                   }
                   frontmatter {
                     title
@@ -46,10 +51,11 @@ exports.createPages = ({ graphql, actions }) => {
           const previous =
             index === posts.length - 1 ? null : posts[index + 1].node
           const next = index === 0 ? null : posts[index - 1].node
+          const { type } = post.node.fields
 
           createPage({
             path: post.node.fields.slug,
-            component: blogPost,
+            component: templates[type],
             context: {
               slug: post.node.fields.slug,
               previous,
@@ -70,7 +76,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const type = getContentTypeFromNode(node)
     let slug = removeDateFromSlug(defaultSlug)
     let image = get(node, 'frontmatter.image', '')
-    const draft = get(node, 'frontmatter.draft', false)
 
     if (image) {
       image = path.relative(
@@ -81,6 +86,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
     if (type === 'post') {
       slug = `/posts${slug}`
+    }
+    if (type === 'til') {
+      slug = `/til${slug}`
     }
 
     createNodeField({

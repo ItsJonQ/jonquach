@@ -11,16 +11,17 @@ export class PostIntro extends React.PureComponent {
     title: 'Title',
     date: undefined,
     timeToRead: undefined,
+    size: 'default',
   }
 
   render() {
-    const { date, topCaption, category, title, timeToRead } = this.props
+    const { date, topCaption, category, size, title, timeToRead } = this.props
 
     return (
       <>
         <TopCaption>{topCaption}</TopCaption>
         <Category>{category}</Category>
-        <PostHeader>{title}</PostHeader>
+        <PostHeader size={size}>{title}</PostHeader>
         <PostMeta date={date} timeToRead={timeToRead} />
       </>
     )
