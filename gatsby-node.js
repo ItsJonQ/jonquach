@@ -12,6 +12,7 @@ exports.createPages = ({ graphql, actions }) => {
       page: path.resolve('./src/templates/Post.js'),
       post: path.resolve('./src/templates/Post.js'),
       til: path.resolve('./src/templates/TIL.js'),
+      x: path.resolve('./src/templates/X.js'),
     }
 
     resolve(
@@ -89,6 +90,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     }
     if (type === 'til') {
       slug = `/til${slug}`
+    }
+    if (type === 'x') {
+      slug = `/x${slug}`
     }
 
     createNodeField({

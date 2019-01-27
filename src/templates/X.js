@@ -3,8 +3,8 @@ import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import SEO from '../components/Base/SEO'
 import PostIntro from '../components/Post/PostIntro'
-import TopCaption from '../components/Meta/TopCaption'
 import PostFadeTop from '../components/Post/PostFadeTop'
+import PostFeaturedImage from '../components/Post/PostFeaturedImage'
 import PostPreviousNext from '../components/Post/PostPreviousNext'
 import BaseLayout from '../layouts'
 import Container from '../components/Layout/Container'
@@ -15,6 +15,7 @@ import {
   isPageType,
   pageTypeCheck,
   getPostIntroProps,
+  getFeaturedImageFromPostLoose,
 } from '../utils/posts'
 
 class PostTemplate extends React.Component {
@@ -30,6 +31,15 @@ class PostTemplate extends React.Component {
         next={pageTypeCheck(next)}
       />
     )
+  }
+
+  renderFeaturedImage() {
+    const post = getPostDataFromProps(this.props)
+    const featuredImage = getFeaturedImageFromPostLoose(post)
+
+    if (!featuredImage) return
+
+    return <PostFeaturedImage src={featuredImage} />
   }
 
   render() {
@@ -51,7 +61,8 @@ class PostTemplate extends React.Component {
               <PostIntro {...getPostIntroProps(this.props)} size="sm" />
             </Section>
             <PostContentUI>
-              <TopCaption>Today I learned...</TopCaption>
+              {this.renderFeaturedImage()}
+
               <PostTypography
                 dangerouslySetInnerHTML={{ __html: post.html }}
                 withDropCap={false}
@@ -69,7 +80,7 @@ const PostContentUI = styled('div')`
 `
 
 export const pageQuery = graphql`
-  query TILBySlug($slug: String!) {
+  query XPostBySlug($slug: String!) {
     site {
       siteMetadata {
         title

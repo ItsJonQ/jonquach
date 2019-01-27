@@ -4,6 +4,8 @@
   to: '/posts'
 - title: 'TIL'
   to: '/til'
+- title: 'X'
+  to: '/x'
 - title: 'Prefs'
   to: '/prefs'
 - title: 'Contact'

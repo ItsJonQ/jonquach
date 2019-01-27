@@ -93,3 +93,10 @@ export function getDescriptionFromPost(post) {
 export function getFeaturedImageFromPost(post) {
   return get(post, 'frontmatter.featuredImage.childImageSharp.fluid')
 }
+
+export function getFeaturedImageFromPostLoose(post) {
+  return (
+    get(post, 'frontmatter.featuredImage.childImageSharp.fluid') ||
+    get(post, 'frontmatter.image.publicURL')
+  )
+}
