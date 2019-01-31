@@ -54,7 +54,7 @@ em {
   text-decoration: underline;
 }
 
-html *:not(pre) code[class*='language-'] {
+html *:not(pre) code[class*='language-text'] {
   background-color: rgba(27, 31, 35, 0.05);
   border-radius: 3px;
   color: inherit;
@@ -62,6 +62,10 @@ html *:not(pre) code[class*='language-'] {
   margin: 0;
   padding: 0.2em 0.4em;
   word-break: break-word;
+}
+
+html *:not(pre) code[class*='language-'] {
+  font-size: 85%;
 }
 
 ::-webkit-scrollbar-track {
