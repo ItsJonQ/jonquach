@@ -135,5 +135,5 @@ function filterNonPosts(post) {
 }
 
 function filterPublishedPosts(posts) {
-  return posts.filter(filterPublishedPost).filter(filterNonPosts)
+  return posts.filter(filterPublishedPost)
 }
