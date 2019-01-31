@@ -129,6 +129,11 @@ function filterPublishedPost(post) {
   )
 }
 
+function filterNonPosts(post) {
+  const type = get(post, 'node.fields.type')
+  return type === 'post'
+}
+
 function filterPublishedPosts(posts) {
-  return posts.filter(filterPublishedPost)
+  return posts.filter(filterPublishedPost).filter(filterNonPosts)
 }
