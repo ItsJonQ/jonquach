@@ -68,7 +68,6 @@ class PostTemplate extends React.Component {
                 withDropCap={getDropcapFromPost(post)}
               />
             </PostContentUI>
-            {this.renderPreviousNext()}
           </Container>
         </article>
       </BaseLayout>
