@@ -190,7 +190,7 @@ render() {
 
 ### The Result
 
-![Card animations demo](./images/card-animations.gif)
+<iframe src="https://codesandbox.io/embed/4xrjz4yoz0" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 Pretty spiffy, if I do say so myself!
 

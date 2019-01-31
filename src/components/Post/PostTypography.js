@@ -166,6 +166,10 @@ const TypographyUI = styled('div')`
     opacity: 0.08;
     margin: 3em 0;
   }
+
+  iframe[src*="https://codesandbox"] {
+    margin: 1.6em 0 2em !important;
+  }
 `
 
 export default Typography
