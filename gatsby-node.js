@@ -5,7 +5,14 @@ const { createFilePath } = require('gatsby-source-filesystem')
 const { get } = _
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  createRedirect({
+    fromPath: '/prefs/',
+    isPermanent: true,
+    redirectInBrowser: true,
+    toPath: '/uses/',
+  })
 
   return new Promise((resolve, reject) => {
     const templates = {

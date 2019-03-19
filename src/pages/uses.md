@@ -1,5 +1,5 @@
 ---
-title: 'Prefs'
+title: 'Uses'
 topCaption: '🤓 Workflow and other preferences'
 dropCap: false
 ---
