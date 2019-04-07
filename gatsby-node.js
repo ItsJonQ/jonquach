@@ -18,6 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
     const templates = {
       page: path.resolve('./src/templates/Post.js'),
       post: path.resolve('./src/templates/Post.js'),
+      project: path.resolve('./src/templates/TIL.js'),
       til: path.resolve('./src/templates/TIL.js'),
     }
 
@@ -52,7 +53,9 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create blog posts pages.
         let posts = result.data.allMarkdownRemark.edges
+
         posts = filterPublishedPosts(posts)
+        posts = filterProjectPosts(posts)
 
         _.each(posts, (post, index) => {
           const previous =
@@ -93,6 +96,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
     if (type === 'post') {
       slug = `/posts${slug}`
+    }
+    if (type === 'project') {
+      slug = `/projects${slug}`
     }
     if (type === 'til') {
       slug = `/til${slug}`
@@ -138,4 +144,10 @@ function filterPublishedPost(post) {
 
 function filterPublishedPosts(posts) {
   return posts.filter(filterPublishedPost)
+}
+
+function filterProjectPosts(posts) {
+  return posts.filter(post => {
+    return get(post, 'node.fields.type') !== 'project'
+  })
 }

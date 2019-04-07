@@ -31,7 +31,7 @@ export class Footer extends React.PureComponent {
               ))}
             </ListUI>
           )}
-          © {year}. Made by Q 🐙. <strong>Have a great day!</strong>
+          © {year}. Made by Q 🦄. <strong>Have a great day!</strong>
         </FooterUI>
       </>
     )

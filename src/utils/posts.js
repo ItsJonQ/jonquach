@@ -5,19 +5,21 @@ import get from 'lodash/get'
  */
 export function getSnippetPropsFromNode(node) {
   const url = get(node, 'fields.slug')
+  const frontmatter = get(node, 'frontmatter', {})
   const title = get(node, 'frontmatter.title') || url
-  const date = get(node, 'frontmatter.date')
   const timeToRead = get(node, 'timeToRead')
-  const category = get(node, 'frontmatter.category')
+  const html = get(node, 'html')
+  const id = get(node, 'id')
 
   return {
+    ...frontmatter,
     key: url,
     title,
+    id,
+    html,
     url,
-    date,
     timeToRead,
     excerpt: getExcerptFromNode(node),
-    category,
   }
 }
 
