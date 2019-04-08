@@ -1,6 +1,6 @@
 ---
 title: 'Uses'
-topCaption: '🤓 Workflow and other preferences'
+topCaption: 'Workflow and other preferences ✌️'
 dropCap: false
 ---
 

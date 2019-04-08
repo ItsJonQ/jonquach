@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Category from '../Meta/Category'
+import PostStatus from './PostStatus'
 
 export class PostSnippet extends React.PureComponent {
   static defaultProps = {
@@ -13,12 +14,21 @@ export class PostSnippet extends React.PureComponent {
   }
 
   render() {
-    const { category, description, html, icon, title } = this.props
+    const {
+      category,
+      description,
+      github,
+      html,
+      icon,
+      status,
+      title,
+    } = this.props
 
     return (
-      <CardUI>
+      <CardUI href={github} target="_blank">
         <HeaderUI>
           <Category>{category}</Category>
+          <PostStatus status={status} />
           <IconUI>{icon}</IconUI>
           <TitleUI>
             <span>{title}</span>
@@ -31,20 +41,34 @@ export class PostSnippet extends React.PureComponent {
   }
 }
 
-const CardUI = styled('article')`
+const CardUI = styled('a')`
+  background: rgb(255, 255, 255);
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px, rgba(0, 0, 0, 0.06) 0px 8px 20px;
-  background: rgb(255, 255, 255);
+  color: currentColor;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  height: 100%;
   margin: 0 0 1.2em;
-  padding: 1.8em 1.8em 2.2em;
+  padding: 2em 1.8em 2.2em;
+  position: relative;
   text-align: center;
   transition: all 300ms ease 0s;
   width: 100%;
+  width: 100%;
 
   &:hover {
+    background: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px,
       rgba(0, 0, 0, 0.12) 0px 12px 30px;
     transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px,
+      rgba(0, 0, 0, 0.06) 0px 8px 20px;
+    transform: translateY(1px);
   }
 `
 
