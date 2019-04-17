@@ -4,7 +4,7 @@ category: 'React Testing'
 date: 2019-04-12
 description: 'Cypress-like testing for React + JSDOM'
 icon: '🐱'
-github: 'https://github.com/itsjonq/cyan'
+github: 'https://github.com/helpscout/cyan'
 status: 'development'
 type: 'Libraries'
 order: 2
