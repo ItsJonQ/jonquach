@@ -4,6 +4,8 @@ const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { get } = _
 
+const { fetchAllPosts } = require('./src/utils/data')
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
 
@@ -14,68 +16,72 @@ exports.createPages = ({ graphql, actions }) => {
     toPath: '/uses/',
   })
 
-  return new Promise((resolve, reject) => {
-    const templates = {
-      page: path.resolve('./src/templates/Post.js'),
-      post: path.resolve('./src/templates/Post.js'),
-      project: path.resolve('./src/templates/TIL.js'),
-      til: path.resolve('./src/templates/TIL.js'),
-    }
+  const defaultCreatePages = () => {
+    return new Promise((resolve, reject) => {
+      const templates = {
+        page: path.resolve('./src/templates/Post.js'),
+        post: path.resolve('./src/templates/Post.js'),
+        project: path.resolve('./src/templates/TIL.js'),
+        til: path.resolve('./src/templates/TIL.js'),
+      }
 
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC }
-              limit: 1000
-            ) {
-              edges {
-                node {
-                  fields {
-                    slug
-                    type
-                  }
-                  frontmatter {
-                    title
-                    draft
+      resolve(
+        graphql(
+          `
+            {
+              allMarkdownRemark(
+                sort: { fields: [frontmatter___date], order: DESC }
+                limit: 1000
+              ) {
+                edges {
+                  node {
+                    fields {
+                      slug
+                      type
+                    }
+                    frontmatter {
+                      title
+                      draft
+                    }
                   }
                 }
               }
             }
+          `
+        ).then(result => {
+          if (result.errors) {
+            console.log(result.errors)
+            reject(result.errors)
           }
-        `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
-        }
 
-        // Create blog posts pages.
-        let posts = result.data.allMarkdownRemark.edges
+          // Create blog posts pages.
+          let posts = result.data.allMarkdownRemark.edges
 
-        posts = filterPublishedPosts(posts)
-        posts = filterProjectPosts(posts)
+          posts = filterPublishedPosts(posts)
+          posts = filterProjectPosts(posts)
 
-        _.each(posts, (post, index) => {
-          const previous =
-            index === posts.length - 1 ? null : posts[index + 1].node
-          const next = index === 0 ? null : posts[index - 1].node
-          const { type } = post.node.fields
+          _.each(posts, (post, index) => {
+            const previous =
+              index === posts.length - 1 ? null : posts[index + 1].node
+            const next = index === 0 ? null : posts[index - 1].node
+            const { type } = post.node.fields
 
-          createPage({
-            path: post.node.fields.slug,
-            component: templates[type],
-            context: {
-              slug: post.node.fields.slug,
-              previous,
-              next,
-            },
+            createPage({
+              path: post.node.fields.slug,
+              component: templates[type],
+              context: {
+                slug: post.node.fields.slug,
+                previous,
+                next,
+              },
+            })
           })
         })
-      })
-    )
-  })
+      )
+    })
+  }
+
+
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
