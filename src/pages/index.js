@@ -41,9 +41,8 @@ export class BlogIndex extends React.PureComponent {
         <LeadUI>
           I specialize in <em>Design Systems</em>, <em>Interaction</em>, and{' '}
           <em>UI</em>.<br />
-          I'm a Design Engineer at{' '}
-          <Link to="https://www.helpscout.com/">Help Scout</Link>, where I
-          create frameworks, tools, and 🎉 delight 🎉.
+          I'm a Principal Designer at{' '}
+          <Link to="https://www.automattic.com/">Automattic</Link>.
         </LeadUI>
         <Showcase />
         <Hr />
