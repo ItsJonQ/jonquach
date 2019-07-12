@@ -30,10 +30,8 @@ export class BlogIndex extends React.PureComponent {
             title={
               <SecondaryTextUI>
                 I'm Q.
-                <br />A <DesignerUI>
-                  designer
-                </DesignerUI> <SlashUI>/</SlashUI>{' '}
-                <DeveloperUI>developer</DeveloperUI>.
+                <br />A <span>designer</span> <SlashUI>/</SlashUI>{' '}
+                <span>developer</span>.
               </SecondaryTextUI>
             }
           />
@@ -75,13 +73,6 @@ const LeadUI = styled(PostLead)`
   a {
     color: inherit;
   }
-`
-
-const DesignerUI = styled('span')``
-
-const DeveloperUI = styled('span')`
-  font-family: var(--fontFamilyMono);
-  letter-spacing: -4px;
 `
 
 const SlashUI = styled('span')`
