@@ -10,9 +10,9 @@ A list of workflow or tool preferences that I use on the daily.
 
 #### Machine
 
-##### MacBook Pro 2017
+##### MacBook Pro 2019
 
-The one with the keyboard that dies from dust. Yes, it happened to me.
+A beastly machine with the keyboard that dies from dust. (Yes, it happened to me).
 
 ---
 
