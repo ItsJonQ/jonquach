@@ -1,15 +1,13 @@
 # Q
 
-[![Build Status](https://travis-ci.org/ItsJonQ/jonquach.svg?branch=master)](https://travis-ci.org/ItsJonQ/jonquach)
-
 > Personal site for Jon Q
 
 ## Setup
 
-This project is powered by [Gatsby](https://www.gatsbyjs.org/). To get started, install the dependencies by running:
+This project is powered by [Next.js](https://nextjs.org/). To get started, install the dependencies by running:
 
 ```
-npm install
+yarn
 ```
 
 ## Development
@@ -17,11 +15,11 @@ npm install
 When you've downloaded all the dependencies, run:
 
 ```
-npm start
+yarn start
 ```
 
-The local development website will be available at [http://localhost:8000/](http://localhost:8000/).
+The local development website will be available at [http://localhost:3000/](http://localhost:3000/).
 
 ## Deploying
 
-This project is deployed via [Netlify](https://www.netlify.com/). Any pushes to the `master` branch will automatically trigger a build and deploy.
+This project is deployed via [Vercel](https://vercel.com/). Any pushes to the `master` branch will automatically trigger a build and deploy.

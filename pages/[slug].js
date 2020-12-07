@@ -1,0 +1,88 @@
+import { useRouter } from 'next/router';
+import ErrorPage from 'next/error';
+import { styled } from '@wp-g2/styles';
+import PostBody from '../components/post/body';
+import PostIntro from '../components/post/intro';
+import PostFeaturedImage from '../components/post/featured-image';
+import Layout from '../components/page-layout';
+import Section from '../components/layout/section';
+import SEO from '../components/seo';
+import { getPageBySlug, getAllPages } from '../lib/api';
+import markdownToHtml from '../lib/markdownToHtml';
+
+export default function Post({ post, preview }) {
+	const router = useRouter();
+	if (!router.isFallback && !post?.slug) {
+		return <ErrorPage statusCode={404} />;
+	}
+
+	return (
+		<Layout preview={preview}>
+			{router.isFallback ? (
+				<div>Loading…</div>
+			) : (
+				<>
+					<article className="mb-32">
+						<SEO
+							title={post.title}
+							image={post.image}
+							description={post.description}
+						/>
+						<Section>
+							<PostIntro {...post} />
+						</Section>
+						<PostContentUI>
+							{post.featuredImage && (
+								<PostFeaturedImage src={post.featuredImage} />
+							)}
+							<PostBody content={post.content} />
+						</PostContentUI>
+					</article>
+				</>
+			)}
+		</Layout>
+	);
+}
+
+const PostContentUI = styled('div')`
+	margin: 40px auto;
+`;
+
+export async function getStaticProps({ params }) {
+	const post = getPageBySlug(params.slug, [
+		'title',
+		'date',
+		'slug',
+		'category',
+		'topCaption',
+		'content',
+		'image',
+		'featuredImage',
+	]);
+
+	const content = await markdownToHtml(post.content || '');
+
+	return {
+		props: {
+			post: {
+				...post,
+				content,
+			},
+		},
+	};
+}
+
+export async function getStaticPaths() {
+	const pages = getAllPages(['slug']);
+
+	return {
+		paths: pages.map((page) => {
+			return {
+				params: {
+					slug: page.slug,
+				},
+			};
+		}),
+		fallback: false,
+	};
+}

@@ -1,4 +1,0 @@
-User-Agent: *
-Allow: /
-
-sitemap: https://jonquach.com/sitemap.xml

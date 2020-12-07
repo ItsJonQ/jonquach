@@ -1,0 +1,43 @@
+:root {
+	--brandColor: #05f;
+	--brandColorRGB: 0, 85, 255;
+	--fontSize: 16px;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--fontSize: 18px;
+	}
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+		'Roboto Light', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+		'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol';
+	font-size: var(--fontSize);
+}
+
+body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: var(--brandColor);
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: rgba(var(--brandColorRGB), 0.1);
+}
+
+em {
+	font-style: normal;
+	text-decoration: underline;
+}
