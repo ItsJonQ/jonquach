@@ -4,6 +4,29 @@ import { cache } from "@wp-g2/styles";
 
 const { extractCritical } = createEmotionServer(cache);
 
+function GoogleAnalyticsScript() {
+	return (
+		<>
+			<script
+				async
+				src="https://www.googletagmanager.com/gtag/js?id=UA-50367408-1"
+			/>
+			<script
+				dangerouslySetInnerHTML={{
+					__html: `
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-50367408-1');
+		`,
+				}}
+			/>
+		</>
+	);
+}
+
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx) {
 		const initialProps = await Document.getInitialProps(ctx);
@@ -26,7 +49,9 @@ export default class MyDocument extends Document {
 	render() {
 		return (
 			<html>
-				<Head />
+				<Head>
+					<GoogleAnalyticsScript />
+				</Head>
 				<body>
 					<Main />
 					<NextScript />
