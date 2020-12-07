@@ -11,7 +11,7 @@ const theme = createTheme(({ theme, get }) => {
 		fontSize: "18px",
 		fontFamily:
 			'-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Roboto Light","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
-		colorAdmin: "#05f05f",
+		colorAdmin: "#0055ff",
 	};
 });
 
