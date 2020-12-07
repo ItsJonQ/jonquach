@@ -13,6 +13,7 @@ export default function SEO({
 	const router = useRouter();
 
 	const url = `${baseUrl}${router.asPath}`;
+	const imagePath = image ? `${baseUrl}${image}` : undefined;
 
 	return (
 		<Head>
@@ -24,7 +25,7 @@ export default function SEO({
 			<meta property="og:url" content={url} />
 			<meta property="og:title" content={siteTitle} />
 			<meta property="og:description" content={description} />
-			{image && <meta property="og:image" content={image} />}
+			{imagePath && <meta property="og:image" content={imagePath} />}
 
 			<meta property="twitter:creator" content="@itsjonq" />
 			<meta property="twitter:card" content="summary_large_image" />
@@ -32,7 +33,7 @@ export default function SEO({
 			<meta property="twitter:title" content={siteTitle} />
 			<meta property="twitter:description" content={description} />
 
-			{image && <meta property="twitter:image" content={image} />}
+			{imagePath && <meta property="twitter:image" content={imagePath} />}
 		</Head>
 	);
 }

@@ -12,6 +12,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://jonquach.com/animation-interpolations</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://jonquach.com/blackpink</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -33,6 +37,10 @@
   </url>
   <url>
     <loc>https://jonquach.com/design-engineer-what-it-means</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://jonquach.com/designing-draggables-droppables-and-sortables</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
