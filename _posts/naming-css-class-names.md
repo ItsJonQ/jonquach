@@ -1,11 +1,11 @@
 ---
-date: '2019-01-14'
-title: 'Naming CSS Class Names'
-category: 'CSS'
+date: "2019-01-14"
+title: "Naming CSS Class Names"
+category: "CSS"
 draft: false
-topCaption: '😅 Um... Box?'
-image: '/assets/posts/naming-things-is-hard.png'
-featuredImage: '/assets/posts/naming-things-is-hard.png'
+topCaption: "😅 Um... Box?"
+image: "/assets/posts/naming-things-is-hard.png"
+featuredImage: "/assets/posts/naming-things-is-hard.png"
 ---
 
 You're working on some UI. It's a series of CSS problems. You figured out the styles required to solve it. All you gotta do is create a couple of new CSS class names.

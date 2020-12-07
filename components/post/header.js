@@ -1,6 +1,6 @@
-import React from 'react';
-import Date from '../meta/date';
-import PostTitle from './title';
+import React from "react";
+import Date from "../meta/date";
+import PostTitle from "./title";
 
 function PostHeader({ children, title, date }, ref) {
 	return (

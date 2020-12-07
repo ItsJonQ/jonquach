@@ -1,6 +1,6 @@
-import { styled } from '@wp-g2/styles';
+import { styled } from "@wp-g2/styles";
 
-const SiteContainerUI = styled('div')`
+const SiteContainerUI = styled("div")`
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 720px;

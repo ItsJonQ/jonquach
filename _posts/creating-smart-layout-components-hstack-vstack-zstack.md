@@ -1,11 +1,11 @@
 ---
-date: '2020-08-12'
-title: 'Creating Smart Layout Components (HStack, VStack, and ZStack)'
-category: 'Component Design'
-topCaption: '🥞 Stack em up.'
+date: "2020-08-12"
+title: "Creating Smart Layout Components (HStack, VStack, and ZStack)"
+category: "Component Design"
+topCaption: "🥞 Stack em up."
 draft: false
-image: '/assets/posts/create-smart-layout-components-hstack-vstack-zstack/featured.png'
-featuredImage: '/assets/posts/create-smart-layout-components-hstack-vstack-zstack/featured.png'
+image: "/assets/posts/create-smart-layout-components-hstack-vstack-zstack/featured.png"
+featuredImage: "/assets/posts/create-smart-layout-components-hstack-vstack-zstack/featured.png"
 ---
 
 In today’s Zoom session, I streamed the design and creation process for creating a handful of [SwiftUI](https://developer.apple.com/xcode/swiftui/) inspired layout components for G2: HStack, VStack, and ZStack.

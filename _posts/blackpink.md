@@ -1,8 +1,8 @@
 ---
-title: 'BLACKPINK'
-category: 'Misc'
-date: '2017-11-22'
-topCaption: 'BOOMBAYAH 💅'
+title: "BLACKPINK"
+category: "Misc"
+date: "2017-11-22"
+topCaption: "BOOMBAYAH 💅"
 draft: false
 ---
 
@@ -16,9 +16,9 @@ There were several reasons why I decided to **revamp** my site:
 
 Over the past year and a half or so, I've been fortunate to have the opportunities to _invent_ some really cool projects at my [job](https://www.helpscout.net/) (bonus: a lot of them are open source). Some of these projects include:
 
--   [A modular CSS framework](https://developer.helpscout.com/seed/)
--   [A React-inspired templating "language" for Jekyll](https://github.com/helpscout/jekyll-spark)
--   [A Jekyll unit testing library](https://github.com/helpscout/jekyll-joule)
+- [A modular CSS framework](https://developer.helpscout.com/seed/)
+- [A React-inspired templating "language" for Jekyll](https://github.com/helpscout/jekyll-spark)
+- [A Jekyll unit testing library](https://github.com/helpscout/jekyll-joule)
 
 There's more, but the ones I mentioned are used to build this site. (Curious? Check out the [source code](https://github.com/itsjonq/jonquach)).
 

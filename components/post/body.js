@@ -1,5 +1,5 @@
-import { View } from '@wp-g2/components';
-import { css } from '@wp-g2/styles';
+import { View } from "@wp-g2/components";
+import { css } from "@wp-g2/styles";
 
 const textStyles = css`
 	font-size: 1rem;

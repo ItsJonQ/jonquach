@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "prestart": "yarn",
+    "format": "prettier './**/*.{js,md}' --write",
     "start": "yarn run dev"
   },
   "dependencies": {
@@ -29,6 +30,17 @@
     "string-strip-html": "^7.0.3"
   },
   "devDependencies": {
-    "globby": "^11.0.1"
+    "globby": "^11.0.1",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "prettier": "2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.--write": "prettier --write"
   }
 }

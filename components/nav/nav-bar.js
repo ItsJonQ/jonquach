@@ -1,20 +1,20 @@
-import Link from 'next/link';
-import NavLogo from './nav-logo';
-import { styled } from '@wp-g2/styles';
-import SiteContainer from '../layout/site-container';
+import Link from "next/link";
+import NavLogo from "./nav-logo";
+import { styled } from "@wp-g2/styles";
+import SiteContainer from "../layout/site-container";
 
 const links = [
 	{
-		to: '/about',
-		title: 'About',
+		to: "/about",
+		title: "About",
 	},
 	{
-		to: '/posts',
-		title: 'Posts',
+		to: "/posts",
+		title: "Posts",
 	},
 	{
-		to: '/contact',
-		title: 'Contact',
+		to: "/contact",
+		title: "Contact",
 	},
 ];
 
@@ -39,15 +39,15 @@ function NavBar() {
 	);
 }
 
-const NavBarUI = styled('div')`
+const NavBarUI = styled("div")`
 	padding: 20px 0;
 `;
 
-const MenuUI = styled('div')`
+const MenuUI = styled("div")`
 	display: flex;
 `;
 
-const MenuItemUI = styled('div')`
+const MenuItemUI = styled("div")`
 	cursor: pointer;
 	padding: 15px 3px;
 
@@ -68,7 +68,7 @@ const MenuItemUI = styled('div')`
 	}
 `;
 
-const NavLinkUI = styled('a')`
+const NavLinkUI = styled("a")`
 	color: black;
 	font-weight: 700;
 	font-size: 0.8rem;

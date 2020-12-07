@@ -1,4 +1,4 @@
-import { css, styled } from '@wp-g2/styles';
+import { css, styled } from "@wp-g2/styles";
 
 const compact = ({ isCompact }) => {
 	if (!isCompact) return;
@@ -14,7 +14,7 @@ const compact = ({ isCompact }) => {
 	`;
 };
 
-const SectionUI = styled('section')`
+const SectionUI = styled("section")`
 	padding: 40px 0;
 	margin-bottom: 20px;
 

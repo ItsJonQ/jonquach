@@ -1,12 +1,12 @@
-import React from 'react';
-import { styled } from '@wp-g2/styles';
+import React from "react";
+import { styled } from "@wp-g2/styles";
 
-const SectionMetaTitleUI = styled('div')`
+const SectionMetaTitleUI = styled("div")`
 	margin-top: 10px;
 	margin-bottom: 10px;
 `;
 
-const TitleUI = styled('span')`
+const TitleUI = styled("span")`
 	border: 1px solid rgba(var(--brandColorRGB), 0.2);
 	color: var(--brandColor);
 	font-size: 0.6rem;

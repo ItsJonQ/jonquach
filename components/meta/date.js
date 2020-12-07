@@ -1,7 +1,7 @@
-import { parseISO, format } from 'date-fns';
-import { styled } from '@wp-g2/styles';
+import { parseISO, format } from "date-fns";
+import { styled } from "@wp-g2/styles";
 
-const DateUI = styled('div')`
+const DateUI = styled("div")`
 	font-size: 11px;
 	opacity: 0.4;
 	margin-top: 8px;
@@ -15,7 +15,7 @@ export default function Date({ date: dataProp }) {
 
 	return (
 		<DateUI>
-			<time dateTime={date}>{format(date, 'LLLL	d, yyyy')}</time>
+			<time dateTime={date}>{format(date, "LLLL	d, yyyy")}</time>
 		</DateUI>
 	);
 }

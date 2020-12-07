@@ -1,11 +1,11 @@
 ---
-date: '2019-01-30'
-title: 'Creating a Self Resizing Card'
-category: 'Experiments'
-topCaption: ' 👨‍✈️ 🦅 Show me your moves!'
+date: "2019-01-30"
+title: "Creating a Self Resizing Card"
+category: "Experiments"
+topCaption: " 👨‍✈️ 🦅 Show me your moves!"
 draft: false
-image: '/assets/posts/card-animations-cover.png'
-featuredImage: '/assets/posts/card-animations-cover.png'
+image: "/assets/posts/card-animations-cover.png"
+featuredImage: "/assets/posts/card-animations-cover.png"
 ---
 
 Every so often, I get randomly inspired to code something... experimental. Recently, I felt particularly ambitious, and thought it would be neat to create a self-resizing Card component with fancy animations.
@@ -22,21 +22,21 @@ In this post, I'm going to walk through the my thought process in creating this 
 
 To create a Card component that...
 
--   Automatically resizes itself based on it's content
--   Resizes any time the content changes
--   Renders a skeleton UI, when there's no content present
--   Transition nicely between skeleton 👉 content
--   Renders and animates at a stable 60fps
--   And, oh yea!... Do all this ☝️ **automatically** without having to babysit the Card and manage state or whatever the heck (ugh)
+- Automatically resizes itself based on it's content
+- Resizes any time the content changes
+- Renders a skeleton UI, when there's no content present
+- Transition nicely between skeleton 👉 content
+- Renders and animates at a stable 60fps
+- And, oh yea!... Do all this ☝️ **automatically** without having to babysit the Card and manage state or whatever the heck (ugh)
 
 ### The Tools
 
 For this experiment, I went with the following setup:
 
--   [Codesandbox](https://codesandbox.io/dashboard), for development
--   [React](https://reactjs.org/), for JavaScript component things
--   [Fancy](https://github.com/helpscout/fancy), for styles
--   [AnimeJS](https://animejs.com/), for animations
+- [Codesandbox](https://codesandbox.io/dashboard), for development
+- [React](https://reactjs.org/), for JavaScript component things
+- [Fancy](https://github.com/helpscout/fancy), for styles
+- [AnimeJS](https://animejs.com/), for animations
 
 **Note**: The principles for building this component aren't specific to any of the libraries/frameworks specified above. You can achieve the same result with vanilla JavaScript and plain ol' CSS. I just happen to like these libraries 🤓.
 
@@ -48,8 +48,8 @@ Below is a sketch that details how the auto-resizing stuff is going to work:
 
 The most important parts (or phases) are when...
 
--   Content is added or removed, which triggers the **update** phase
--   Recalcuating the desired height during the "**MATHS**" phase
+- Content is added or removed, which triggers the **update** phase
+- Recalcuating the desired height during the "**MATHS**" phase
 
 ### The Structure
 
@@ -117,8 +117,8 @@ By the way, you can achieve the same effect using the CSS `transition` property.
 
 The Simple Version ☝️ works... with some caveats.
 
--   Any update/re-render will trigger the animation calculations, even if the height does not change.
--   Resizing during mid-resize causes a janky transition. This occurs when an update happens too quickly.
+- Any update/re-render will trigger the animation calculations, even if the height does not change.
+- Resizing during mid-resize causes a janky transition. This occurs when an update happens too quickly.
 
 To resolve these issues, we'll need to do the following:
 

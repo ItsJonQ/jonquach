@@ -1,6 +1,6 @@
-import { styled } from '@wp-g2/styles';
+import { styled } from "@wp-g2/styles";
 
-function Logo({ color = 'var(--brandColor)', width = 200 }) {
+function Logo({ color = "var(--brandColor)", width = 200 }) {
 	const height = width;
 
 	const style = {
@@ -24,7 +24,7 @@ function Logo({ color = 'var(--brandColor)', width = 200 }) {
 	);
 }
 
-const LogoUI = styled('div')`
+const LogoUI = styled("div")`
 	svg {
 		display: block;
 		width: 100%;

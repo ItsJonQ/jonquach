@@ -1,5 +1,5 @@
-import React from 'react';
-import { styled } from '@wp-g2/styles';
+import React from "react";
+import { styled } from "@wp-g2/styles";
 
 function PostFeaturedImage({ src }) {
 	return (
@@ -9,11 +9,11 @@ function PostFeaturedImage({ src }) {
 	);
 }
 
-const FeaturedImageUI = styled('div')`
+const FeaturedImageUI = styled("div")`
 	margin-bottom: 2em;
 `;
 
-const PlainImage = styled('img')`
+const PlainImage = styled("img")`
 	max-width: 100%;
 	height: auto;
 	display: block;

@@ -1,11 +1,11 @@
 ---
-date: '2020-08-11'
-title: 'Core Systems for Components'
-category: 'Design Systems'
-topCaption: '🐶 Yo dawg, I heard you like Systems.'
+date: "2020-08-11"
+title: "Core Systems for Components"
+category: "Design Systems"
+topCaption: "🐶 Yo dawg, I heard you like Systems."
 draft: false
-image: '/assets/posts/core-systems-for-components/featured.jpg'
-featuredImage: '/assets/posts/core-systems-for-components/featured.jpg'
+image: "/assets/posts/core-systems-for-components/featured.jpg"
+featuredImage: "/assets/posts/core-systems-for-components/featured.jpg"
 ---
 
 For years now, I’ve been thinking very deeply about design systems, with a focus on UI / component libraries.
@@ -26,10 +26,10 @@ These core systems should feel invisible to folks using the library – kind of 
 
 Above is a rough diagram that outlines the various core systems (at a high level):
 
--   **Styling** (and theming/customization)
--   **Accessibility**
--   **Context**
--   **Animations** (and gestures)
+- **Styling** (and theming/customization)
+- **Accessibility**
+- **Context**
+- **Animations** (and gestures)
 
 I’m going to touch upon important aspects of each system. The choice of technologies is not nearly as important as the problem each system is attempting to solve.
 

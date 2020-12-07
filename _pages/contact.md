@@ -1,7 +1,7 @@
 ---
-title: 'Contact'
-topCaption: 'Like, Comment, *Social Media Action Verbs*… 👍'
-description: 'Get in touch!'
+title: "Contact"
+topCaption: "Like, Comment, *Social Media Action Verbs*… 👍"
+description: "Get in touch!"
 dropCap: false
 ---
 

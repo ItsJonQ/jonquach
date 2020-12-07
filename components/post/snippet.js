@@ -1,7 +1,7 @@
-import { styled } from '@wp-g2/styles';
-import Link from 'next/link';
-import Category from '../meta/category';
-import Date from '../meta/date';
+import { styled } from "@wp-g2/styles";
+import Link from "next/link";
+import Category from "../meta/category";
+import Date from "../meta/date";
 
 export default function PostSnippet({ title, category, date, excerpt, slug }) {
 	return (
@@ -20,7 +20,7 @@ export default function PostSnippet({ title, category, date, excerpt, slug }) {
 	);
 }
 
-const LinkUI = styled('a')`
+const LinkUI = styled("a")`
 	color: var(--fontColor);
 	display: block;
 
@@ -29,7 +29,7 @@ const LinkUI = styled('a')`
 	}
 `;
 
-const ExcerptUI = styled('p')`
+const ExcerptUI = styled("p")`
 	font-size: 0.9em;
 	transition: opacity 200ms ease;
 	line-height: 1.5;
@@ -40,7 +40,7 @@ const ExcerptUI = styled('p')`
 	}
 `;
 
-const TitleUI = styled('h4')`
+const TitleUI = styled("h4")`
 	color: black;
 	font-size: 1.2rem;
 	transition: color 200ms ease;
@@ -54,6 +54,6 @@ const TitleUI = styled('h4')`
 	}
 `;
 
-const ArticleUI = styled('article')`
+const ArticleUI = styled("article")`
 	padding: 1.2em 0;
 `;

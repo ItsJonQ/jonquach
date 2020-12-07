@@ -1,6 +1,6 @@
-import { styled } from '@wp-g2/styles';
+import { styled } from "@wp-g2/styles";
 
-const HrUI = styled('hr')`
+const HrUI = styled("hr")`
 	width: 100%;
 	height: 0;
 	border: 0;
@@ -10,7 +10,7 @@ const HrUI = styled('hr')`
 `;
 
 HrUI.defaultProps = {
-	role: 'presentation',
+	role: "presentation",
 };
 
 export default HrUI;

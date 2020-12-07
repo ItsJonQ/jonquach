@@ -1,6 +1,6 @@
 ---
-title: 'About'
-topCaption: 'Shucks! You wanna know more about me? ❤️'
+title: "About"
+topCaption: "Shucks! You wanna know more about me? ❤️"
 ---
 
 I'm a self-taught _Designer / Developer_, with several years of experience in both (I started first with Design). I'm proficient in a handful of [coding languages](https://github.com/itsjonq), but my absolute fav. is CSS.

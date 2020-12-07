@@ -1,8 +1,8 @@
 ---
-date: '2019-01-05'
-title: 'New Face'
-category: 'Design'
-topCaption: '🎶 Yes, I want some...'
+date: "2019-01-05"
+title: "New Face"
+category: "Design"
+topCaption: "🎶 Yes, I want some..."
 draft: false
 ---
 

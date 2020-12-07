@@ -1,8 +1,8 @@
 ---
-title: 'What it means to be a Design Engineer'
-date: '2017-12-08'
-category: 'Product'
-topCaption: '🎨 + 💻?'
+title: "What it means to be a Design Engineer"
+date: "2017-12-08"
+category: "Product"
+topCaption: "🎨 + 💻?"
 draft: false
 ---
 

@@ -1,7 +1,7 @@
 ---
-date: '2019-01-09'
-title: 'Writing Release Notes'
-category: 'Engineering'
+date: "2019-01-09"
+title: "Writing Release Notes"
+category: "Engineering"
 draft: false
 topCaption: '"Bug Fixes. The End."'
 ---
@@ -30,9 +30,9 @@ Over time, I've learned to streamline the process of reviewing, documenting, and
 
 The process can be broken down into three main parts:
 
--   The Git Commit(s)
--   The Pull Request
--   The Release Notes
+- The Git Commit(s)
+- The Pull Request
+- The Release Notes
 
 ### The Git Commit(s)
 

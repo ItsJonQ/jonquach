@@ -1,10 +1,10 @@
 ---
-date: '2019-01-10'
-title: 'Design Engineer - The Role'
-category: 'Design Engineering'
+date: "2019-01-10"
+title: "Design Engineer - The Role"
+category: "Design Engineering"
 draft: false
-topCaption: '🔥 🌷'
-image: '/assets/posts/design-engineer-it-me.png'
+topCaption: "🔥 🌷"
+image: "/assets/posts/design-engineer-it-me.png"
 ---
 
 Every so often, a tweet or blog post would make me reflect upon my career in the web development industry. Being a hybrid design/coder, I can't help but feel out of place within in.
@@ -47,13 +47,13 @@ I create things to help them create things for our product end users.
 
 If required, I can also assume the role of a designer or an engineer. I can...
 
--   Write design specs
--   Create wireframes, prototypes, or high fidelity mock-ups
--   Implement code
--   Rig up APIs
--   Math through complex animations/interactions
--   Architect data management systems
--   ...and more
+- Write design specs
+- Create wireframes, prototypes, or high fidelity mock-ups
+- Implement code
+- Rig up APIs
+- Math through complex animations/interactions
+- Architect data management systems
+- ...and more
 
 Although I enjoy this work, it is not where my passion lies.
 

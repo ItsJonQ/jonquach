@@ -1,17 +1,17 @@
-import { styled } from '@wp-g2/styles';
-import Category from '../meta/category';
-import SectionMetaTitle from '../meta/section-meta-title';
-import PostHeader from './header';
-import PostMeta from './meta';
-import PostLead from './lead';
-import Link from 'next/link';
+import { styled } from "@wp-g2/styles";
+import Category from "../meta/category";
+import SectionMetaTitle from "../meta/section-meta-title";
+import PostHeader from "./header";
+import PostMeta from "./meta";
+import PostLead from "./lead";
+import Link from "next/link";
 
 function PostFeatured({
 	category,
 	date,
 	excerpt,
-	url = '/',
-	title = 'Title',
+	url = "/",
+	title = "Title",
 	...rest
 }) {
 	return (
@@ -38,7 +38,7 @@ const TitleUI = styled(PostHeader)`
 	}
 `;
 
-const LinkUI = styled('a')`
+const LinkUI = styled("a")`
 	color: var(--fontColor);
 	display: block;
 

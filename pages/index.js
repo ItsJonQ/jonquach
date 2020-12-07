@@ -1,15 +1,15 @@
-import { styled } from '@wp-g2/styles';
-import Link from 'next/link';
-import Hr from '../components/base/hr';
-import SEO from '../components/seo';
-import Layout from '../components/page-layout';
-import PostIntro from '../components/post/intro';
-import PostLead from '../components/post/lead';
-import PostSnippet from '../components/post/snippet';
-import SectionMetaTitle from '../components/meta/section-meta-title';
-import Section from '../components/layout/section';
-import { getAllPosts } from '../lib/api';
-import { chunk } from 'lodash';
+import { styled } from "@wp-g2/styles";
+import Link from "next/link";
+import Hr from "../components/base/hr";
+import SEO from "../components/seo";
+import Layout from "../components/page-layout";
+import PostIntro from "../components/post/intro";
+import PostLead from "../components/post/lead";
+import PostSnippet from "../components/post/snippet";
+import SectionMetaTitle from "../components/meta/section-meta-title";
+import Section from "../components/layout/section";
+import { getAllPosts } from "../lib/api";
+import { chunk } from "lodash";
 
 export default function Index({ allPosts }) {
 	const [posts] = chunk(allPosts, 5);
@@ -31,18 +31,14 @@ export default function Index({ allPosts }) {
 								</SecondaryTextUI>
 							}
 						/>
-						<SelfieUI
-							src="/assets/home/q-sketch-cropped.jpg"
-							alt="Selfie!"
-						/>
+						<SelfieUI src="/assets/home/q-sketch-cropped.jpg" alt="Selfie!" />
 					</PostIntroWrapperUI>
 				</Section>
 				<LeadUI>
-					I specialize in <strong>Design Systems</strong>,{' '}
-					<strong>UI</strong>, <strong>animations</strong>, and{' '}
-					<strong>interactions</strong>.<br />
+					I specialize in <strong>Design Systems</strong>, <strong>UI</strong>,{" "}
+					<strong>animations</strong>, and <strong>interactions</strong>.<br />
 					<br />
-					I'm a Principal Designer at{' '}
+					I'm a Principal Designer at{" "}
 					<a href="https://www.automattic.com/">Automattic</a>.
 				</LeadUI>
 				<Hr />
@@ -84,7 +80,7 @@ const SelfieUI = styled.img`
 	}
 `;
 
-const SecondaryTextUI = styled('div')`
+const SecondaryTextUI = styled("div")`
 	font-size: 100%;
 	position: relative;
 	z-index: 1;
@@ -103,11 +99,11 @@ const LeadUI = styled(PostLead)`
 
 export async function getStaticProps() {
 	const allPosts = getAllPosts([
-		'title',
-		'date',
-		'slug',
-		'excerpt',
-		'category',
+		"title",
+		"date",
+		"slug",
+		"excerpt",
+		"category",
 	]);
 
 	return {

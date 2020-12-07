@@ -1,4 +1,4 @@
-import Date from '../meta/date';
+import Date from "../meta/date";
 
 function PostMeta(props) {
 	return <Date {...props} />;

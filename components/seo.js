@@ -1,15 +1,15 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import Head from "next/head";
+import { useRouter } from "next/router";
 
-const baseUrl = 'https://jonquach.com';
+const baseUrl = "https://jonquach.com";
 const defaultDescription = `I'm Q! A designer + developer. I specialize in Design Systems, UI, animations, and interactions.`;
 
 export default function SEO({
 	title,
-	image = '/images/q-meta.png',
+	image = "/images/q-meta.png",
 	description = defaultDescription,
 }) {
-	const siteTitle = title ? `${title} | Q` : 'Q';
+	const siteTitle = title ? `${title} | Q` : "Q";
 	const router = useRouter();
 
 	const url = `${baseUrl}${router.asPath}`;

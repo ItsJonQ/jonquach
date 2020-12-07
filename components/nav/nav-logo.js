@@ -1,10 +1,10 @@
-import { styled } from '@wp-g2/styles';
-import Link from 'next/link';
-import Logo from '../logo/logo';
-import LogoHappy from '../logo/logo-happy';
-import { VisuallyHidden } from '@wp-g2/components';
+import { styled } from "@wp-g2/styles";
+import Link from "next/link";
+import Logo from "../logo/logo";
+import LogoHappy from "../logo/logo-happy";
+import { VisuallyHidden } from "@wp-g2/components";
 
-function NavLogo({ title = 'Q', ...props }) {
+function NavLogo({ title = "Q", ...props }) {
 	return (
 		<Link href="/" passHref>
 			<NavLogoUI {...props}>
@@ -22,7 +22,7 @@ function NavLogo({ title = 'Q', ...props }) {
 	);
 }
 
-const AnimationUI = styled('span')`
+const AnimationUI = styled("span")`
 	@keyframes oBoy {
 		0% {
 			transform: rotate(-10deg) translateZ(0);
@@ -66,7 +66,7 @@ const AnimationUI = styled('span')`
 	}
 `;
 
-const NavLogoUI = styled('a')`
+const NavLogoUI = styled("a")`
 	display: block;
 	width: 50px;
 	height: 50px;

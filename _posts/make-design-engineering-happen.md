@@ -1,8 +1,8 @@
 ---
-title: 'Make Design Engineering Happen'
-date: '2018-04-07'
-category: 'Design Engineering'
-topCaption: '🙌'
+title: "Make Design Engineering Happen"
+date: "2018-04-07"
+category: "Design Engineering"
+topCaption: "🙌"
 draft: false
 ---
 

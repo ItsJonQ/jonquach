@@ -1,19 +1,19 @@
-import React from 'react';
-import { styled } from '@wp-g2/styles';
-import Hr from '../base/hr';
+import React from "react";
+import { styled } from "@wp-g2/styles";
+import Hr from "../base/hr";
 
 const links = [
 	{
-		to: 'https://github.com/itsjonq',
-		title: 'Github',
+		to: "https://github.com/itsjonq",
+		title: "Github",
 	},
 	{
-		to: 'https://twitter.com/itsjonq',
-		title: 'Twitter',
+		to: "https://twitter.com/itsjonq",
+		title: "Twitter",
 	},
 	{
-		to: 'https://github.com/itsjonq/jonquach',
-		title: 'View Source',
+		to: "https://github.com/itsjonq/jonquach",
+		title: "View Source",
 	},
 ];
 
@@ -41,7 +41,7 @@ function Footer(props) {
 	);
 }
 
-const FooterUI = styled('footer')`
+const FooterUI = styled("footer")`
 	color: #999;
 	font-size: 0.8rem;
 	padding: 20px 0 40px;
@@ -52,12 +52,12 @@ const FooterUI = styled('footer')`
 	}
 `;
 
-const ListUI = styled('div')`
+const ListUI = styled("div")`
 	margin-bottom: 10px;
 	display: flex;
 `;
 
-const ListItemUI = styled('div')`
+const ListItemUI = styled("div")`
 	margin: 0 20px 10px 0;
 	font-size: 0.8rem;
 
