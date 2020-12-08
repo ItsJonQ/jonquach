@@ -1,21 +1,38 @@
 import { styled } from "@wp-g2/styles";
+import { HStack, FlexBlock, Image, View } from "@wp-g2/components";
 import Link from "next/link";
 import Category from "../meta/category";
 import Date from "../meta/date";
 
-export default function PostSnippet({ title, category, date, excerpt, slug }) {
+export default function PostSnippet({
+	title,
+	featuredImage,
+	category,
+	date,
+	excerpt,
+	slug,
+}) {
 	return (
 		<ArticleUI>
-			<Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
-				<LinkUI>
-					<Category>{category}</Category>
-					<TitleUI>
-						<span>{title}</span>
-					</TitleUI>
+			<HStack alignment="top">
+				<FlexBlock>
+					<Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
+						<LinkUI>
+							<Category>{category}</Category>
+							<TitleUI>
+								<span>{title}</span>
+							</TitleUI>
+						</LinkUI>
+					</Link>
+					<ExcerptUI dangerouslySetInnerHTML={{ __html: excerpt }} />
 					{date && <Date date={date} />}
-				</LinkUI>
-			</Link>
-			<ExcerptUI dangerouslySetInnerHTML={{ __html: excerpt }} />
+				</FlexBlock>
+				{featuredImage && (
+					<View css={{ width: [150, 175, 200] }}>
+						<Image aspectRatio={16 / 9} src={featuredImage} />
+					</View>
+				)}
+			</HStack>
 		</ArticleUI>
 	);
 }
@@ -34,10 +51,6 @@ const ExcerptUI = styled("p")`
 	transition: opacity 200ms ease;
 	line-height: 1.5;
 	opacity: 0.5;
-
-	*:hover > & {
-		opacity: 1;
-	}
 `;
 
 const TitleUI = styled("h4")`

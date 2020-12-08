@@ -3,15 +3,15 @@ title: "About"
 topCaption: "Shucks! You wanna know more about me? ❤️"
 ---
 
-I'm a self-taught _Designer / Developer_ with experience in both (I started first with Design). I'm proficient in a handful of [coding languages](https://github.com/itsjonq), but my absolute fav. is CSS.
+I'm a self-taught Designer + Developer, with proficiency in a handful of [coding languages](https://github.com/itsjonq). My absolute favourite is CSS!
 
 <!-- more -->
 
-> **I love CSS.** It's so wonderfully creative, expressively fun, and generally mis-understood.
+> **I love CSS.** It's so wonderfully creative and expressively powerful (and fun).
 
-Having experience in design and development allows me to effectively make an impact in both disciplines. In other words, I make both sides happier and get along better, together.
+Having experience in design and development allows me to make an impact in both disciplines. In other words, I make both sides happier and get along better - together.
 
-When I'm not doing overly-ambitious (and possibly silly) things like, I don't know, inventing a way to [write CSS unit tests](https://developer.helpscout.com/seed/css-unit-testing/), or building a [React component library](https://github.com/helpscout/blue) from scratch, I dabble in the world of _illustration_, specifically character / mascot design.
+When I'm not doing overly-ambitious (and possibly silly) things like, I don't know, inventing a way to [write CSS unit tests](https://developer.helpscout.com/seed/css-unit-testing/), or building a [React component library](https://github.com/helpscout/blue) from scratch, I dabble in the world of _illustration_, specifically character/mascot design.
 
 (Fun fact: I started off as a graphic artist.)
 

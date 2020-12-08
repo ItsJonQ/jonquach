@@ -39,6 +39,7 @@ export async function getStaticProps() {
 		"slug",
 		"excerpt",
 		"category",
+		"featuredImage",
 	]);
 
 	return {
