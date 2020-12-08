@@ -1,8 +1,28 @@
 import { styled } from "@wp-g2/styles";
-import { HStack, FlexBlock, Image, View } from "@wp-g2/components";
+import {
+	HStack,
+	FlexBlock,
+	Image,
+	View,
+	ViewportPhablet,
+} from "@wp-g2/components";
 import Link from "next/link";
 import Category from "../meta/category";
 import Date from "../meta/date";
+
+function FeaturedImage({ slug, featuredImage }) {
+	if (!featuredImage) return null;
+
+	return (
+		<View css={{ width: [150, 175, 200] }}>
+			<Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
+				<LinkUI>
+					<Image aspectRatio={16 / 9} src={featuredImage} />
+				</LinkUI>
+			</Link>
+		</View>
+	);
+}
 
 export default function PostSnippet({
 	title,
@@ -24,14 +44,12 @@ export default function PostSnippet({
 							</TitleUI>
 						</LinkUI>
 					</Link>
-					<ExcerptUI dangerouslySetInnerHTML={{ __html: excerpt }} />
+					<ViewportPhablet>
+						<ExcerptUI dangerouslySetInnerHTML={{ __html: excerpt }} />
+					</ViewportPhablet>
 					{date && <Date date={date} />}
 				</FlexBlock>
-				{featuredImage && (
-					<View css={{ width: [150, 175, 200] }}>
-						<Image aspectRatio={16 / 9} src={featuredImage} />
-					</View>
-				)}
+				<FeaturedImage slug={slug} featuredImage={featuredImage} />
 			</HStack>
 		</ArticleUI>
 	);
