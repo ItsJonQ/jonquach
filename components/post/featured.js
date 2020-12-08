@@ -6,9 +6,9 @@ import PostMeta from "./meta";
 import PostLead from "./lead";
 import Link from "next/link";
 
-function PostFeatured({ category, date, excerpt, url = "/", title = "Title" }) {
+function PostFeatured({ category, date, excerpt, title = "Title", slug }) {
 	return (
-		<Link href={url} passHref>
+		<Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
 			<LinkUI>
 				<MetaTitleUI>Latest Post</MetaTitleUI>
 				<Category>{category}</Category>
