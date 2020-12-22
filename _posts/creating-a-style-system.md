@@ -8,7 +8,7 @@ image: "/assets/posts/creating-a-style-system/featured.png"
 featuredImage: "/assets/posts/creating-a-style-system/featured.png"
 ---
 
-One of the biggest and most important challenges for the G2 Components project was defining and creating the [Style system](https://github.com/ItsJonQ/g2/tree/master/packages/styles). The Style system is one of the core system that’s responsible for managing and powering the entire UI layer for the library.
+One of the biggest and most important challenges for the [G2 Components](https://github.com/itsjonq/g2) project was defining and creating the [Style system](https://github.com/ItsJonQ/g2/tree/master/packages/styles). The Style system is one of the core system that’s responsible for managing and powering the entire UI layer for the library.
 
 <!-- more -->
 

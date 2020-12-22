@@ -11,7 +11,7 @@ import Section from "../components/layout/section";
 import { getAllPosts } from "../lib/api";
 import { chunk } from "lodash";
 
-export default function Index({ allPosts }) {
+export default function Index({ allPosts = [] }) {
 	const [posts] = chunk(allPosts, 5);
 
 	return (
@@ -41,20 +41,20 @@ export default function Index({ allPosts }) {
 					I'm a Principal Designer at{" "}
 					<a href="https://www.automattic.com/">Automattic</a>.
 				</LeadUI>
-				<Hr />
-				{posts.length && (
+				{!!posts.length && (
 					<>
+						<Hr />
 						<SectionMetaTitle>Writing</SectionMetaTitle>
 						{posts.map((post) => (
 							<PostSnippet key={post.slug} {...post} />
 						))}
+						<Section>
+							<Link href="/posts" passHref>
+								<a>See More</a>
+							</Link>
+						</Section>
 					</>
 				)}
-				<Section>
-					<Link href="/posts" passHref>
-						<a>See More</a>
-					</Link>
-				</Section>
 			</Layout>
 		</>
 	);
