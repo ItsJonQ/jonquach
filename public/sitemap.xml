@@ -32,6 +32,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://jonquach.com/creating-a-variable-system</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://jonquach.com/creating-self-resizing-card</loc>
     <changefreq>hourly</changefreq>
   </url>

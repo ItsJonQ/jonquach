@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import { styled } from "@wp-g2/styles";
+import renderToString from "next-mdx-remote/render-to-string";
+import { components } from "../../components/mdx";
 import PostBody from "../../components/post/body";
 import PostIntro from "../../components/post/intro";
 import PostFeaturedImage from "../../components/post/featured-image";
@@ -8,7 +10,6 @@ import Layout from "../../components/page-layout";
 import Section from "../../components/layout/section";
 import SEO from "../../components/seo";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
-import markdownToHtml from "../../lib/markdownToHtml";
 
 export default function Post({ post, preview }) {
 	const router = useRouter();
@@ -60,13 +61,15 @@ export async function getStaticProps({ params }) {
 		"featuredImage",
 	]);
 
-	const content = await markdownToHtml(post.content || "");
+	const { renderedOutput } = await renderToString(post.content || "", {
+		components,
+	});
 
 	return {
 		props: {
 			post: {
 				...post,
-				content,
+				content: renderedOutput,
 			},
 		},
 	};
