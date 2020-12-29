@@ -4,19 +4,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://jonquach.com/[slug]</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://jonquach.com/</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://jonquach.com/posts/</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://jonquach.com/projects/[slug]</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
