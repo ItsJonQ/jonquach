@@ -1,4 +1,5 @@
 import { styled } from "@wp-g2/styles";
+import NextImage from "next/image";
 import {
 	HStack,
 	FlexBlock,
@@ -17,7 +18,12 @@ function FeaturedImage({ slug, featuredImage }) {
 		<View css={{ width: [150, 175, 200] }}>
 			<Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
 				<LinkUI>
-					<Image aspectRatio={16 / 9} src={featuredImage} />
+					<Image
+						aspectRatio={16 / 9}
+						src={featuredImage}
+						as={NextImage}
+						layout="fill"
+					/>
 				</LinkUI>
 			</Link>
 		</View>

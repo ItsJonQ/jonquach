@@ -1,5 +1,6 @@
 import { styled } from "@wp-g2/styles";
 import Link from "next/link";
+import Image from "next/image";
 import Hr from "@components/base/hr";
 import SEO from "@components/seo";
 import Layout from "@components/page-layout";
@@ -31,7 +32,14 @@ export default function Index({ allPosts = [] }) {
 								</SecondaryTextUI>
 							}
 						/>
-						<SelfieUI src="/assets/home/q-sketch-cropped.jpg" alt="Selfie!" />
+						<SelfieUI>
+							<Image
+								src="/assets/home/q-sketch-cropped.jpg"
+								alt="Selfie!"
+								width="551"
+								height="967"
+							/>
+						</SelfieUI>
 					</PostIntroWrapperUI>
 				</Section>
 				<LeadUI>
@@ -66,7 +74,7 @@ const PostIntroWrapperUI = styled.div`
 	position: relative;
 `;
 
-const SelfieUI = styled.img`
+const SelfieUI = styled.div`
 	opacity: 0.16;
 	pointer-events: none;
 	position: absolute;
