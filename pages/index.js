@@ -82,6 +82,7 @@ const SelfieUI = styled.img`
 
 const SecondaryTextUI = styled("div")`
 	font-size: 100%;
+	font-weight: inherit;
 	position: relative;
 	z-index: 1;
 `;

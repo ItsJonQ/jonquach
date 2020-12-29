@@ -76,6 +76,7 @@ const TitleUI = styled("h4")`
 	font-size: 1.2rem;
 	transition: color 200ms ease;
 	margin-bottom: 5px;
+	font-weight: 700;
 
 	*:hover > & {
 		color: var(--brandColor);
