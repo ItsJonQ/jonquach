@@ -28,7 +28,7 @@ function Footer(props) {
 					<ListUI>
 						{links.map((link) => (
 							<ListItemUI key={link.to}>
-								<a href={link.to} target="_blank">
+								<a href={link.to} target="_blank" rel="noreferrer">
 									{link.title}
 								</a>
 							</ListItemUI>

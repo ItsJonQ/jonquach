@@ -6,12 +6,13 @@ import {
 	Image,
 	View,
 	ViewportPhablet,
+	VisuallyHidden,
 } from "@wp-g2/components";
 import Link from "next/link";
 import Category from "../meta/category";
 import Date from "../meta/date";
 
-function FeaturedImage({ slug, featuredImage }) {
+function FeaturedImage({ slug, featuredImage, title }) {
 	if (!featuredImage) return null;
 
 	return (
@@ -23,7 +24,9 @@ function FeaturedImage({ slug, featuredImage }) {
 						src={featuredImage}
 						as={NextImage}
 						layout="fill"
+						alt={title}
 					/>
+					<VisuallyHidden>{title}</VisuallyHidden>
 				</LinkUI>
 			</Link>
 		</View>
@@ -31,6 +34,7 @@ function FeaturedImage({ slug, featuredImage }) {
 }
 
 export default function PostSnippet({
+	titleAs,
 	title,
 	featuredImage,
 	category,
@@ -45,7 +49,7 @@ export default function PostSnippet({
 					<Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
 						<LinkUI>
 							<Category>{category}</Category>
-							<TitleUI>
+							<TitleUI as={titleAs}>
 								<span>{title}</span>
 							</TitleUI>
 						</LinkUI>
@@ -55,7 +59,11 @@ export default function PostSnippet({
 					</ViewportPhablet>
 					{date && <Date date={date} />}
 				</FlexBlock>
-				<FeaturedImage slug={slug} featuredImage={featuredImage} />
+				<FeaturedImage
+					slug={slug}
+					featuredImage={featuredImage}
+					title={title}
+				/>
 			</HStack>
 		</ArticleUI>
 	);
@@ -77,7 +85,7 @@ const ExcerptUI = styled("p")`
 	opacity: 0.5;
 `;
 
-const TitleUI = styled("h4")`
+const TitleUI = styled("h2")`
 	color: black;
 	font-size: 1.2rem;
 	transition: color 200ms ease;
