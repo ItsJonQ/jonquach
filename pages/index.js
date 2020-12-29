@@ -38,6 +38,7 @@ export default function Index({ allPosts = [] }) {
 								alt="Selfie!"
 								width="551"
 								height="967"
+								priority
 							/>
 						</SelfieUI>
 					</PostIntroWrapperUI>
