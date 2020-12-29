@@ -23,7 +23,7 @@ export default function Post({ post, preview }) {
 				<div>Loading…</div>
 			) : (
 				<>
-					<article className="mb-32">
+					<article>
 						<SEO
 							title={post.title}
 							image={post.image}

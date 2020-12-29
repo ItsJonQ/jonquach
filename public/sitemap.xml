@@ -1,5 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jonquach.com/404</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://jonquach.com/[slug]</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -9,6 +13,10 @@
   </url>
   <url>
     <loc>https://jonquach.com/posts/</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://jonquach.com/projects/[slug]</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>

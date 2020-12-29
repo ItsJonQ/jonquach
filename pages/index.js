@@ -35,8 +35,10 @@ export default function Index({ allPosts = [] }) {
 					</PostIntroWrapperUI>
 				</Section>
 				<LeadUI>
-					I specialize in <strong>Design Systems</strong>, <strong>UI</strong>,{" "}
-					<strong>animations</strong>, and <strong>interactions</strong>.<br />
+					I'm passionate about crafting and scaling{" "}
+					<strong>Design Systems</strong>, with an emphasis on{" "}
+					<strong>UI</strong>, <strong>UX</strong>, and{" "}
+					<strong>animations</strong>.<br />
 					<br />
 					I'm a Principal Designer at{" "}
 					<a href="https://www.automattic.com/">Automattic</a>.

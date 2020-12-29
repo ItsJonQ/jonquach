@@ -192,7 +192,7 @@ render() {
 
 ### The Result
 
-<iframe src="https://codesandbox.io/embed/4xrjz4yoz0?autoresize=1&hidenavigation=1&view=preview" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/4xrjz4yoz0?autoresize=1&hidenavigation=1&view=preview" style={{width:'100%', height: 500, border:0, borderRadius: 4, overflow:"hidden"}} sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin" />
 
 Pretty spiffy, if I do say so myself!
 

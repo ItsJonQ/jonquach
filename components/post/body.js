@@ -91,12 +91,10 @@ const listStyles = css`
 `;
 
 const syntaxHighlighterStyles = css`
-	.remark-highlight {
+	.prism-code {
 		margin: 2em 0;
-
-		& > pre {
-			border-radius: 12px;
-		}
+		border-radius: 12px;
+		font-size: 0.92em;
 
 		code {
 			padding: 0;

@@ -50,7 +50,7 @@ Another notable change would be the shift from circular eyes to rectangular ones
 
 Below is a video/gif of a quick sketch timelapse of my new selfie character. It was sketched on an iPad Pro (some model... not the newest one) with an Apple Pencil in [Procreate](https://procreate.art/).
 
-<div style='position:relative; padding-bottom:75.00%'><iframe src='https://gfycat.com/ifr/ExhaustedYawningGlobefish' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div><p> <a href="https://gfycat.com/ExhaustedYawningGlobefish">via Gfycat</a></p>
+<div style={{position:'relative', paddingBottom:'75.00%'}}><iframe src='https://gfycat.com/ifr/ExhaustedYawningGlobefish' frameborder='0' scrolling='no' width='100%' height='100%' style={{position:'absolute',top:0,left:0}} allowfullscreen />></div><p> <a href="https://gfycat.com/ExhaustedYawningGlobefish">via Gfycat</a></p>
 
 I wanted to update my personal site to go along with my updated logo. So...
 

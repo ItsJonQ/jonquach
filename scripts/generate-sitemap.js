@@ -24,6 +24,8 @@ async function generateSitemap() {
 		"pages/**/*{.js,.mdx}",
 		"_posts/**/*{.js,.md}",
 		"!pages/_*.js",
+		"!pages/[slug].js",
+		"!pages/projects/[slug].js",
 		"!pages/posts/[slug].js",
 		"!pages/api",
 	]);

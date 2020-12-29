@@ -59,6 +59,7 @@ export async function getStaticProps({ params }) {
 		"content",
 		"image",
 		"featuredImage",
+		"layout",
 	]);
 
 	const { renderedOutput } = await renderToString(post.content || "", {
