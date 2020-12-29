@@ -61,7 +61,7 @@ export default function Index({ allPosts = [] }) {
 						))}
 						<Section>
 							<Link href="/posts" passHref>
-								<a>See More</a>
+								<a>Read More Posts</a>
 							</Link>
 						</Section>
 					</>
