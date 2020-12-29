@@ -1,14 +1,14 @@
 import { styled } from "@wp-g2/styles";
 import Link from "next/link";
-import Hr from "../components/base/hr";
-import SEO from "../components/seo";
-import Layout from "../components/page-layout";
-import PostIntro from "../components/post/intro";
-import PostLead from "../components/post/lead";
-import PostSnippet from "../components/post/snippet";
-import SectionMetaTitle from "../components/meta/section-meta-title";
-import Section from "../components/layout/section";
-import { getAllPosts } from "../lib/api";
+import Hr from "@components/base/hr";
+import SEO from "@components/seo";
+import Layout from "@components/page-layout";
+import PostIntro from "@components/post/intro";
+import PostLead from "@components/post/lead";
+import PostSnippet from "@components/post/snippet";
+import SectionMetaTitle from "@components/meta/section-meta-title";
+import Section from "@components/layout/section";
+import { getAllPosts } from "@lib/api";
 import { chunk } from "lodash";
 
 export default function Index({ allPosts = [] }) {
