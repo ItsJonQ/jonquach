@@ -47,10 +47,7 @@ export default function Index({ allPosts = [] }) {
 					I'm passionate about crafting and scaling{" "}
 					<strong>Design Systems</strong>, with an emphasis on{" "}
 					<strong>UI</strong>, <strong>UX</strong>, and{" "}
-					<strong>animations</strong>.<br />
-					<br />
-					I'm a Principal Designer at{" "}
-					<a href="https://www.automattic.com/">Automattic</a>.
+					<strong>animations</strong>.
 				</LeadUI>
 				{!!posts.length && (
 					<>
