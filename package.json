@@ -18,7 +18,7 @@
     "create-emotion-server": "10.0.27",
     "date-fns": "^2.16.1",
     "gray-matter": "4.0.2",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "markdown-it": "^12.0.4",
     "next": "^10.0.4",
     "next-mdx-remote": "2.0.1",
