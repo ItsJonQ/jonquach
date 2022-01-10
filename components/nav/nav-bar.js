@@ -9,6 +9,10 @@ const links = [
 		title: "About",
 	},
 	{
+		to: "https://notes.jonquach.com",
+		title: "Notes",
+	},
+	{
 		to: "/posts",
 		title: "Posts",
 	},
