@@ -44,7 +44,7 @@ export default function Index({ allPosts = [] }) {
 					</PostIntroWrapperUI>
 				</Section>
 				<LeadUI>
-					I'm love crafting and scaling <strong>Design Systems</strong> to make
+					I love crafting and scaling <strong>Design Systems</strong> to make
 					things better, <strong>together</strong>.
 				</LeadUI>
 				{!!posts.length && (
