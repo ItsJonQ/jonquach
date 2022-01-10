@@ -27,8 +27,8 @@ export default function Index({ allPosts = [] }) {
 								<SecondaryTextUI>
 									I'm Q!
 									<br />
-									<span>Designer</span>.<br />
-									<span>Developer</span>.
+									<span>Designer. Maker</span>.<br />
+									<span>Systems thinker</span>.
 								</SecondaryTextUI>
 							}
 						/>
@@ -44,10 +44,8 @@ export default function Index({ allPosts = [] }) {
 					</PostIntroWrapperUI>
 				</Section>
 				<LeadUI>
-					I'm passionate about crafting and scaling{" "}
-					<strong>Design Systems</strong>, with an emphasis on{" "}
-					<strong>UI</strong>, <strong>UX</strong>, and{" "}
-					<strong>animations</strong>.
+					I'm love crafting and scaling <strong>Design Systems</strong> to make
+					things better, <strong>together</strong>.
 				</LeadUI>
 				{!!posts.length && (
 					<>
