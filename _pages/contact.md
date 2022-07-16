@@ -5,6 +5,6 @@ description: "Get in touch!"
 dropCap: false
 ---
 
-[✉️ Email me](mailto:hello@jonquach.com)
+[✉️ Email me](mailto:hi@itsjonq.com)
 
 I'm not super on the socials, but I do have a [Twitter](https://twitter.com/itsjonq), [Github](https://github.com/itsjonq), and [Dribbble](https://dribbble.com/itsjonq).
