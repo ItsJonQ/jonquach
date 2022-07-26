@@ -73,6 +73,10 @@ const headingStyles = css`
 	* + h6 {
 		margin-top: 2.5em;
 	}
+
+	h2 + h3 {
+		margin-top: 1em;
+	}
 `;
 
 const imageStyles = css`

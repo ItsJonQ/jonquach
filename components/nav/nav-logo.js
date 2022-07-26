@@ -1,7 +1,6 @@
 import { styled } from "@wp-g2/styles";
 import Link from "next/link";
 import Logo from "../logo/logo";
-import LogoHappy from "../logo/logo-happy";
 import { VisuallyHidden } from "@wp-g2/components";
 
 function NavLogo({ title = "Q", ...props }) {
@@ -11,9 +10,6 @@ function NavLogo({ title = "Q", ...props }) {
 				<AnimationUI>
 					<div className="regular">
 						<Logo width={34} />
-					</div>
-					<div className="happy">
-						<LogoHappy width={34} />
 					</div>
 				</AnimationUI>
 				<VisuallyHidden>{title}</VisuallyHidden>
@@ -49,20 +45,8 @@ const AnimationUI = styled("span")`
 		left: 8px;
 	}
 
-	.happy {
-		display: none;
-	}
-
 	&:hover {
 		animation: oBoy 400ms linear infinite;
-
-		.regular {
-			display: none;
-		}
-
-		.happy {
-			display: block;
-		}
 	}
 `;
 
