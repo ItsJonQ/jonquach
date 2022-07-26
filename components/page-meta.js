@@ -5,7 +5,7 @@ export default function Meta() {
 		<Head>
 			<link rel="shortcut icon" href="/icons/icon-48x48.png" />
 			<link rel="manifest" href="/manifest.webmanifest" />
-			<meta name="theme-color" content="#ffa7c4" />
+			<meta name="theme-color" content="#0055ff" />
 		</Head>
 	);
 }

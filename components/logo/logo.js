@@ -11,7 +11,7 @@ function Logo({ color = "var(--brandColor)", width = 200 }) {
 	return (
 		<LogoUI style={style}>
 			<svg
-				enable-background="new 0 0 480 480"
+				enableBackground="new 0 0 480 480"
 				viewBox="0 0 480 480"
 				xmlns="http://www.w3.org/2000/svg"
 			>

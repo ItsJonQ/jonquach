@@ -12,6 +12,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://jonquach.com/analog-tools</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://jonquach.com/animation-interpolations</loc>
     <changefreq>hourly</changefreq>
   </url>
