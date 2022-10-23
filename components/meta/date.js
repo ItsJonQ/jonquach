@@ -1,5 +1,5 @@
 import { parseISO, format } from "date-fns";
-import { styled } from "@wp-g2/styles";
+import styled from "@emotion/styled";
 
 const DateUI = styled("div")`
 	font-size: 11px;

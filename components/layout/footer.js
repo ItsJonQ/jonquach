@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@wp-g2/styles";
+import styled from "@emotion/styled";
 import Hr from "../base/hr";
 
 const links = [

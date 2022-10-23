@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "create-emotion-server";
 import { cache } from "@wp-g2/styles";
+import { renderStatic } from "../lib/emotionRenderer";
 
 const { extractCritical } = createEmotionServer(cache);
 
@@ -32,6 +33,9 @@ export default class MyDocument extends Document {
 		const initialProps = await Document.getInitialProps(ctx);
 		const styles = extractCritical(initialProps.html);
 
+		const page = await ctx.renderPage();
+		const { css, ids } = await renderStatic(page.html);
+
 		return {
 			...initialProps,
 			styles: (
@@ -40,6 +44,10 @@ export default class MyDocument extends Document {
 					<style
 						data-emotion-css={styles.ids.join(" ")}
 						dangerouslySetInnerHTML={{ __html: styles.css }}
+					/>
+					<style
+						data-emotion={`css ${ids.join(" ")}`}
+						dangerouslySetInnerHTML={{ __html: css }}
 					/>
 				</>
 			),

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import { styled } from "@wp-g2/styles";
+import styled from "@emotion/styled";
 import renderToString from "next-mdx-remote/render-to-string";
 import { components } from "@components/mdx";
 import PostBody from "@components/post/body";

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { styled } from "@wp-g2/styles";
+import styled from "@emotion/styled";
 
 function PostFeaturedImage({ src }) {
 	return (

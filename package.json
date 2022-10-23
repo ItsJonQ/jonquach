@@ -11,6 +11,10 @@
     "start": "yarn run dev"
   },
   "dependencies": {
+    "@emotion/css": "^11.10.0",
+    "@emotion/react": "^11.10.4",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.4",
     "@wp-g2/components": "^0.0.124",
     "@wp-g2/context": "^0.0.124",
     "@wp-g2/styles": "^0.0.124",

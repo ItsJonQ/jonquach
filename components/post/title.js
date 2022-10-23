@@ -1,5 +1,5 @@
-import { View } from "@wp-g2/components";
-import { css } from "@wp-g2/styles";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const headerStyles = css`
 	font-size: 2.75rem;
@@ -17,9 +17,7 @@ const headerStyles = css`
 export default function PostTitle({ children }) {
 	return (
 		<header>
-			<View as="h1" className={headerStyles}>
-				{children}
-			</View>
+			<h1 className={headerStyles}>{children}</h1>
 		</header>
 	);
 }

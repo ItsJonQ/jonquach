@@ -1,4 +1,5 @@
-import { css, styled } from "@wp-g2/styles";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const compact = ({ isCompact }) => {
 	if (!isCompact) return;

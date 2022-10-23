@@ -1,4 +1,4 @@
-import { styled } from "@wp-g2/styles";
+import styled from "@emotion/styled";
 import Link from "next/link";
 import Logo from "../logo/logo";
 import { VisuallyHidden } from "@wp-g2/components";

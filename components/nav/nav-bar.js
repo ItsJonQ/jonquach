@@ -1,6 +1,6 @@
 import Link from "next/link";
 import NavLogo from "./nav-logo";
-import { styled } from "@wp-g2/styles";
+import styled from "@emotion/styled";
 import SiteContainer from "../layout/site-container";
 
 const links = [

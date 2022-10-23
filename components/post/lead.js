@@ -1,4 +1,4 @@
-import { styled } from "@wp-g2/styles";
+import styled from "@emotion/styled";
 
 const PostLeadUI = styled("p")`
 	font-size: 1.2rem;

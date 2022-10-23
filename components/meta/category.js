@@ -1,4 +1,4 @@
-import { styled } from "@wp-g2/styles";
+import styled from "@emotion/styled";
 
 const CategoryUI = styled("div")`
 	font-size: 11px;

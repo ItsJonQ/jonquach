@@ -1,4 +1,4 @@
-import { styled } from "@wp-g2/styles";
+import styled from "@emotion/styled";
 
 function Logo({ color = "var(--brandColor)", width = 200 }) {
 	const height = width;

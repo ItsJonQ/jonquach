@@ -1,5 +1,5 @@
-import { View } from "@wp-g2/components";
-import { css } from "@wp-g2/styles";
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
 
 const textStyles = css`
 	font-size: 1rem;
@@ -144,7 +144,7 @@ const hrStyles = css`
 	}
 `;
 
-const contentStyles = css`
+const PostBodyView = styled("div")`
 	${textStyles};
 	${codeStyles};
 	${headingStyles};
@@ -157,10 +157,5 @@ const contentStyles = css`
 `;
 
 export default function PostBody({ content }) {
-	return (
-		<View
-			dangerouslySetInnerHTML={{ __html: content }}
-			className={contentStyles}
-		/>
-	);
+	return <PostBodyView dangerouslySetInnerHTML={{ __html: content }} />;
 }

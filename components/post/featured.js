@@ -1,4 +1,4 @@
-import { styled } from "@wp-g2/styles";
+import styled from "@emotion/styled";
 import Category from "../meta/category";
 import SectionMetaTitle from "../meta/section-meta-title";
 import PostHeader from "./header";

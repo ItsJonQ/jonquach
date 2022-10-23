@@ -1,13 +1,13 @@
-import { styled } from "@wp-g2/styles";
+import styled from "@emotion/styled";
 import NextImage from "next/image";
 import {
-	HStack,
 	FlexBlock,
 	Image,
 	View,
 	ViewportPhablet,
 	VisuallyHidden,
 } from "@wp-g2/components";
+import { HStack } from "@components/layout/h-stack";
 import Link from "next/link";
 import Category from "../meta/category";
 import Date from "../meta/date";
