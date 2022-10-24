@@ -64,9 +64,9 @@ When an order is made, a ticket is printed. On the line, you make it your missio
 
 Depending on the components of the order, tickets can be split across the line. Responsibility is delegated to the cooks working those associated stations (i.e. appetizers, mains, and sides).
 
-With every time comes expectation. Expectation brings with it a timer that, in totality, determines the experience of that customer, the success of the night's service, and ultimately, the restaurant itself.
+With every ticket comes expectation. Expectation brings with it a timer that, in totality, determines the experience of that customer, the success of the night's service, and ultimately, the restaurant itself.
 
-Tickets, and all that they represent, must be intentionally organized, prioritized, coordinated, and executed in the highest order.
+Tickets, and all that they represent, must be organized, prioritized, coordinated, and executed in the highest order.
 
 **You live and die by your tickets.**
 
@@ -106,7 +106,7 @@ When commands are given, you must confirm that you've understood the instruction
 
 During service, you can't always see or hear what's happening. A confidently exclaimed "heard" is a **signal that cuts through all noise**.
 
-Not all kitchens use "heard". Some simply say "OK!", "Got it", or "Yup!". Regardless of the confirmation catchphrase, all line cooks share the sense of duty to respond to orders.
+Not all kitchens use "heard". Some simply say "OK!", "Got it", or "Yup!". Regardless of the confirmation catchphrase, all line cooks share the sense of duty to respond to orders and to each other.
 
 "We have 5 specials all day..."
 
@@ -139,6 +139,12 @@ Refire represents the mentality of owning mistakes and adapting to any situation
 Mistakes happen. Refire when needed. Communicate your times.
 
 Stay focused on your times, your tickets, and tonight's service.
+
+"I need a refire on fries. 5 minutes..."
+
+"Hold the main for table 37. Get it ready on the pass in 4 mins".
+
+"Heard."
 
 ## 7. Serve the customer
 
