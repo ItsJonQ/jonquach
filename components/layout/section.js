@@ -5,22 +5,18 @@ const compact = ({ isCompact }) => {
 	if (!isCompact) return;
 
 	return css`
-		padding-top: 40px;
-		padding-bottom: 40px;
+		padding-top: 20px;
+		padding-bottom: 20px;
 
 		@media (min-width: 768px) {
-			padding-top: 60px;
-			padding-bottom: 40px;
+			padding-top: 40px;
+			padding-bottom: 20px;
 		}
 	`;
 };
 
 const SectionUI = styled("section")`
-	padding: 40px 0;
-
-	@media (min-width: 768px) {
-		padding: 80px 0;
-	}
+	padding: 20px 0 20px;
 
 	${compact};
 `;

@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
-import { css } from "@emotion/react";
 
-const headerStyles = css`
+const HeaderView = styled("h1")`
 	font-size: 2.75rem;
 	font-weight: 800;
 	line-height: 1.1;
@@ -17,7 +16,7 @@ const headerStyles = css`
 export default function PostTitle({ children }) {
 	return (
 		<header>
-			<h1 className={headerStyles}>{children}</h1>
+			<HeaderView>{children}</HeaderView>
 		</header>
 	);
 }

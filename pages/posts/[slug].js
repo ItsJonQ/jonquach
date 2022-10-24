@@ -46,7 +46,7 @@ export default function Post({ post, preview }) {
 }
 
 const PostContentUI = styled("div")`
-	margin: 40px auto;
+	margin: 20px auto;
 `;
 
 export async function getStaticProps({ params }) {

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
 import Logo from "../logo/logo";
-import { VisuallyHidden } from "@wp-g2/components";
+import { VisuallyHidden } from "@components/base/visually-hidden";
 
 function NavLogo({ title = "Q", ...props }) {
 	return (

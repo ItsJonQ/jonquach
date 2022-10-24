@@ -1,35 +1,52 @@
 import styled from "@emotion/styled";
 import NextImage from "next/image";
 import {
-	FlexBlock,
+	AspectRatio,
+	HStack,
 	Image,
-	View,
-	ViewportPhablet,
+	Spacer,
 	VisuallyHidden,
-} from "@wp-g2/components";
-import { HStack } from "@components/layout/h-stack";
+} from "@components/base";
 import Link from "next/link";
 import Category from "../meta/category";
 import Date from "../meta/date";
+
+const FeaturedImageWrapperView = styled("div")`
+	width: 150px;
+	@media (min-width: 40em) {
+		width: 175px;
+	}
+	@media (min-width: 52em) {
+		width: 200px;
+	}
+`;
+
+const ViewportPhabletView = styled("div")`
+	display: none;
+	@media (min-width: 36em) {
+		display: block;
+	}
+}`;
 
 function FeaturedImage({ slug, featuredImage, title }) {
 	if (!featuredImage) return null;
 
 	return (
-		<View css={{ width: [150, 175, 200] }}>
+		<FeaturedImageWrapperView>
 			<Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
 				<LinkUI>
-					<Image
-						aspectRatio={16 / 9}
-						src={featuredImage}
-						as={NextImage}
-						layout="fill"
-						alt={title}
-					/>
+					<AspectRatio ratio={16 / 9}>
+						<Image
+							src={featuredImage}
+							as={NextImage}
+							layout="fill"
+							alt={title}
+						/>
+					</AspectRatio>
 					<VisuallyHidden>{title}</VisuallyHidden>
 				</LinkUI>
 			</Link>
-		</View>
+		</FeaturedImageWrapperView>
 	);
 }
 
@@ -45,7 +62,7 @@ export default function PostSnippet({
 	return (
 		<ArticleUI>
 			<HStack alignment="top">
-				<FlexBlock>
+				<Spacer>
 					<Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
 						<LinkUI>
 							<Category>{category}</Category>
@@ -54,11 +71,11 @@ export default function PostSnippet({
 							</TitleUI>
 						</LinkUI>
 					</Link>
-					<ViewportPhablet>
+					<ViewportPhabletView>
 						<ExcerptUI dangerouslySetInnerHTML={{ __html: excerpt }} />
-					</ViewportPhablet>
+					</ViewportPhabletView>
 					{date && <Date date={date} />}
-				</FlexBlock>
+				</Spacer>
 				<FeaturedImage
 					slug={slug}
 					featuredImage={featuredImage}
