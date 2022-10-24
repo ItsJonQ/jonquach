@@ -18,7 +18,7 @@ When you've downloaded all the dependencies, run:
 yarn start
 ```
 
-The local development website will be available at [http://localhost:3000/](http://localhost:3000/).
+The local development website will be available at [http://localhost:5001/](http://localhost:5001/).
 
 ## Deploying
 
